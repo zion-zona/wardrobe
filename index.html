@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Шкаф на раздачу</title>
+  <meta name="description" content="Одежда, обувь, сумки и аксессуары — дарю, меняю, продаю.">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="config.js"></script>
+</head>
+<body>
+  <header class="top">
+    <div class="top__inner">
+      <a class="logo" href="./" id="site-title">Шкаф на раздачу</a>
+      <button class="cart-btn" id="cart-open" aria-label="Открыть корзину">
+        Корзина <span class="cart-btn__count" id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="intro">
+      <h1 id="site-heading">Шкаф на раздачу</h1>
+      <p class="intro__sub" id="site-subtitle"></p>
+      <details class="rules" open>
+        <summary>Как это работает</summary>
+        <ol id="rules-list"></ol>
+        <p class="rules__pickup" id="pickup" hidden></p>
+      </details>
+    </section>
+
+    <section class="filters" aria-label="Фильтры">
+      <div class="chips" id="cat-chips" role="tablist"></div>
+      <div class="filters__row">
+        <label class="select">
+          <span>Условия</span>
+          <select id="f-deal">
+            <option value="">Все</option>
+            <option value="gift">Дарю</option>
+            <option value="swap">Обмен</option>
+            <option value="donate">Донат</option>
+            <option value="price">С ценой</option>
+          </select>
+        </label>
+        <label class="select">
+          <span>Размер</span>
+          <select id="f-size"><option value="">Все</option></select>
+        </label>
+        <label class="toggle"><input type="checkbox" id="f-free"> Только свободные</label>
+        <label class="toggle"><input type="checkbox" id="f-liked"> ♡ Избранное</label>
+      </div>
+    </section>
+
+    <p class="empty" id="empty" hidden>Под эти фильтры ничего нет.</p>
+    <section class="grid" id="grid" aria-live="polite"></section>
+  </main>
+
+  <dialog class="modal" id="item-modal" aria-labelledby="m-title">
+    <button class="modal__close" data-close aria-label="Закрыть">×</button>
+    <div class="modal__body" id="item-body"></div>
+  </dialog>
+
+  <dialog class="drawer" id="cart-modal" aria-labelledby="cart-title">
+    <button class="modal__close" data-close aria-label="Закрыть">×</button>
+    <div class="drawer__body">
+      <h2 id="cart-title">Корзина</h2>
+      <div id="cart-list"></div>
+      <div id="cart-form" hidden>
+        <label class="field">Твоё имя
+          <input type="text" id="u-name" autocomplete="name" placeholder="Как тебя подписать">
+        </label>
+        <label class="field">Как связаться (необязательно)
+          <input type="text" id="u-contact" placeholder="@ник в Telegram или телефон">
+        </label>
+        <p class="field-error" id="cart-error" hidden>Напиши имя, чтобы я знала, от кого заявка.</p>
+        <p class="hint">Текст заявки:</p>
+        <pre class="preview" id="cart-preview"></pre>
+        <div class="drawer__actions">
+          <button class="btn btn--primary" id="send-tg" hidden>Скопировать и открыть Telegram</button>
+          <button class="btn" id="copy-only">Скопировать текст</button>
+        </div>
+        <p class="hint" id="copy-status" role="status"></p>
+        <p class="hint" id="no-contact" hidden>Контакт для заявок пока не указан. Скопируй текст и отправь хозяйке шкафа лично.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
