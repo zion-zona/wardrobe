@@ -172,3 +172,43 @@ img { display: block; max-width: 100%; }
 .cart-item select:focus-visible, .select select:focus-visible { outline: none; border-bottom-color: var(--ink); }
 #cart-form { display: flex; flex-direction: column; gap: 18px; }
 #cart-form[hidden] { display: none; }
+
+/* ===== v2: элементы по референсам (ГЭС-2, Гараж) ===== */
+
+/* бегущая строка */
+.ticker { background: var(--ink); color: #fff; overflow: hidden; white-space: nowrap; font-size: 12px; letter-spacing: .02em; height: 26px; display: flex; align-items: center; }
+.ticker[hidden] { display: none; }
+.ticker__track { display: inline-flex; animation: ticker 40s linear infinite; }
+.ticker__track span { padding-right: 0; }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .ticker__track { animation: none; } }
+
+/* правила: [+] / [−] как на ГЭС-2 */
+.rules summary::after { content: "[+]"; font-size: 13px; letter-spacing: 0; }
+.rules[open] summary::after { content: "[−]"; }
+
+/* большой заголовок раздела */
+.section-title { font-size: clamp(40px, 8vw, 88px); line-height: .95; font-weight: 500; letter-spacing: -.04em; margin: 72px 0 0; }
+
+/* сетка с вертикальными линиями между колонками, как в коллекции Гаража */
+.grid { gap: 0; margin-top: 0; border-top: 1px solid var(--ink); overflow: hidden; }
+.card { border-left: 1px solid var(--ink); margin-left: -1px; padding: 20px 14px 28px; }
+@media (min-width: 720px) { .grid { gap: 0; } .card { padding: 32px 24px 40px; } }
+.card__img { aspect-ratio: 4 / 5; }
+.card__info { align-items: center; text-align: center; padding-top: 16px; gap: 2px; }
+.card__title { font-size: 15px; font-weight: 500; text-align: center; }
+.card .badges { justify-content: center; margin-top: 8px; }
+.like { top: 14px; right: 12px; }
+@media (min-width: 720px) { .like { top: 24px; right: 20px; } }
+
+/* статус внизу карточки: ○ свободно / ◐ забронировано / ● отдано */
+.card__status { position: static; margin-top: 12px; font-size: 10px; text-transform: uppercase; letter-spacing: .1em; display: inline-flex; align-items: center; gap: 6px; }
+.card__status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; border: 1px solid var(--ink); box-sizing: border-box; }
+.st-reserved::before { background: linear-gradient(90deg, var(--ink) 50%, transparent 50%); }
+.st-given::before { background: var(--ink); }
+.st-given { color: var(--muted); }
+
+/* стрелки у кнопок и ссылок */
+.btn--primary::after { content: " →"; }
+#copy-only::after { content: " ↗"; }
+.cart-btn::after { content: "↗"; margin-left: 2px; }

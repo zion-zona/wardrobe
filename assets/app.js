@@ -82,6 +82,12 @@
     }
     $("#site-subtitle").textContent = CFG.subtitle || "";
     $("#rules-list").innerHTML = (CFG.rules || []).map((r) => `<li>${esc(r)}</li>`).join("");
+    if (CFG.ticker) {
+      const t = $("#ticker"), tr = $("#ticker-track");
+      const chunk = `<span>${esc(CFG.ticker)}&nbsp;&nbsp;&nbsp;</span>`;
+      tr.innerHTML = chunk.repeat(6);
+      t.hidden = false;
+    }
     if (CFG.pickup) { const p = $("#pickup"); p.textContent = CFG.pickup; p.hidden = false; }
   }
 
@@ -144,7 +150,7 @@
     const st = STATUS[i.status] || STATUS.available;
     const liked = state.likes.has(i.id);
     const meta = [i.size && `р. ${i.size}`, i.brand].filter(Boolean).map(esc).join(" · ");
-    const statusBadge = i.status !== "available" ? `<span class="badge ${st.cls} card__status">${st.label}</span>` : "";
+    const statusLine = `<div class="card__status st-${esc(i.status || "available")}">${st.label}</div>`;
     const extra = [
       (i.defects && i.defects.length) ? `<span class="badge b-defect">Дефект</span>` : "",
       state.cart[i.id] ? `<span class="badge b-incart">В корзине</span>` : ""
@@ -153,12 +159,12 @@
       <button class="card__img" data-open="${esc(i.id)}" aria-label="Открыть: ${esc(i.title)}">
         <img src="${esc((i.photos || [])[0] || "")}" alt="${esc(i.title)}" loading="lazy">
       </button>
-      ${statusBadge}
       <button class="like" data-like="${esc(i.id)}" aria-pressed="${liked}" aria-label="В избранное">${liked ? "♥" : "♡"}</button>
       <div class="card__info">
         <button class="card__title" data-open="${esc(i.id)}">${esc(i.title)}</button>
         ${meta ? `<div class="card__meta">${meta}</div>` : ""}
         <div class="badges">${dealBadges(i, true)}${extra}</div>
+        ${statusLine}
       </div>
     </article>`;
   }
