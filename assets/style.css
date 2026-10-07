@@ -55,7 +55,8 @@ img { display: block; max-width: 100%; }
 
 /* ---------- главная ---------- */
 .intro { padding: 36px 0 8px; }
-.intro__title { font-size: clamp(36px, 9vw, 104px); line-height: .92; font-weight: 700; letter-spacing: -.045em; margin: 0 0 28px; max-width: 13ch; }
+.intro__title { font-size: clamp(34px, 8.4vw, 96px); line-height: 1.04; font-weight: 700; letter-spacing: -.02em; margin: 0 0 40px; max-width: 14ch; }
+@media (min-width: 720px) { .intro__title { margin-bottom: 56px; } }
 .intro__text { max-width: 36em; font-size: 16px; line-height: 1.5; }
 .intro__text p { margin: 0 0 12px; }
 .intro__links { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 22px; font-size: 14px; }
