@@ -429,10 +429,10 @@
   function buildMessage() {
     const sel = selected();
     const head = sel.length > 1 ? "привет! хочу забрать несколько вещей с сайта:" : "привет! хочу забрать вещь с сайта:";
-    const lines = sel.map(({ v, item }) => `— ${titleOf(item)} — ${INTENTS[effectiveIntent(item, v.intent)].msg}`);
+    const lines = sel.map(({ v, item }) => `• ${titleOf(item)} - ${INTENTS[effectiveIntent(item, v.intent)].msg}`);
     const name = (state.user.name || "").trim() || "…";
     const tg = normTg(state.user.tg) || "@…";
-    let text = `${head}\n\n${lines.join("\n")}\n\nя — ${name}, ${tg}`;
+    let text = `${head}\n\n${lines.join("\n")}\n\nя - ${name}, ${tg}`;
     const c = (state.user.comment || "").trim();
     if (c) text += `\nкомментарий: ${c}`;
     return text;
