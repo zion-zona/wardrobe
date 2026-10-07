@@ -124,7 +124,9 @@ img { display: block; max-width: 100%; }
 
 /* ---------- идеи для подгона ---------- */
 .podgon { max-width: 760px; margin-top: 28px; }
-.podgon__intro { font-size: 18px; line-height: 1.45; margin: 0 0 40px; }
+.podgon__intro { font-size: 18px; line-height: 1.45; margin: 0 0 28px; }
+.podgon__intro + .podgon__list { border-top: 1px solid var(--ink); }
+.podgon__outro { font-size: 18px; line-height: 1.45; margin: 32px 0 0; }
 .podgon__h { font-size: 13px; font-weight: 400; color: var(--muted); margin: 40px 0 0; padding-bottom: 10px; border-bottom: 1px solid var(--ink); }
 .podgon__list { list-style: none; counter-reset: p; margin: 0; padding: 0; }
 .podgon__list li { counter-increment: p; display: grid; grid-template-columns: 36px 1fr; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 16px; }

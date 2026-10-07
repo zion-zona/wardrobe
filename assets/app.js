@@ -143,8 +143,10 @@
     const p = CFG.podgon || {};
     const list = (arr) => `<ol class="podgon__list">${arr.map((x) => `<li>${esc(x)}</li>`).join("")}</ol>`;
     let html = p.intro ? `<p class="podgon__intro">${esc(p.intro)}</p>` : "";
+    if (p.items && p.items.length) html += list(p.items);
     if (p.permanent && p.permanent.length) html += `<h2 class="podgon__h">постоянные направления</h2>${list(p.permanent)}`;
     if (p.wishes && p.wishes.length) html += `<h2 class="podgon__h">актуальные хотелки</h2>${list(p.wishes)}`;
+    if (p.outro) html += `<p class="podgon__outro">${esc(p.outro)}</p>`;
     $("#podgon-body").innerHTML = html;
   }
 
