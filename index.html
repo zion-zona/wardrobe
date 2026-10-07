@@ -2,90 +2,121 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Шкаф на раздачу</title>
-  <meta name="description" content="Одежда, обувь, сумки и аксессуары — дарю, меняю, продаю.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ОДНА ВЕЩЬ ТЕБЕ ИЛИ ДВЕ ДРУГОМУ</title>
+  <meta name="description" content="это экспериментальный проект по осознанному потреблению. здесь я собрала вещи, которые хочу передать в добрые или не очень руки.">
+  <meta property="og:title" content="ОДНА ВЕЩЬ ТЕБЕ ИЛИ ДВЕ ДРУГОМУ">
+  <meta property="og:description" content="это экспериментальный проект по осознанному потреблению. здесь я собрала вещи, которые хочу передать в добрые или не очень руки.">
   <link rel="stylesheet" href="assets/style.css">
   <script src="config.js"></script>
 </head>
 <body>
   <div class="ticker" id="ticker" hidden aria-hidden="true"><div class="ticker__track" id="ticker-track"></div></div>
+
   <header class="top">
     <div class="top__inner">
-      <a class="logo" href="./" id="site-title">Шкаф на раздачу</a>
-      <button class="cart-btn" id="cart-open" aria-label="Открыть корзину">
-        Корзина <span class="cart-btn__count" id="cart-count">0</span>
-      </button>
+      <a class="logo" href="#" id="logo">ОДНА ВЕЩЬ ТЕБЕ ИЛИ ДВЕ ДРУГОМУ</a>
+      <nav class="top__nav" aria-label="разделы">
+        <a class="top__link hide-sm" href="#podgon">идеи для подгона</a>
+        <a class="top__link hide-sm" href="#archive">архив</a>
+        <button class="top__link" id="mine-open">моё <span class="count" id="mine-count">0</span></button>
+      </nav>
     </div>
   </header>
 
   <main class="wrap">
-    <section class="intro">
-      <h1 id="site-heading">Шкаф на раздачу</h1>
-      <p class="intro__sub" id="site-subtitle"></p>
-      <details class="rules" open>
-        <summary>Как это работает</summary>
-        <ol id="rules-list"></ol>
-        <p class="rules__pickup" id="pickup" hidden></p>
-      </details>
+    <!-- каталог -->
+    <section id="view-catalog">
+      <section class="intro">
+        <h1 class="intro__title" id="site-heading">ОДНА ВЕЩЬ ТЕБЕ ИЛИ ДВЕ ДРУГОМУ</h1>
+        <div class="intro__text" id="intro-text"></div>
+        <div class="intro__links">
+          <button class="link" id="to-items">к вещам ↓</button>
+          <a class="link" href="#podgon">идеи для подгона →</a>
+          <a class="link" href="#archive">архив →</a>
+        </div>
+        <a class="given" href="#archive" id="given-counter" hidden></a>
+      </section>
+
+      <h2 class="section-title" id="items-title">вещи</h2>
+      <section class="filters" aria-label="фильтры">
+        <div class="chips" id="cat-chips" role="tablist" aria-label="категории"></div>
+        <div class="filters__row">
+          <label class="select">
+            <span>условие</span>
+            <select id="f-deal">
+              <option value="">любое</option>
+              <option value="give">отдаю</option>
+              <option value="donate">донат от</option>
+              <option value="price">цена</option>
+            </select>
+          </label>
+          <label class="toggle"><input type="checkbox" id="f-free"> только доступные</label>
+          <label class="toggle"><input type="checkbox" id="f-liked"> ♡ избранное</label>
+        </div>
+      </section>
+      <p class="empty" id="empty" hidden></p>
+      <section class="grid" id="grid" aria-live="polite"></section>
     </section>
 
-    <h2 class="section-title" id="items-title">Вещи</h2>
-    <section class="filters" aria-label="Фильтры">
-      <div class="chips" id="cat-chips" role="tablist"></div>
-      <div class="filters__row">
-        <label class="select">
-          <span>Условия</span>
-          <select id="f-deal">
-            <option value="">Все</option>
-            <option value="gift">Дарю</option>
-            <option value="swap">Обмен</option>
-            <option value="donate">Донат</option>
-            <option value="price">С ценой</option>
-          </select>
-        </label>
-        <label class="select">
-          <span>Размер</span>
-          <select id="f-size"><option value="">Все</option></select>
-        </label>
-        <label class="toggle"><input type="checkbox" id="f-free"> Только свободные</label>
-        <label class="toggle"><input type="checkbox" id="f-liked"> ♡ Избранное</label>
-      </div>
+    <!-- архив -->
+    <section id="view-archive" hidden>
+      <a class="back" href="#">← к вещам</a>
+      <h1 class="section-title section-title--page">архив</h1>
+      <p class="view-sub" id="archive-sub"></p>
+      <p class="empty" id="archive-empty" hidden>пока пусто</p>
+      <section class="grid" id="archive-grid"></section>
     </section>
 
-    <p class="empty" id="empty" hidden>Под эти фильтры ничего нет.</p>
-    <section class="grid" id="grid" aria-live="polite"></section>
+    <!-- идеи для подгона -->
+    <section id="view-podgon" hidden>
+      <a class="back" href="#">← к вещам</a>
+      <h1 class="section-title section-title--page">идеи для подгона</h1>
+      <div class="podgon" id="podgon-body"></div>
+    </section>
   </main>
 
+  <footer class="foot">
+    <ul class="foot__rules" id="foot-rules"></ul>
+    <a class="link" id="foot-tg" href="#" target="_blank" rel="noopener"></a>
+  </footer>
+
+  <!-- карточка вещи -->
   <dialog class="modal" id="item-modal" aria-labelledby="m-title">
-    <button class="modal__close" data-close aria-label="Закрыть">×</button>
+    <button class="modal__close" data-close aria-label="закрыть">×</button>
     <div class="modal__body" id="item-body"></div>
   </dialog>
 
-  <dialog class="drawer" id="cart-modal" aria-labelledby="cart-title">
-    <button class="modal__close" data-close aria-label="Закрыть">×</button>
+  <!-- моё -->
+  <dialog class="drawer" id="mine-modal" aria-labelledby="mine-title">
+    <button class="modal__close" data-close aria-label="закрыть">×</button>
     <div class="drawer__body">
-      <h2 id="cart-title">Корзина</h2>
-      <div id="cart-list"></div>
-      <div id="cart-form" hidden>
-        <label class="field">Твоё имя
-          <input type="text" id="u-name" autocomplete="name" placeholder="Как тебя подписать">
+      <h2 class="drawer__title" id="mine-title">моё</h2>
+      <p class="mine-empty" id="mine-empty">пока ничего. возможно, тебе действительно ничего не нужно — и это даже хорошо</p>
+      <div id="mine-list"></div>
+      <p class="field-error" id="sel-error" hidden>выбери хотя бы одну вещь, иначе мне нечего отдавать</p>
+      <button class="btn btn--primary" id="build">собрать заявку</button>
+
+      <div class="req" id="req" hidden>
+        <label class="field">имя
+          <input type="text" id="u-name" autocomplete="given-name">
         </label>
-        <label class="field">Как связаться (необязательно)
-          <input type="text" id="u-contact" placeholder="@ник в Telegram или телефон">
+        <p class="field-error" id="name-error" hidden>напиши имя</p>
+        <label class="field">telegram
+          <input type="text" id="u-tg" placeholder="@username" autocapitalize="off" autocorrect="off" spellcheck="false">
         </label>
-        <p class="field-error" id="cart-error" hidden>Напиши имя, чтобы я знала, от кого заявка.</p>
-        <p class="hint">Текст заявки:</p>
-        <pre class="preview" id="cart-preview"></pre>
-        <div class="drawer__actions">
-          <button class="btn btn--primary" id="send-tg" hidden>Скопировать и открыть Telegram</button>
-          <button class="btn" id="copy-only">Скопировать текст</button>
-        </div>
-        <p class="hint" id="copy-status" role="status"></p>
-        <p class="hint" id="no-contact" hidden>Контакт для заявок пока не указан. Скопируй текст и отправь хозяйке шкафа лично.</p>
+        <p class="field-error" id="tg-error" hidden>напиши свой telegram</p>
+        <label class="field"><span>комментарий <span class="field__opt">· необязательно</span></span>
+          <input type="text" id="u-comment">
+        </label>
+        <pre class="preview" id="preview"></pre>
+        <a class="btn btn--primary" id="send" href="#" target="_blank" rel="noopener">скопировать и написать в telegram</a>
+        <ul class="hint-list" id="mine-rules"></ul>
       </div>
     </div>
   </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script src="assets/app.js"></script>
 </body>

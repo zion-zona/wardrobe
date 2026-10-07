@@ -2,185 +2,245 @@
   "use strict";
 
   const CFG = window.WARDROBE_CONFIG || {};
+  const TG = String(CFG.telegram || "").replace(/^@/, "").trim();
+
   const CATS = [
-    { id: "", label: "Все" },
-    { id: "clothes", label: "Одежда" },
-    { id: "shoes", label: "Обувь" },
-    { id: "bags", label: "Сумки" },
-    { id: "accessories", label: "Аксессуары" }
+    ["", "всё"], ["clothes", "одежда"], ["shoes", "обувь"], ["bags", "сумки"],
+    ["accessories", "аксессуары"], ["jewelry", "украшения"], ["books", "книги"],
+    ["beauty", "косметика и уход"], ["toys", "игрушки"], ["home", "дом"], ["other", "другое"]
   ];
-  const DEAL = {
-    gift: { label: "Дарю", cls: "b-gift" },
-    swap: { label: "Обмен", cls: "b-swap" },
-    donate: { label: "Донат — сколько не жалко", short: "Донат", cls: "b-donate" },
-    price: { label: "Цена", cls: "b-price" }
-  };
-  const COND = {
-    new_tag: "Новое с биркой",
-    new: "Новое без бирки",
-    excellent: "Отличное",
-    good: "Хорошее",
-    fair: "Ношеное"
-  };
-  const STATUS = {
-    available: { label: "Свободно", cls: "" },
-    reserved: { label: "Забронировано", cls: "b-reserved" },
-    given: { label: "Отдано", cls: "b-given" }
-  };
+  const CAT = Object.fromEntries(CATS);
   const INTENTS = {
-    maybe: { label: "Возможно", hint: "просто интересно, вещь остаётся свободной" },
-    try: { label: "Возьму, если подойдёт вживую", hint: "мягкая бронь до примерки" },
-    sure: { label: "Беру точно", hint: "твёрдая бронь" }
+    try: { label: "хочу примерить / посмотреть вживую", msg: "хочу примерить" },
+    take: { label: "хочу забрать", msg: "хочу забрать" },
+    queue: { label: "встать в очередь", msg: "встану в очередь" }
+  };
+  const PHOTO_NOTE = {
+    ai: "ai-фото — цвет, посадка и детали могут отличаться",
+    model: "фото этой модели из интернета",
+    defect: "дефект"
+  };
+  const T = {
+    added: "добавлено в моё ♡",
+    queued: "ты в очереди ♡",
+    removed: "передумать тоже нормально",
+    copied: "заявка скопирована ♡",
+    copyFail: "не получилось скопировать :( попробуй ещё раз",
+    reserved: "эта вещь уже забронирована :( но можно встать в очередь",
+    given: "эта вещь уже в других руках :(",
+    none: "ничего не нашлось :(",
+    noFree: "свободных вещей здесь пока нет :(",
+    error: "что-то пошло не так :(",
+    market: "примерная стоимость — ориентир по вторичному рынку, а не цена продажи"
   };
 
-  // ---------- storage (может быть недоступно) ----------
+  // ---------- хранилище в браузере (может быть недоступно) ----------
   const store = {
-    get(key, fallback) {
-      try { const v = localStorage.getItem("wardrobe:" + key); return v ? JSON.parse(v) : fallback; }
-      catch (e) { return fallback; }
-    },
-    set(key, value) {
-      try { localStorage.setItem("wardrobe:" + key, JSON.stringify(value)); } catch (e) { /* ignore */ }
-    }
+    get(k, d) { try { const v = localStorage.getItem("ovtd:" + k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
+    set(k, v) { try { localStorage.setItem("ovtd:" + k, JSON.stringify(v)); } catch (e) { /* ignore */ } }
   };
 
   const state = {
     items: [],
-    cat: "",
-    deal: "",
-    size: "",
-    onlyFree: false,
-    onlyLiked: false,
+    cat: "", deal: "", onlyFree: false, onlyLiked: false,
     likes: new Set(store.get("likes", [])),
-    cart: store.get("cart", {}), // id -> intent
-    user: store.get("user", { name: "", contact: "" })
+    mine: store.get("mine", {}),            // id -> { intent, on }
+    user: store.get("user", { name: "", tg: "", comment: "" })
   };
 
-  const $ = (s, root) => (root || document).querySelector(s);
+  const $ = (s, r) => (r || document).querySelector(s);
   const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const fmtPrice = (n) => Number(n).toLocaleString("ru-RU") + " ₽";
+  const rub = (n) => Number(n).toLocaleString("ru-RU") + " ₽";
+  const byId = (id) => state.items.find((i) => i.id === id);
+  const saveLikes = () => store.set("likes", Array.from(state.likes));
+  const saveMine = () => { store.set("mine", state.mine); updateMineCount(); };
 
-  function dealBadges(item, short) {
-    return (item.deal || []).map((d) => {
-      const def = DEAL[d];
-      if (!def) return "";
-      let text = short && def.short ? def.short : def.label;
-      if (d === "price") text = item.price != null ? fmtPrice(item.price) : "Цена не указана";
-      return `<span class="badge ${def.cls}">${esc(text)}</span>`;
-    }).join("");
+  // ---------- toast ----------
+  let toastTimer;
+  function toast(text) {
+    const el = $("#toast");
+    const host = document.querySelector("dialog[open]:last-of-type") || document.body;
+    const open = Array.from(document.querySelectorAll("dialog[open]"));
+    (open.length ? open[open.length - 1] : host).appendChild(el);
+    el.textContent = text;
+    el.classList.add("is-on");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => el.classList.remove("is-on"), 2400);
   }
 
-  function saveLikes() { store.set("likes", Array.from(state.likes)); }
-  function saveCart() { store.set("cart", state.cart); updateCartCount(); }
+  // ---------- данные вещи ----------
+  function norm(i) {
+    const photos = (i.photos || []).map((p) => (typeof p === "string" ? { src: p, kind: "real" } : p)).filter((p) => p && p.src);
+    return Object.assign({}, i, {
+      photos,
+      condition: i.condition || {},
+      deal: i.deal || { mode: "give" },
+      defects: i.defects || [],
+      status: i.status || "available"
+    });
+  }
+  function titleOf(i) {
+    if (i.title) return i.title;
+    return [i.brand, i.model || i.type].filter(Boolean).join(" · ") || "без названия";
+  }
+  function condText(i) {
+    const c = i.condition;
+    return [c.label, c.score != null && c.score !== "" ? c.score + "/10" : ""].filter(Boolean).join(" · ");
+  }
+  function condRank(i) {
+    const c = i.condition, s = Number(c.score) || 0;
+    if (c.label === "новая") return 2000 + s;
+    if (c.label === "как новая") return 1000 + s;
+    return s * 10;
+  }
+  function dealShort(i) {
+    const d = i.deal;
+    if (d.mode === "donate") return "донат от " + rub(d.amount);
+    if (d.mode === "price") return rub(d.amount);
+    return "отдаю";
+  }
+  const PODGON_LINK = `<a class="link" href="#podgon">идеи для подгона →</a>`;
+  function dealSub(i) {
+    if (i.deal.mode === "give") return `донат или подгон по желанию · ${PODGON_LINK}`;
+    if (i.deal.mode === "donate") return `или эквивалентный подгон · ${PODGON_LINK}`;
+    return "";
+  }
+  function effectiveIntent(item, saved) {
+    if (item.status === "reserved") return "queue";
+    if (!saved || saved === "queue") return "take";
+    return saved;
+  }
 
-  // ---------- init ----------
+  // ---------- оформление страницы из config ----------
   function applyConfig() {
     if (CFG.title) {
       document.title = CFG.title;
-      $("#site-title").textContent = CFG.title;
+      $("#logo").textContent = CFG.title;
       $("#site-heading").textContent = CFG.title;
     }
-    $("#site-subtitle").textContent = CFG.subtitle || "";
-    $("#rules-list").innerHTML = (CFG.rules || []).map((r) => `<li>${esc(r)}</li>`).join("");
+    $("#intro-text").innerHTML = (CFG.intro || []).map((p) => `<p>${esc(p)}</p>`).join("");
     if (CFG.ticker) {
-      const t = $("#ticker"), tr = $("#ticker-track");
-      const chunk = `<span>${esc(CFG.ticker)}&nbsp;&nbsp;&nbsp;</span>`;
-      tr.innerHTML = chunk.repeat(6);
-      t.hidden = false;
+      $("#ticker-track").innerHTML = `<span>${esc(CFG.ticker)}&nbsp;</span>`.repeat(12);
+      $("#ticker").hidden = false;
     }
-    if (CFG.pickup) { const p = $("#pickup"); p.textContent = CFG.pickup; p.hidden = false; }
+    const rules = (CFG.handover || []).map((r) => `<li>${esc(r)}</li>`).join("");
+    $("#foot-rules").innerHTML = rules;
+    $("#mine-rules").innerHTML = rules;
+    if (TG) {
+      $("#foot-tg").href = "https://t.me/" + encodeURIComponent(TG);
+      $("#foot-tg").textContent = "telegram @" + TG + " ↗";
+      $("#send").href = "https://t.me/" + encodeURIComponent(TG);
+    } else {
+      $("#foot-tg").hidden = true;
+    }
+    renderPodgon();
   }
 
-  async function loadItems() {
+  function renderPodgon() {
+    const p = CFG.podgon || {};
+    const list = (arr) => `<ol class="podgon__list">${arr.map((x) => `<li>${esc(x)}</li>`).join("")}</ol>`;
+    let html = p.intro ? `<p class="podgon__intro">${esc(p.intro)}</p>` : "";
+    if (p.permanent && p.permanent.length) html += `<h2 class="podgon__h">постоянные направления</h2>${list(p.permanent)}`;
+    if (p.wishes && p.wishes.length) html += `<h2 class="podgon__h">актуальные хотелки</h2>${list(p.wishes)}`;
+    $("#podgon-body").innerHTML = html;
+  }
+
+  // ---------- загрузка ----------
+  async function load() {
     try {
       const res = await fetch("data/items.json", { cache: "no-store" });
       if (!res.ok) throw new Error(res.status);
-      const items = await res.json();
-      state.items = items.slice().sort((a, b) => {
-        const ga = a.status === "given" ? 1 : 0, gb = b.status === "given" ? 1 : 0;
-        if (ga !== gb) return ga - gb;
-        return String(b.added || "").localeCompare(String(a.added || "")) || String(b.id).localeCompare(String(a.id));
-      });
+      const raw = await res.json();
+      state.items = raw.map(norm).sort((a, b) =>
+        condRank(b) - condRank(a) ||
+        String(b.added || "").localeCompare(String(a.added || "")) ||
+        String(a.id).localeCompare(String(b.id)));
     } catch (e) {
-      $("#grid").innerHTML = `<p class="empty">Не получилось загрузить вещи. Обнови страницу.</p>`;
+      $("#empty").textContent = T.error;
+      $("#empty").hidden = false;
       return;
     }
-    // убрать из корзины вещи, которых больше нет
-    Object.keys(state.cart).forEach((id) => { if (!state.items.find((i) => i.id === id)) delete state.cart[id]; });
-    saveCart();
-    buildFilters();
+    Object.keys(state.mine).forEach((id) => { if (!byId(id)) delete state.mine[id]; });
+    saveMine();
+    buildChips();
     render();
-    openFromHash();
+    renderArchive();
+    route();
   }
 
-  function buildFilters() {
+  // ---------- каталог ----------
+  function buildChips() {
     const chips = $("#cat-chips");
-    chips.innerHTML = CATS.map((c) => {
-      const n = c.id ? state.items.filter((i) => i.category === c.id).length : state.items.length;
-      if (c.id && !n) return "";
-      return `<button class="chip" role="tab" data-cat="${c.id}" aria-selected="${state.cat === c.id}">${c.label}<small>${n}</small></button>`;
-    }).join("");
-    chips.onclick = (e) => {
+    chips.innerHTML = CATS.map(([id, label]) =>
+      `<button class="chip" role="tab" data-cat="${id}" aria-selected="${state.cat === id}">${label}</button>`).join("");
+    chips.addEventListener("click", (e) => {
       const b = e.target.closest("[data-cat]");
       if (!b) return;
       state.cat = b.dataset.cat;
       chips.querySelectorAll(".chip").forEach((x) => x.setAttribute("aria-selected", x === b));
       render();
-    };
-    const sizes = Array.from(new Set(state.items.map((i) => i.size).filter(Boolean))).sort((a, b) => String(a).localeCompare(String(b), "ru", { numeric: true }));
-    $("#f-size").innerHTML = `<option value="">Все</option>` + sizes.map((s) => `<option>${esc(s)}</option>`).join("");
+    });
     $("#f-deal").onchange = (e) => { state.deal = e.target.value; render(); };
-    $("#f-size").onchange = (e) => { state.size = e.target.value; render(); };
     $("#f-free").onchange = (e) => { state.onlyFree = e.target.checked; render(); };
     $("#f-liked").onchange = (e) => { state.onlyLiked = e.target.checked; render(); };
   }
 
-  function visibleItems() {
-    return state.items.filter((i) =>
+  function catalog() { return state.items.filter((i) => i.status !== "archive"); }
+
+  function render() {
+    const base = catalog().filter((i) =>
       (!state.cat || i.category === state.cat) &&
-      (!state.deal || (i.deal || []).includes(state.deal)) &&
-      (!state.size || i.size === state.size) &&
-      (!state.onlyFree || i.status === "available") &&
-      (!state.onlyLiked || state.likes.has(i.id))
-    );
+      (!state.deal || i.deal.mode === state.deal) &&
+      (!state.onlyLiked || state.likes.has(i.id)));
+    const list = state.onlyFree ? base.filter((i) => i.status === "available") : base;
+    $("#grid").innerHTML = list.map(cardHTML).join("");
+    const empty = $("#empty");
+    empty.hidden = list.length > 0;
+    empty.textContent = state.onlyFree && base.length ? T.noFree : T.none;
+
+    const given = state.items.filter((i) => i.status === "archive").length;
+    const gc = $("#given-counter");
+    gc.hidden = given === 0;
+    gc.textContent = `уже в других руках — ${given}`;
   }
 
-  // ---------- grid ----------
   function cardHTML(i) {
-    const st = STATUS[i.status] || STATUS.available;
+    const archived = i.status === "archive";
     const liked = state.likes.has(i.id);
-    const meta = [i.size && `р. ${i.size}`, i.brand].filter(Boolean).map(esc).join(" · ");
-    const statusLine = `<div class="card__status st-${esc(i.status || "available")}">${st.label}</div>`;
-    const extra = [
-      (i.defects && i.defects.length) ? `<span class="badge b-defect">Дефект</span>` : "",
-      state.cart[i.id] ? `<span class="badge b-incart">В корзине</span>` : ""
-    ].join("");
-    return `<article class="card ${i.status === "given" ? "is-given" : ""}">
-      <button class="card__img" data-open="${esc(i.id)}" aria-label="Открыть: ${esc(i.title)}">
-        <img src="${esc((i.photos || [])[0] || "")}" alt="${esc(i.title)}" loading="lazy">
+    const meta = [i.size, i.defects.length ? "есть дефект" : ""].filter(Boolean).map(esc).join(" · ");
+    const status = i.status === "reserved" ? `<div class="card__status st-reserved">забронировано</div>`
+      : archived ? `<div class="card__status st-archive">уже в других руках</div>` : "";
+    const price = i.deal.mode === "price";
+    return `<article class="card${archived ? " is-archived" : ""}">
+      <button class="card__img" data-open="${esc(i.id)}" aria-label="открыть: ${esc(titleOf(i))}">
+        <img src="${esc((i.photos[0] || {}).src || "")}" alt="${esc(titleOf(i))}" loading="lazy">
       </button>
-      <button class="like" data-like="${esc(i.id)}" aria-pressed="${liked}" aria-label="В избранное">${liked ? "♥" : "♡"}</button>
+      ${archived ? "" : `<button class="like" data-like="${esc(i.id)}" aria-pressed="${liked}" aria-label="нравится">${liked ? "♥" : "♡"}</button>`}
       <div class="card__info">
-        <button class="card__title" data-open="${esc(i.id)}">${esc(i.title)}</button>
+        <button class="card__title" data-open="${esc(i.id)}">${esc(titleOf(i))}</button>
         ${meta ? `<div class="card__meta">${meta}</div>` : ""}
-        <div class="badges">${dealBadges(i, true)}${extra}</div>
-        ${statusLine}
+        <div class="card__deal${price ? " is-price" : ""}">${esc(dealShort(i))}</div>
+        ${status}
       </div>
     </article>`;
   }
 
-  function render() {
-    const list = visibleItems();
-    $("#grid").innerHTML = list.map(cardHTML).join("");
-    $("#empty").hidden = list.length > 0;
+  function renderArchive() {
+    const list = state.items.filter((i) => i.status === "archive")
+      .sort((a, b) => String(b.added || "").localeCompare(String(a.added || "")));
+    $("#archive-grid").innerHTML = list.map(cardHTML).join("");
+    $("#archive-empty").hidden = list.length > 0;
+    $("#archive-sub").textContent = list.length ? `уже в других руках — ${list.length}` : "";
   }
 
-  $("#grid").addEventListener("click", (e) => {
+  function onGridClick(e) {
     const like = e.target.closest("[data-like]");
     if (like) { toggleLike(like.dataset.like); return; }
     const open = e.target.closest("[data-open]");
     if (open) openItem(open.dataset.open);
-  });
+  }
+  $("#grid").addEventListener("click", onGridClick);
+  $("#archive-grid").addEventListener("click", onGridClick);
 
   function toggleLike(id) {
     if (state.likes.has(id)) state.likes.delete(id); else state.likes.add(id);
@@ -189,170 +249,258 @@
     if ($("#item-modal").open && currentId === id) renderItem(id);
   }
 
-  // ---------- item modal ----------
+  // ---------- карточка вещи ----------
   let currentId = null;
+  let viewHash = "";
+
   function openItem(id) {
-    const item = state.items.find((i) => i.id === id);
+    const item = byId(id);
     if (!item) return;
     currentId = id;
     renderItem(id);
     const m = $("#item-modal");
     if (!m.open) m.showModal();
-    history.replaceState(null, "", "#item-" + id);
+    m.scrollTop = 0;
+    history.replaceState(null, "", "#item-" + encodeURIComponent(id));
   }
 
   function renderItem(id) {
-    const i = state.items.find((x) => x.id === id);
-    const st = STATUS[i.status] || STATUS.available;
-    const photos = i.photos && i.photos.length ? i.photos : [""];
-    const liked = state.likes.has(i.id);
-    const inCart = state.cart[i.id];
-    const specs = [
-      ["Тип", i.type], ["Бренд", i.brand], ["Размер", i.size], ["Цвет", i.color], ["Сезон", i.season],
-      ["Состояние", COND[i.condition] || i.condition]
-    ].concat(Object.entries(i.measurements || {}))
-      .filter(([, v]) => v)
-      .map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("");
-    const defects = (i.defects && i.defects.length)
-      ? `<div class="defect-box"><strong>Дефект</strong><ul>${i.defects.map((d) => `<li>${esc(d)}</li>`).join("")}</ul></div>` : "";
-    const given = i.status === "given";
-    const intents = given ? "" : `<fieldset class="intents">
-        <legend>${i.status === "reserved" ? "Вещь забронирована — можно встать в очередь" : "Насколько хочешь?"}</legend>
-        ${Object.entries(INTENTS).map(([k, v]) => `<label class="intent"><input type="radio" name="intent" value="${k}" ${(inCart || "try") === k ? "checked" : ""}><span>${v.label}<small>${v.hint}</small></span></label>`).join("")}
-      </fieldset>`;
+    const i = byId(id);
+    const mine = state.mine[id];
+    const liked = state.likes.has(id);
+    const head = [CAT[i.category], i.type].filter(Boolean).map(esc).join(" · ");
+
+    const rows = [];
+    if (i.brand) rows.push(["бренд", i.brand]);
+    if (i.model) rows.push(["модель", i.model]);
+    if (i.size) rows.push(["размер", [i.size, i.fit].filter(Boolean).join(" · ")]);
+    else if (i.fit) rows.push(["посадка", i.fit]);
+    if (i.author) rows.push(["автор", i.author]);
+    if (i.publisher) rows.push(["издательство", i.publisher]);
+    if (i.opened === true) rows.push(["упаковка", "открыта"]);
+    if (i.opened === false) rows.push(["упаковка", "не открыта"]);
+    if (condText(i)) rows.push(["состояние", condText(i)]);
+    const specs = rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("");
+
+    const defects = i.defects.map((d) => `<p class="defect">есть дефект → ${esc(d)}</p>`).join("");
+    const market = i.market ? `<div class="market">примерная стоимость сейчас ≈ ${esc(rub(i.market))}
+        <button class="market__q" aria-expanded="false" aria-label="что это">?</button>
+        <span class="market__note" hidden>${esc(T.market)}</span></div>` : "";
+
+    const photos = i.photos.length ? i.photos : [{ src: "", kind: "real" }];
+    const slides = photos.map((p, n) => `<figure class="slide">
+        <img src="${esc(p.src)}" alt="${esc(titleOf(i))}, фото ${n + 1}" ${n ? 'loading="lazy"' : ""}>
+        ${PHOTO_NOTE[p.kind] ? `<figcaption class="slide__note${p.kind === "defect" ? " is-defect" : ""}">${PHOTO_NOTE[p.kind]}</figcaption>` : ""}
+      </figure>`).join("");
+    const many = photos.length > 1;
+
+    let actions = "";
+    const likeBtn = `<button class="btn btn--icon" id="m-like" aria-pressed="${liked}" aria-label="нравится">${liked ? "♥" : "♡"}</button>`;
+    if (i.status === "archive") {
+      actions = `<p class="state-msg">${T.given}</p>`;
+    } else if (i.status === "reserved") {
+      actions = `<p class="state-msg">${T.reserved}</p>` + (mine
+        ? `<p class="ok-msg">${T.queued}</p><div class="row-actions"><button class="btn btn--ghost" id="m-remove">убрать из моего</button>${likeBtn}</div>`
+        : `<div class="row-actions"><button class="btn btn--primary" id="m-queue">встать в очередь</button>${likeBtn}</div>`);
+    } else {
+      const cur = mine ? effectiveIntent(i, mine.intent) : "try";
+      actions = `<fieldset class="intents"><legend class="sr-only">что хочешь</legend>
+          ${["try", "take"].map((k) => `<label class="intent"><input type="radio" name="intent" value="${k}" ${cur === k ? "checked" : ""}><span>${INTENTS[k].label}</span></label>`).join("")}
+        </fieldset>
+        <div class="row-actions">
+          ${mine ? `<button class="btn btn--ghost" id="m-remove">убрать из моего</button>` : `<button class="btn btn--primary" id="m-add">добавить в моё</button>`}
+          ${likeBtn}
+        </div>`;
+    }
+
     $("#item-body").innerHTML = `
       <div class="gallery">
-        <div class="gallery__main"><img id="g-main" src="${esc(photos[0])}" alt="${esc(i.title)}"></div>
-        ${photos.length > 1 ? `<div class="gallery__thumbs">${photos.map((p, n) => `<button class="thumb" data-src="${esc(p)}" aria-current="${n === 0}" aria-label="Фото ${n + 1}"><img src="${esc(p)}" alt=""></button>`).join("")}</div>` : ""}
+        <div class="gallery__track" id="g-track">${slides}</div>
+        ${many ? `<div class="gallery__bar">
+          <button class="gallery__nav" data-dir="-1" aria-label="предыдущее фото">←</button>
+          <span id="g-count">1 / ${photos.length}</span>
+          <button class="gallery__nav" data-dir="1" aria-label="следующее фото">→</button>
+        </div>` : ""}
       </div>
       <div class="details">
-        <div>
-          <div class="details__num">№${esc(i.id)}</div>
-          <h2 id="m-title">${esc(i.title)}</h2>
+        <div class="details__head">${head}</div>
+        <h2 class="details__title" id="m-title">${esc(titleOf(i))}</h2>
+        <div class="deal">
+          <div class="deal__main">${esc(dealShort(i))}</div>
+          ${dealSub(i) ? `<div class="deal__sub">${dealSub(i)}</div>` : ""}
         </div>
-        <div class="badges">${dealBadges(i, false)}${i.status !== "available" ? `<span class="badge ${st.cls}">${st.label}</span>` : ""}</div>
         ${specs ? `<dl class="specs">${specs}</dl>` : ""}
         ${defects}
-        ${i.description ? `<p class="desc">${esc(i.description)}</p>` : ""}
-        ${intents}
-        <div class="row-actions">
-          ${given ? "" : `<button class="btn btn--primary" id="m-cart">${inCart ? "Обновить в корзине" : "В корзину"}</button>`}
-          ${inCart ? `<button class="btn btn--ghost" id="m-remove">Убрать</button>` : ""}
-          <button class="btn btn--ghost" id="m-like" aria-pressed="${liked}">${liked ? "♥ В избранном" : "♡ В избранное"}</button>
-        </div>
+        ${market}
+        ${i.comment ? `<p class="comment">${esc(i.comment)}</p>` : ""}
+        <div class="actions">${actions}</div>
       </div>`;
+
     const body = $("#item-body");
-    body.querySelectorAll(".thumb").forEach((t) => t.addEventListener("click", () => {
-      $("#g-main").src = t.dataset.src;
-      body.querySelectorAll(".thumb").forEach((x) => x.setAttribute("aria-current", x === t));
+    const track = $("#g-track");
+    if (many) {
+      track.addEventListener("scroll", () => {
+        const n = Math.round(track.scrollLeft / track.clientWidth) + 1;
+        $("#g-count").textContent = `${n} / ${photos.length}`;
+      }, { passive: true });
+      body.querySelectorAll(".gallery__nav").forEach((b) => b.addEventListener("click", () =>
+        track.scrollBy({ left: track.clientWidth * Number(b.dataset.dir), behavior: "smooth" })));
+    }
+    const q = body.querySelector(".market__q");
+    if (q) q.addEventListener("click", () => {
+      const note = body.querySelector(".market__note");
+      note.hidden = !note.hidden;
+      q.setAttribute("aria-expanded", String(!note.hidden));
+    });
+    const like = $("#m-like");
+    if (like) like.addEventListener("click", () => toggleLike(id));
+    body.querySelectorAll("input[name=intent]").forEach((r) => r.addEventListener("change", () => {
+      if (state.mine[id]) { state.mine[id].intent = r.value; saveMine(); }
     }));
-    const add = $("#m-cart");
+    const add = $("#m-add");
     if (add) add.addEventListener("click", () => {
       const v = (body.querySelector("input[name=intent]:checked") || {}).value || "try";
-      state.cart[i.id] = v; saveCart(); render(); renderItem(i.id);
+      state.mine[id] = { intent: v, on: true };
+      saveMine(); toast(T.added); renderItem(id);
+    });
+    const queue = $("#m-queue");
+    if (queue) queue.addEventListener("click", () => {
+      state.mine[id] = { intent: "queue", on: true };
+      saveMine(); toast(T.queued); renderItem(id);
     });
     const rm = $("#m-remove");
-    if (rm) rm.addEventListener("click", () => { delete state.cart[i.id]; saveCart(); render(); renderItem(i.id); });
-    $("#m-like").addEventListener("click", () => toggleLike(i.id));
+    if (rm) rm.addEventListener("click", () => {
+      delete state.mine[id];
+      saveMine(); toast(T.removed); renderItem(id);
+    });
   }
 
-  function openFromHash() {
-    const m = location.hash.match(/^#item-(.+)$/);
-    if (m) openItem(decodeURIComponent(m[1]));
+  // ---------- моё ----------
+  function mineEntries() {
+    return Object.entries(state.mine).map(([id, v]) => ({ id, v, item: byId(id) })).filter((x) => x.item);
+  }
+  function selected() {
+    return mineEntries().filter((x) => x.v.on !== false && x.item.status !== "archive");
+  }
+  function updateMineCount() {
+    $("#mine-count").textContent = mineEntries().filter((x) => x.item.status !== "archive").length;
   }
 
-  // ---------- cart ----------
-  function updateCartCount() { $("#cart-count").textContent = Object.keys(state.cart).length; }
-
-  function cartMessage() {
-    const lines = Object.entries(state.cart).map(([id, intent]) => {
-      const i = state.items.find((x) => x.id === id);
-      if (!i) return null;
-      return `• №${i.id} ${i.title}${i.size ? ` (р. ${i.size})` : ""} — ${INTENTS[intent].label.toLowerCase()}`;
-    }).filter(Boolean);
-    const name = state.user.name.trim() || "…";
-    let text = `Привет! Это ${name}. Хочу с сайта:\n${lines.join("\n")}`;
-    if (state.user.contact.trim()) text += `\nСвязь: ${state.user.contact.trim()}`;
-    return text;
-  }
-
-  function renderCart() {
-    const ids = Object.keys(state.cart);
-    const list = $("#cart-list");
-    if (!ids.length) {
-      list.innerHTML = `<p class="cart-empty">Пока пусто. Открой вещь и нажми «В корзину».</p>`;
-      $("#cart-form").hidden = true;
-      return;
-    }
-    list.innerHTML = ids.map((id) => {
-      const i = state.items.find((x) => x.id === id);
-      if (!i) return "";
-      return `<div class="cart-item">
-        <img src="${esc((i.photos || [])[0] || "")}" alt="">
-        <div>
-          <div class="cart-item__title">${esc(i.title)}</div>
-          <select data-intent="${esc(id)}" aria-label="Насколько хочешь">${Object.entries(INTENTS).map(([k, v]) => `<option value="${k}" ${state.cart[id] === k ? "selected" : ""}>${v.label}</option>`).join("")}</select>
+  function renderMine() {
+    const list = mineEntries();
+    $("#mine-empty").hidden = list.length > 0;
+    $("#build").hidden = list.length === 0 || !$("#req").hidden;
+    if (!list.length) $("#req").hidden = true;
+    $("#mine-list").innerHTML = list.map(({ id, v, item }) => {
+      const archived = item.status === "archive";
+      const intent = effectiveIntent(item, v.intent);
+      const opts = item.status === "reserved" ? ["queue"] : ["try", "take"];
+      const control = archived
+        ? `<p class="mine-item__state">${T.given}</p>`
+        : `<select data-intent="${esc(id)}" aria-label="что хочешь">${opts.map((k) =>
+            `<option value="${k}" ${intent === k ? "selected" : ""}>${INTENTS[k].label}</option>`).join("")}</select>`;
+      return `<div class="mine-item${archived ? " is-off" : ""}">
+        <input type="checkbox" class="check" data-check="${esc(id)}" ${!archived && v.on !== false ? "checked" : ""} ${archived ? "disabled" : ""} aria-label="включить в заявку">
+        <img src="${esc((item.photos[0] || {}).src || "")}" alt="">
+        <div class="mine-item__body">
+          <button class="mine-item__title" data-open="${esc(id)}">${esc(titleOf(item))}</button>
+          ${control}
+          <button class="remove" data-remove="${esc(id)}">убрать из моего</button>
         </div>
-        <button class="remove" data-remove="${esc(id)}" aria-label="Убрать">Убрать</button>
       </div>`;
     }).join("");
-    $("#cart-form").hidden = false;
-    $("#u-name").value = state.user.name;
-    $("#u-contact").value = state.user.contact;
-    $("#cart-preview").textContent = cartMessage();
-    const tg = (CFG.contact && CFG.contact.telegram || "").replace(/^@/, "");
-    $("#send-tg").hidden = !tg;
-    $("#no-contact").hidden = !!tg;
-    $("#copy-status").textContent = "";
+    $("#u-name").value = state.user.name || "";
+    $("#u-tg").value = state.user.tg || "";
+    $("#u-comment").value = state.user.comment || "";
+    updatePreview();
   }
 
-  $("#cart-list").addEventListener("change", (e) => {
+  function normTg(s) {
+    s = String(s || "").trim().replace(/^https?:\/\/(t\.me|telegram\.me)\//i, "").replace(/\s+/g, "");
+    if (!s) return "";
+    return s.startsWith("@") ? s : "@" + s;
+  }
+
+  function buildMessage() {
+    const sel = selected();
+    const head = sel.length > 1 ? "привет! хочу забрать несколько вещей с сайта:" : "привет! хочу забрать вещь с сайта:";
+    const lines = sel.map(({ v, item }) => `— ${titleOf(item)} — ${INTENTS[effectiveIntent(item, v.intent)].msg}`);
+    const name = (state.user.name || "").trim() || "…";
+    const tg = normTg(state.user.tg) || "@…";
+    let text = `${head}\n\n${lines.join("\n")}\n\nя — ${name}, ${tg}`;
+    const c = (state.user.comment || "").trim();
+    if (c) text += `\nкомментарий: ${c}`;
+    return text;
+  }
+  function updatePreview() { $("#preview").textContent = buildMessage(); }
+
+  $("#mine-list").addEventListener("change", (e) => {
+    const c = e.target.closest("[data-check]");
+    if (c) { state.mine[c.dataset.check].on = c.checked; saveMine(); $("#sel-error").hidden = true; updatePreview(); return; }
     const s = e.target.closest("[data-intent]");
-    if (s) { state.cart[s.dataset.intent] = s.value; saveCart(); $("#cart-preview").textContent = cartMessage(); }
+    if (s) { state.mine[s.dataset.intent].intent = s.value; saveMine(); updatePreview(); }
   });
-  $("#cart-list").addEventListener("click", (e) => {
+  $("#mine-list").addEventListener("click", (e) => {
     const r = e.target.closest("[data-remove]");
-    if (r) { delete state.cart[r.dataset.remove]; saveCart(); render(); renderCart(); }
+    if (r) { delete state.mine[r.dataset.remove]; saveMine(); renderMine(); toast(T.removed); return; }
+    const o = e.target.closest("[data-open]");
+    if (o) openItem(o.dataset.open);
   });
-  ["u-name", "u-contact"].forEach((fid) => $("#" + fid).addEventListener("input", () => {
-    state.user = { name: $("#u-name").value, contact: $("#u-contact").value };
-    store.set("user", state.user);
-    $("#cart-error").hidden = true;
-    $("#cart-preview").textContent = cartMessage();
-  }));
+  [["u-name", "name"], ["u-tg", "tg"], ["u-comment", "comment"]].forEach(([fid, key]) =>
+    $("#" + fid).addEventListener("input", (e) => {
+      state.user[key] = e.target.value;
+      store.set("user", state.user);
+      if (key === "name") $("#name-error").hidden = true;
+      if (key === "tg") $("#tg-error").hidden = true;
+      updatePreview();
+    }));
 
-  async function copyText(text) {
-    try { await navigator.clipboard.writeText(text); return true; }
-    catch (e) {
-      const ta = document.createElement("textarea");
-      ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "absolute"; ta.style.left = "-9999px";
-      document.body.appendChild(ta); ta.select();
-      let ok = false; try { ok = document.execCommand("copy"); } catch (e2) { ok = false; }
-      ta.remove(); return ok;
+  $("#build").addEventListener("click", () => {
+    if (!selected().length) { $("#sel-error").hidden = false; return; }
+    $("#sel-error").hidden = true;
+    $("#req").hidden = false;
+    $("#build").hidden = true;
+    updatePreview();
+    $("#req").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  function copySync(text, host) {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.cssText = "position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;";
+    host.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try { ta.setSelectionRange(0, text.length); } catch (e) { /* ignore */ }
+    let ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+    ta.remove();
+    return ok;
+  }
+
+  $("#send").addEventListener("click", (e) => {
+    if (!selected().length) { e.preventDefault(); $("#sel-error").hidden = false; return; }
+    let bad = false;
+    if (!(state.user.name || "").trim()) { $("#name-error").hidden = false; bad = true; }
+    if (!normTg(state.user.tg)) { $("#tg-error").hidden = false; bad = true; }
+    if (bad) { e.preventDefault(); return; }
+    if (!TG) e.preventDefault();
+    const text = buildMessage();
+    if (copySync(text, $("#mine-modal"))) { toast(T.copied); return; }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(() => toast(T.copied), () => toast(T.copyFail));
+    } else {
+      toast(T.copyFail);
     }
-  }
-
-  function validName() {
-    if (!state.user.name.trim()) { $("#cart-error").hidden = false; $("#u-name").focus(); return false; }
-    return true;
-  }
-
-  $("#copy-only").addEventListener("click", async () => {
-    if (!validName()) return;
-    const ok = await copyText(cartMessage());
-    $("#copy-status").textContent = ok ? "Скопировано. Вставь в сообщение." : "Не получилось скопировать — выдели текст выше вручную.";
-  });
-  $("#send-tg").addEventListener("click", async () => {
-    if (!validName()) return;
-    const tg = (CFG.contact.telegram || "").replace(/^@/, "");
-    const ok = await copyText(cartMessage());
-    $("#copy-status").textContent = ok ? "Текст скопирован — вставь его в чат." : "Скопируй текст выше вручную и вставь в чат.";
-    window.open("https://t.me/" + encodeURIComponent(tg), "_blank", "noopener");
   });
 
-  $("#cart-open").addEventListener("click", () => { renderCart(); $("#cart-modal").showModal(); });
+  $("#mine-open").addEventListener("click", () => {
+    renderMine();
+    $("#mine-modal").showModal();
+  });
 
-  // ---------- dialogs ----------
+  // ---------- окна ----------
   document.querySelectorAll("dialog").forEach((d) => {
     d.addEventListener("click", (e) => {
       if (e.target === d || e.target.closest("[data-close]")) d.close();
@@ -360,11 +508,37 @@
   });
   $("#item-modal").addEventListener("close", () => {
     currentId = null;
-    if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+    if (/^#item-/.test(location.hash)) history.replaceState(null, "", viewHash || location.pathname + location.search);
+    render();
+    if ($("#mine-modal").open) renderMine();
   });
-  window.addEventListener("hashchange", openFromHash);
+  $("#mine-modal").addEventListener("close", () => { render(); $("#req").hidden = true; });
+
+  // ---------- навигация ----------
+  function showView(name) {
+    ["catalog", "archive", "podgon"].forEach((v) => { $("#view-" + v).hidden = v !== name; });
+  }
+  function route() {
+    const h = location.hash;
+    const m = h.match(/^#item-(.+)$/);
+    if (m) {
+      const item = byId(decodeURIComponent(m[1]));
+      if (item && !$("#item-modal").open) showView(item.status === "archive" ? "archive" : "catalog");
+      viewHash = item && item.status === "archive" ? "#archive" : "";
+      openItem(decodeURIComponent(m[1]));
+      return;
+    }
+    viewHash = h === "#archive" || h === "#podgon" ? h : "";
+    document.querySelectorAll("dialog[open]").forEach((d) => d.close());
+    const name = h === "#archive" ? "archive" : h === "#podgon" ? "podgon" : "catalog";
+    const wasHidden = $("#view-" + name).hidden;
+    showView(name);
+    if (name !== "catalog" || wasHidden) window.scrollTo(0, 0);
+  }
+  window.addEventListener("hashchange", route);
+  $("#to-items").addEventListener("click", () => $("#items-title").scrollIntoView({ behavior: "smooth" }));
 
   applyConfig();
-  updateCartCount();
-  loadItems();
+  updateMineCount();
+  load();
 })();
