@@ -55,7 +55,10 @@ img { display: block; max-width: 100%; }
 
 /* ---------- главная ---------- */
 .intro { padding: 36px 0 8px; }
-.intro__title { font-size: clamp(34px, 8.4vw, 96px); line-height: 1.04; font-weight: 700; letter-spacing: -.02em; margin: 0 0 40px; max-width: 14ch; }
+/* название: каждая строка растягивается ровно на ширину блока (размер подбирает app.js) */
+.intro__title { font-weight: 700; letter-spacing: -.02em; line-height: 1; margin: 0 0 40px; max-width: 1200px; font-size: 40px; }
+.intro__title .tl { display: block; white-space: nowrap; width: max-content; }
+.intro__title .tl + .tl { margin-top: .06em; }
 @media (min-width: 720px) { .intro__title { margin-bottom: 56px; } }
 .intro__text { max-width: 36em; font-size: 16px; line-height: 1.5; }
 .intro__text p { margin: 0 0 12px; }

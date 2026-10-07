@@ -116,7 +116,10 @@
     if (CFG.title) {
       document.title = CFG.title;
       $("#logo").textContent = CFG.title;
-      $("#site-heading").textContent = CFG.title;
+      const h = $("#site-heading");
+      const lines = CFG.titleLines && CFG.titleLines.length ? CFG.titleLines : [CFG.title];
+      h.setAttribute("aria-label", CFG.title);
+      h.innerHTML = lines.map((l) => `<span class="tl">${esc(l)}</span>`).join("");
     }
     $("#intro-text").innerHTML = (CFG.intro || []).map((p) => `<p>${esc(p)}</p>`).join("");
     if (CFG.ticker) {
@@ -432,7 +435,12 @@
     if (c) text += `\nкомментарий: ${c}`;
     return text;
   }
-  function updatePreview() { $("#preview").textContent = buildMessage(); }
+  function updatePreview() {
+    const text = buildMessage();
+    $("#preview").textContent = text;
+    // текст сразу подставляется в поле сообщения в Telegram (параметр text у ссылки t.me)
+    if (TG) $("#send").href = "https://t.me/" + encodeURIComponent(TG) + "?text=" + encodeURIComponent(text);
+  }
 
   $("#mine-list").addEventListener("change", (e) => {
     const c = e.target.closest("[data-check]");
@@ -533,12 +541,34 @@
     const name = h === "#archive" ? "archive" : h === "#podgon" ? "podgon" : "catalog";
     const wasHidden = $("#view-" + name).hidden;
     showView(name);
+    if (name === "catalog") fitTitle();
     if (name !== "catalog" || wasHidden) window.scrollTo(0, 0);
   }
   window.addEventListener("hashchange", route);
   $("#to-items").addEventListener("click", () => $("#items-title").scrollIntoView({ behavior: "smooth" }));
 
+  // ---------- название: подгон строк под ширину ----------
+  function fitTitle() {
+    const h = $("#site-heading");
+    if (!h || !h.offsetParent) return;
+    const w = h.clientWidth;
+    h.querySelectorAll(".tl").forEach((line) => {
+      let size = 100;
+      for (let k = 0; k < 3; k++) {          // пара итераций — чтобы край совпал до пикселя
+        line.style.fontSize = size + "px";
+        const actual = line.getBoundingClientRect().width;
+        if (!actual) return;
+        size = size * w / actual;
+      }
+      line.style.fontSize = Math.floor(size * 100) / 100 + "px";
+    });
+  }
+  let fitRaf;
+  window.addEventListener("resize", () => { cancelAnimationFrame(fitRaf); fitRaf = requestAnimationFrame(fitTitle); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitTitle);
+
   applyConfig();
+  fitTitle();
   updateMineCount();
   load();
 })();
