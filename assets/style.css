@@ -128,9 +128,8 @@ img { display: block; max-width: 100%; }
 .podgon__intro + .podgon__list { border-top: 1px solid var(--ink); }
 .podgon__outro { font-size: 18px; line-height: 1.45; margin: 32px 0 0; }
 .podgon__h { font-size: 13px; font-weight: 400; color: var(--muted); margin: 40px 0 0; padding-bottom: 10px; border-bottom: 1px solid var(--ink); }
-.podgon__list { list-style: none; counter-reset: p; margin: 0; padding: 0; }
-.podgon__list li { counter-increment: p; display: grid; grid-template-columns: 36px 1fr; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 16px; }
-.podgon__list li::before { content: counter(p, decimal-leading-zero); color: var(--muted); font-size: 12px; padding-top: 3px; font-variant-numeric: tabular-nums; }
+.podgon__list { list-style: none; margin: 0; padding: 0; }
+.podgon__list li { padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 16px; }
 
 /* ---------- окна ---------- */
 .modal, .drawer { border: 0; padding: 0; background: #fff; color: var(--ink); }
