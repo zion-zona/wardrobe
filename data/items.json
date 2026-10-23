@@ -1,326 +1,64 @@
 [
  {
-  "id": "v001",
-  "ref": "V001",
-  "title": "Кружка «А вот увидишь!»",
-  "category": "dishes",
-  "subcategory": "кружки",
-  "description": "Кружка с мультяшным котёнком и надписями «А вот увидишь!» и «А какие они, эти неприятности?». Лежит в своей коробке.",
-  "specs": [
-   [
-    "объём",
-    "420 мл (по коробке)"
-   ]
-  ],
-  "condition": {
-   "label": "в коробке, состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 400,
-   "max": 700,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 250,
-   "max": 500,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим кружкам с принтом",
-   "sources": []
-  },
-  "todo": [
-   "пользовались ли кружкой",
-   "бренд"
-  ],
-  "photos": [
-   {
-    "src": "images/v001-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v001-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v002",
-  "ref": "V002",
-  "title": "Кружка Lefard «Щелкунчик»",
-  "category": "dishes",
-  "subcategory": "кружки",
-  "description": "Кружка Lefard с рисунком по мотивам «Щелкунчика», в подарочной коробке.",
+  "id": "v064",
+  "ref": "V064",
+  "title": "Платье OPUS миди",
+  "category": "clothes",
+  "subcategory": "платья",
+  "description": "Молочное платье миди с длинными рукавами и ярусной юбкой из фактурной ткани.",
   "specs": [
    [
     "бренд",
-    "Lefard"
-   ],
-   [
-    "артикул",
-    "760-822 (по коробке)"
+    "OPUS"
    ]
   ],
   "condition": {
-   "label": "в коробке, состояние уточняется"
+   "label": "состояние уточняется"
   },
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 2500
   },
   "nominal": {
-   "min": 600,
-   "max": 1200,
+   "min": 7000,
+   "max": 12000,
    "date": "2026-10-23"
   },
   "estimate": {
-   "min": 400,
-   "max": 800,
+   "min": 1500,
+   "max": 3500,
    "date": "2026-10-23",
    "confidence": "низкая",
    "by_analogs": true,
-   "note": "по кружкам Lefard",
+   "note": "по похожим платьям OPUS б/у",
    "sources": []
   },
   "todo": [
-   "объём",
-   "пользовались ли кружкой"
+   "размер",
+   "состав ткани",
+   "носили ли"
   ],
   "photos": [
    {
-    "src": "images/v002-1.jpg",
+    "src": "images/v064-1.jpg",
+    "kind": "tryon"
+   },
+   {
+    "src": "images/v064-2.jpg",
     "kind": "real"
    },
    {
-    "src": "images/v002-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v003",
-  "ref": "V003",
-  "title": "Набор для сыра modi, 3 предмета",
-  "category": "dishes",
-  "subcategory": "сервировка",
-  "description": "Подарочный набор для подачи сыра: доска и ножи. В базе он записан как набор для вина, но на коробке написано «Набор для сыра (3 предмета)».",
-  "specs": [
-   [
-    "бренд",
-    "modi (по коробке)"
-   ],
-   [
-    "комплект",
-    "3 предмета"
-   ]
-  ],
-  "condition": {
-   "label": "в коробке, состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 900,
-   "max": 1700,
-   "date": "2026-10-23",
-   "note": "аналог: набор Kuchenland 4 пр. — 1 690 ₽"
-  },
-  "estimate": {
-   "min": 500,
-   "max": 1000,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим наборам; точного совпадения нет",
-   "sources": [
-    {
-     "title": "Яндекс Маркет — набор для сыра Kuchenland, 4 пр., 1 690 ₽ (аналог)",
-     "url": "https://market.yandex.ru/cc/Aw5e2Y"
-    }
-   ]
-  },
-  "todo": [
-   "материал доски",
-   "вскрывали ли коробку"
-  ],
-  "photos": [
-   {
-    "src": "images/v003-1.jpg",
+    "src": "images/v064-3.jpg",
     "kind": "real"
    },
    {
-    "src": "images/v003-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v004",
-  "ref": "V004",
-  "title": "Штора для ванной 180 × 180",
-  "category": "home",
-  "subcategory": "ванная",
-  "description": "Тканевая штора для ванной в упаковке, кольца в комплекте по информации на упаковке.",
-  "specs": [
-   [
-    "размер",
-    "180 × 180 см"
-   ],
-   [
-    "состав",
-    "100% полиэстер (по упаковке)"
-   ]
-  ],
-  "condition": {
-   "label": "в упаковке"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 400,
-   "max": 800,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 300,
-   "max": 600,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим шторам",
-   "sources": []
-  },
-  "todo": [
-   "рисунок / цвет шторы"
-  ],
-  "photos": [
-   {
-    "src": "images/v004-1.jpg",
+    "src": "images/v064-4.jpg",
     "kind": "real"
    },
    {
-    "src": "images/v004-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v005",
-  "ref": "V005",
-  "title": "Кисти для тонального крема, 2 шт.",
-  "category": "beauty",
-  "subcategory": "кисти",
-  "description": "Две кисти для тонального средства с синтетическим ворсом, в упаковке.",
-  "specs": [
-   [
-    "артикул",
-    "D-2055 (по упаковке)"
-   ],
-   [
-    "ворс",
-    "синтетический (по упаковке)"
-   ],
-   [
-    "дата производства",
-    "30.06.2025 (по упаковке)"
-   ]
-  ],
-  "condition": {
-   "label": "в упаковке"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 250,
-   "max": 500,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 150,
-   "max": 300,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим наборам кистей",
-   "sources": []
-  },
-  "todo": [],
-  "photos": [
-   {
-    "src": "images/v005-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v005-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v006",
-  "ref": "V006",
-  "title": "Набор кистей для макияжа",
-  "category": "beauty",
-  "subcategory": "кисти",
-  "description": "Набор косметических кистей: для пудры, теней, растушёвки и бровей. В базе записан как художественные кисти, но на упаковке — кисти для макияжа.",
-  "specs": [],
-  "condition": {
-   "label": "в упаковке"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 300,
-   "max": 700,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 200,
-   "max": 500,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим наборам",
-   "sources": []
-  },
-  "todo": [
-   "количество кистей"
-  ],
-  "photos": [
-   {
-    "src": "images/v006-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v006-2.jpg",
+    "src": "images/v064-5.jpg",
     "kind": "real"
    }
   ],
@@ -354,7 +92,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 400
   },
   "nominal": {
    "min": 1490,
@@ -397,1580 +136,75 @@
   "status": "available"
  },
  {
-  "id": "v008",
-  "ref": "V008",
-  "title": "Твёрдый шампунь «Крымские сказки» с маклюрой",
-  "category": "beauty",
-  "subcategory": "уход за волосами",
-  "description": "Твёрдый шампунь ручной работы в плёнке.",
+  "id": "v067",
+  "ref": "V067",
+  "title": "Сумка Michael Kors, светло-розовая",
+  "category": "bags",
+  "subcategory": "сумки",
+  "description": "Светло-розовая сумка с сафьяновой фактурой и короткими ручками. Видны следы носки.",
   "specs": [
    [
     "бренд",
-    "Крымские сказки"
-   ]
-  ],
-  "condition": {
-   "label": "в упаковке"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 350,
-   "max": 550,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 250,
-   "max": 400,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим твёрдым шампуням",
-   "sources": []
-  },
-  "todo": [
-   "вес",
-   "срок годности"
-  ],
-  "photos": [
-   {
-    "src": "images/v008-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v008-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v009",
-  "ref": "V009",
-  "title": "Джутовая мочалка с мылом «Морской микс»",
-  "category": "beauty",
-  "subcategory": "для душа",
-  "description": "Мочалка из джута с кусочком крымского мыла внутри, в упаковке.",
-  "specs": [
-   [
-    "бренд",
-    "Крымская линия (по упаковке)"
-   ]
-  ],
-  "condition": {
-   "label": "в упаковке"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 300,
-   "max": 500,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 200,
-   "max": 400,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим мочалкам с мылом",
-   "sources": []
-  },
-  "todo": [
-   "срок годности мыла"
-  ],
-  "photos": [
-   {
-    "src": "images/v009-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v009-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v010",
-  "ref": "V010",
-  "title": "Мыло «Айва», 2 × 100 г",
-  "category": "beauty",
-  "subcategory": "мыло",
-  "description": "Набор из двух кусков натурального мыла: лимонная айва и мускатная айва.",
-  "specs": [
-   [
-    "производитель",
-    "ООО «Мануфактура Дом Природы» (по коробке)"
+    "Michael Kors"
    ],
    [
-    "вес",
-    "2 × 100 г"
-   ],
-   [
-    "срок годности",
-    "18 месяцев; на коробке 04.2025 и 10.2026"
+    "подлинность",
+    "оригинал (со слов владелицы)"
    ]
   ],
   "condition": {
-   "label": "в коробке"
+   "label": "б/у, есть следы носки"
   },
   "features": [],
-  "defects": [],
+  "defects": [
+   "следы носки"
+  ],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 4500
   },
   "nominal": {
-   "min": 450,
-   "max": 700,
+   "min": 15000,
+   "max": 30000,
    "date": "2026-10-23"
   },
   "estimate": {
-   "min": 300,
-   "max": 500,
+   "min": 2500,
+   "max": 6000,
    "date": "2026-10-23",
    "confidence": "низкая",
    "by_analogs": true,
-   "note": "по похожим наборам мыла",
-   "sources": []
-  },
-  "todo": [
-   "что можно сделать с истекающим сроком"
-  ],
-  "photos": [
-   {
-    "src": "images/v010-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v010-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "draft",
-  "draft_reason": "на коробке 04.2025 и 10.2026 при сроке годности 18 месяцев — похоже, срок истекает в октябре 2026"
- },
- {
-  "id": "v011",
-  "ref": "V011",
-  "title": "Мыло «Лаванда», 50 г",
-  "category": "beauty",
-  "subcategory": "мыло",
-  "description": "Крымское мыло ручной работы с лавандой.",
-  "specs": [
-   [
-    "вес",
-    "50 г (по базе)"
-   ],
-   [
-    "дата на упаковке",
-    "23 авг 2025"
-   ],
-   [
-    "срок годности",
-    "24 месяца (по базе)"
-   ]
-  ],
-  "condition": {
-   "label": "в упаковке"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 150,
-   "max": 250,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 100,
-   "max": 200,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожему мылу",
-   "sources": []
-  },
-  "todo": [
-   "марка: на фото «Ялта», в базе «Крымская линия»"
-  ],
-  "photos": [
-   {
-    "src": "images/v011-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v011-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v012",
-  "ref": "V012",
-  "title": "Серьги-петли",
-  "category": "jewelry",
-  "subcategory": "серьги",
-  "description": "Серьги серебристого цвета с объёмными петлями, в пакетике.",
-  "specs": [],
-  "condition": {
-   "label": "в пакете, состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 300,
-   "max": 700,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 200,
-   "max": 500,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожей бижутерии",
-   "sources": []
-  },
-  "todo": [
-   "металл / покрытие",
-   "носили ли"
-  ],
-  "photos": [
-   {
-    "src": "images/v012-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v012-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v013",
-  "ref": "V013",
-  "title": "Значок «Спальня в Арле»",
-  "category": "jewelry",
-  "subcategory": "значки и броши",
-  "description": "Эмалевый значок с картиной Ван Гога «Спальня в Арле».",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 300,
-   "max": 600,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 200,
-   "max": 450,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим значкам",
-   "sources": []
-  },
-  "todo": [
-   "тип застёжки"
-  ],
-  "photos": [
-   {
-    "src": "images/v013-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v013-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v014",
-  "ref": "V014",
-  "title": "Браслет-кафф бронзового цвета",
-  "category": "jewelry",
-  "subcategory": "браслеты",
-  "description": "Открытый браслет-кафф с петлями, цвет бронзы.",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 300,
-   "max": 800,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 200,
-   "max": 500,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожей бижутерии",
-   "sources": []
-  },
-  "todo": [
-   "металл",
-   "носили ли"
-  ],
-  "photos": [
-   {
-    "src": "images/v014-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v015",
-  "ref": "V015",
-  "title": "Брошь «Сигарета»",
-  "category": "jewelry",
-  "subcategory": "значки и броши",
-  "description": "Эмалевая брошь в форме сигареты, на ней надпись, начинающаяся с NEVER.",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 300,
-   "max": 600,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 200,
-   "max": 400,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим брошам",
-   "sources": []
-  },
-  "todo": [
-   "полный текст надписи"
-  ],
-  "photos": [
-   {
-    "src": "images/v015-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v015-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v016",
-  "ref": "V016",
-  "title": "Серьги-пусеты с котиками Zed & Two",
-  "category": "jewelry",
-  "subcategory": "серьги",
-  "description": "Маленькие пусеты с чёрными котиками на карточке Zed & Two, в пакетике.",
-  "specs": [
-   [
-    "на карточке",
-    "Zed & Two, «S925 Post»"
-   ]
-  ],
-  "condition": {
-   "label": "в пакете, состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 900,
-   "max": 1500,
-   "date": "2026-10-23",
-   "note": "аналог: серебряные пусеты «Котики» на Ozon — 962 ₽"
-  },
-  "estimate": {
-   "min": 500,
-   "max": 1200,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим серебряным пусетам",
+   "note": "по похожим б/у моделям",
    "sources": [
     {
-     "title": "Ozon — серьги-пусеты «Котики», серебро 925, 962 ₽ (аналог)",
-     "url": "https://www.ozon.ru/product/sergi-gvozdiki-zolotoy-merkuriy-pusety-serebro-925-kotiki-silikonovyy-zamok-v-podarok-2086217873/"
+     "title": "Alania Zapoved — Michael Kors Jet Set Travel Tote, б/у, $55 (зарубежная площадка, аналог)",
+     "url": "https://alaniazapoved.ru/products/michael-kors-jet-set-red-travel-tote-saffiano-leather/6422071"
     }
    ]
   },
   "todo": [
-   "проба подтверждена только надписью на карточке",
-   "носили ли"
-  ],
-  "photos": [
-   {
-    "src": "images/v016-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v017",
-  "ref": "V017",
-  "title": "Аксессуар «Мороженое»",
-  "category": "decor",
-  "subcategory": "мелочи",
-  "description": "Небольшая декоративная вещь в форме мороженого.",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 150,
-   "max": 350,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 100,
-   "max": 250,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим мелочам",
-   "sources": []
-  },
-  "todo": [
-   "что это: заколка, значок, брелок или декор",
-   "материал"
-  ],
-  "photos": [
-   {
-    "src": "images/v017-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v018",
-  "ref": "V018",
-  "title": "Набор для пирсинга, мод. 203",
-  "category": "beauty",
-  "subcategory": "разное",
-  "description": "Стерильный набор для прокола ушей с серебряным украшением-шариком и спиртовыми салфетками, в упаковке.",
-  "specs": [
-   [
-    "на упаковке",
-    "«Пистолет для пирсинга в стерильной упаковке мод. 203 с серебряным украшением шарик 3», ПИ-00036"
-   ]
-  ],
-  "condition": {
-   "label": "в упаковке"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 600,
-   "max": 1000,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 400,
-   "max": 800,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим наборам",
-   "sources": []
-  },
-  "todo": [
-   "срок стерильности на упаковке"
-  ],
-  "photos": [
-   {
-    "src": "images/v018-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v018-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "draft",
-  "draft_reason": "изделие для прокола кожи — нужен видимый срок стерильности и целостность упаковки"
- },
- {
-  "id": "v019",
-  "ref": "V019",
-  "title": "Крем для рук «Бархатные ручки», ночной",
-  "category": "beauty",
-  "subcategory": "кремы",
-  "description": "Питательный ночной крем для рук с маслом ши, туба 80 мл.",
-  "specs": [
-   [
-    "бренд",
-    "Бархатные ручки"
-   ],
-   [
-    "объём",
-    "80 мл"
-   ]
-  ],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 120,
-   "max": 200,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 80,
-   "max": 150,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по рознице и б/у косметике",
-   "sources": []
-  },
-  "todo": [
-   "вскрыт ли",
-   "срок годности"
-  ],
-  "photos": [
-   {
-    "src": "images/v019-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v019-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v020",
-  "ref": "V020",
-  "title": "Крем для лица Green Crimea с мочевиной 10%",
-  "category": "beauty",
-  "subcategory": "кремы",
-  "description": "Крем для лица, шеи и зоны декольте с мочевиной, флакон с дозатором 200 мл.",
-  "specs": [
-   [
-    "бренд",
-    "Green Crimea"
-   ],
-   [
-    "объём",
-    "200 мл"
-   ]
-  ],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 400,
-   "max": 700,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 200,
-   "max": 400,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим кремам",
-   "sources": []
-  },
-  "todo": [
-   "реальное фото этикетки с датой",
-   "вскрыт ли"
-  ],
-  "photos": [
-   {
-    "src": "images/v020-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v020-2.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v020-3.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "draft",
-  "draft_reason": "на одном фото «годен до 03.2026» — срок мог истечь; тексты этикетки на двух фото различаются"
- },
- {
-  "id": "v021",
-  "ref": "V021",
-  "title": "Крем для тела Green Crimea с мочевиной 10%",
-  "category": "beauty",
-  "subcategory": "кремы",
-  "description": "Крем для тела «Интенсивный уход» с мочевиной, флакон с дозатором 200 мл.",
-  "specs": [
-   [
-    "бренд",
-    "Green Crimea"
-   ],
-   [
-    "объём",
-    "200 мл"
-   ]
-  ],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 400,
-   "max": 700,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 300,
-   "max": 600,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим кремам",
-   "sources": []
-  },
-  "todo": [
-   "срок годности (на фото не виден)",
-   "вскрыт ли",
-   "тексты этикетки на фото различаются — нужно реальное фото"
-  ],
-  "photos": [
-   {
-    "src": "images/v021-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v021-2.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v021-3.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v022",
-  "ref": "V022",
-  "title": "Мыло-скраб «Лавандовое» в сетке",
-  "category": "beauty",
-  "subcategory": "мыло",
-  "description": "Натуральное мыло-скраб «Крымские сказки» в сетчатом мешочке. В базе записано как мочалка.",
-  "specs": [
-   [
-    "бренд",
-    "Крымские сказки"
-   ]
-  ],
-  "condition": {
-   "label": "в упаковке"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 250,
-   "max": 400,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 150,
-   "max": 300,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожему мылу",
-   "sources": []
-  },
-  "todo": [
-   "вес",
-   "срок годности"
-  ],
-  "photos": [
-   {
-    "src": "images/v022-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v022-2.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v022-3.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v023",
-  "ref": "V023",
-  "title": "Наборы наклеек с персонажами, 2 шт.",
-  "category": "stationery",
-  "subcategory": "наклейки",
-  "description": "Два набора наклеек с милыми персонажами и пластиковыми лопатками, в упаковке.",
-  "specs": [],
-  "condition": {
-   "label": "в упаковке"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 300,
-   "max": 600,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 150,
-   "max": 400,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим наборам",
-   "sources": []
-  },
-  "todo": [],
-  "photos": [
-   {
-    "src": "images/v023-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v023-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v024",
-  "ref": "V024",
-  "title": "Твёрдые духи YOKITOKI «Яркий букет»",
-  "category": "beauty",
-  "subcategory": "ароматы",
-  "description": "Твёрдые духи в стике, Vibrant Bouquet.",
-  "specs": [
-   [
-    "бренд",
-    "YOKITOKI"
-   ],
-   [
-    "вес",
-    "5 г"
-   ],
-   [
-    "срок годности",
-    "36 месяцев (по упаковке)"
-   ]
-  ],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 500,
-   "max": 900,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 300,
-   "max": 700,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим твёрдым духам",
-   "sources": []
-  },
-  "todo": [
-   "дата изготовления",
-   "открывали ли"
-  ],
-  "photos": [
-   {
-    "src": "images/v024-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v024-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v025",
-  "ref": "V025",
-  "title": "Головоломка-змейка",
-  "category": "toys",
-  "subcategory": "головоломки",
-  "description": "Разноцветная головоломка-змейка.",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 150,
-   "max": 350,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 100,
-   "max": 250,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим головоломкам",
-   "sources": []
-  },
-  "todo": [],
-  "photos": [
-   {
-    "src": "images/v025-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v026",
-  "ref": "V026",
-  "title": "Брелок-кубик 3 × 3",
-  "category": "toys",
-  "subcategory": "брелоки",
-  "description": "Маленький кубик-головоломка на брелоке.",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 100,
-   "max": 250,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 80,
-   "max": 200,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим брелокам",
-   "sources": []
-  },
-  "todo": [],
-  "photos": [
-   {
-    "src": "images/v026-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v027",
-  "ref": "V027",
-  "title": "Мягкая игрушка — капибара",
-  "category": "toys",
-  "subcategory": "мягкие игрушки",
-  "description": "Коричневый плюшевый зверёк, по виду капибара (в базе записан как лошадка).",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 400,
-   "max": 900,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 200,
-   "max": 500,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим игрушкам",
-   "sources": []
-  },
-  "todo": [
+   "модель",
    "размер"
   ],
   "photos": [
    {
-    "src": "images/v027-1.jpg",
+    "src": "images/v067-1.jpg",
     "kind": "real"
    },
    {
-    "src": "images/v027-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v028",
-  "ref": "V028",
-  "title": "Браслеты с бусинами, 2 шт.",
-  "category": "jewelry",
-  "subcategory": "браслеты",
-  "description": "Два тонких браслета с бусинами — розовый и зелёный, в пакетиках с карточками Fashion Jewelry.",
-  "specs": [],
-  "condition": {
-   "label": "в пакетах"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 200,
-   "max": 500,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 100,
-   "max": 300,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожей бижутерии",
-   "sources": []
-  },
-  "todo": [],
-  "photos": [
-   {
-    "src": "images/v028-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v029",
-  "ref": "V029",
-  "title": "Карманный компас",
-  "category": "home",
-  "subcategory": "полезные мелочи",
-  "description": "Небольшой карманный компас.",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 200,
-   "max": 500,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 150,
-   "max": 400,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим компасам",
-   "sources": []
-  },
-  "todo": [
-   "работает ли стрелка"
-  ],
-  "photos": [
-   {
-    "src": "images/v029-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v030",
-  "ref": "V030",
-  "title": "Тени Farres 7 Colors, № 04",
-  "category": "beauty",
-  "subcategory": "декоративная косметика",
-  "description": "Палетка из семи оттенков теней.",
-  "specs": [
-   [
-    "бренд",
-    "Farres"
-   ],
-   [
-    "номер",
-    "04, артикул 1242"
-   ],
-   [
-    "годен до",
-    "06.2028 (по упаковке)"
-   ]
-  ],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 250,
-   "max": 450,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 150,
-   "max": 300,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим палеткам",
-   "sources": []
-  },
-  "todo": [
-   "открывали ли палетку"
-  ],
-  "photos": [
-   {
-    "src": "images/v030-1.jpg",
+    "src": "images/v067-2.jpg",
     "kind": "real"
    },
    {
-    "src": "images/v030-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v031",
-  "ref": "V031",
-  "title": "Два чёрных овальных камня",
-  "category": "decor",
-  "subcategory": "мелочи",
-  "description": "Два гладких чёрных камня овальной формы.",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 200,
-   "max": 500,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 100,
-   "max": 300,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим магнитным камням — если это они",
-   "sources": []
-  },
-  "todo": [
-   "что это: магнитные камни или декор"
-  ],
-  "photos": [
-   {
-    "src": "images/v031-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v032",
-  "ref": "V032",
-  "title": "Подборка бижутерии",
-  "category": "jewelry",
-  "subcategory": "наборы",
-  "description": "Несколько браслетов, бус, колец и подвесок одним лотом.",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 1000,
-   "max": 3000,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 300,
-   "max": 1000,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим лотам бижутерии",
-   "sources": []
-  },
-  "todo": [
-   "отдаётся одним лотом или по отдельности",
-   "сколько предметов"
-  ],
-  "photos": [
-   {
-    "src": "images/v032-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v033",
-  "ref": "V033",
-  "title": "Краска LUXENS для кухни и ванной, 5 л",
-  "category": "repair",
-  "subcategory": "краски",
-  "description": "Белоснежная матовая краска для стен и потолков в кухне и ванной.",
-  "specs": [
-   [
-    "бренд",
-    "LUXENS"
-   ],
-   [
-    "объём",
-    "5 л"
-   ],
-   [
-    "финиш",
-    "матовая"
-   ]
-  ],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 2000,
-   "max": 3200,
-   "date": "2026-10-23",
-   "note": "аналог: эмаль Luxens 2,5 кг — 1 989 ₽"
-  },
-  "estimate": {
-   "min": 1200,
-   "max": 2000,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим краскам; точного совпадения нет",
-   "sources": [
-    {
-     "title": "Яндекс Маркет — эмаль Luxens универсальная, 2,5 кг, 1 989 ₽ (аналог)",
-     "url": "https://market.yandex.ru/cc/9KfgRT"
-    }
-   ]
-  },
-  "todo": [
-   "вскрыта ли банка",
-   "срок годности"
-  ],
-  "photos": [
-   {
-    "src": "images/v033-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v034",
-  "ref": "V034",
-  "title": "Масляная краска «Лакра», сурик железный",
-  "category": "repair",
-  "subcategory": "краски",
-  "description": "Масляная краска «Выбор мастера» цвета сурик железный.",
-  "specs": [
-   [
-    "бренд",
-    "Лакра"
-   ]
-  ],
-  "condition": {
-   "label": "на банке следы ржавчины"
-  },
-  "features": [
-   "на банке следы ржавчины"
-  ],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 300,
-   "max": 600,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 100,
-   "max": 300,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим краскам",
-   "sources": []
-  },
-  "todo": [
-   "объём",
-   "вскрыта ли",
-   "не загустела ли краска"
-  ],
-  "photos": [
-   {
-    "src": "images/v034-1.jpg",
+    "src": "images/v067-3.jpg",
     "kind": "real"
    },
    {
-    "src": "images/v034-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v035",
-  "ref": "V035",
-  "title": "Эмаль NOVAX для радиаторов, 3 л",
-  "category": "repair",
-  "subcategory": "краски",
-  "description": "Белая эмаль для радиаторов отопления.",
-  "specs": [
-   [
-    "бренд",
-    "NOVAX"
-   ],
-   [
-    "объём",
-    "3 л"
-   ]
-  ],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 1500,
-   "max": 2500,
-   "date": "2026-10-23",
-   "note": "аналог: эмаль для радиаторов Erica 1,8 кг — 1 376 ₽"
-  },
-  "estimate": {
-   "min": 600,
-   "max": 1200,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим эмалям",
-   "sources": [
-    {
-     "title": "Яндекс Маркет — эмаль для радиаторов Erica, 1,8 кг, 1 376 ₽ (аналог)",
-     "url": "https://market.yandex.ru/cc/9Cy29F"
-    }
-   ]
-  },
-  "todo": [
-   "вскрыта ли банка",
-   "срок годности"
-  ],
-  "photos": [
-   {
-    "src": "images/v035-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v036",
-  "ref": "V036",
-  "title": "Герметик силиконовый бесцветный",
-  "category": "repair",
-  "subcategory": "герметики",
-  "description": "Универсальный силиконовый герметик.",
-  "specs": [
-   [
-    "марка",
-    "на фото читается «OPPA», в базе — «OPERA»"
-   ]
-  ],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 200,
-   "max": 400,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 100,
-   "max": 250,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим герметикам",
-   "sources": []
-  },
-  "todo": [
-   "марка",
-   "срок годности",
-   "вскрыт ли"
-  ],
-  "photos": [
-   {
-    "src": "images/v036-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v037",
-  "ref": "V037",
-  "title": "Краситель для ткани radupro, чёрный",
-  "category": "craft",
-  "subcategory": "рукоделие",
-  "description": "Универсальный краситель для ткани, интенсивный чёрный.",
-  "specs": [
-   [
-    "бренд",
-    "radupro"
-   ],
-   [
-    "вес",
-    "2 × 20 г"
-   ],
-   [
-    "дата изготовления",
-    "04.2024 (по упаковке)"
-   ]
-  ],
-  "condition": {
-   "label": "в упаковке"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 150,
-   "max": 300,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 100,
-   "max": 200,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим красителям",
-   "sources": []
-  },
-  "todo": [
-   "срок годности"
-  ],
-  "photos": [
-   {
-    "src": "images/v037-1.jpg",
+    "src": "images/v067-4.jpg",
     "kind": "real"
    },
    {
-    "src": "images/v037-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v038",
-  "ref": "V038",
-  "title": "Малярная лента MONLID 48 мм × 50 м",
-  "category": "repair",
-  "subcategory": "малярные материалы",
-  "description": "Рулон малярной ленты. В базе записана как MONO, на упаковке — MONLID.",
-  "specs": [
-   [
-    "бренд",
-    "MONLID"
-   ],
-   [
-    "размер",
-    "48 мм × 50 м"
-   ]
-  ],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 150,
-   "max": 350,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 100,
-   "max": 250,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим лентам",
-   "sources": []
-  },
-  "todo": [
-   "начатая или нет"
-  ],
-  "photos": [
-   {
-    "src": "images/v038-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v038-2.jpg",
+    "src": "images/v067-5.jpg",
     "kind": "real"
    }
   ],
@@ -2008,7 +242,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 2500
   },
   "nominal": {
    "min": 4400,
@@ -2080,1212 +315,93 @@
   "status": "available"
  },
  {
-  "id": "v040",
-  "ref": "V040",
-  "title": "Петличный микрофон BOYA",
-  "category": "tech",
-  "subcategory": "аудио",
-  "description": "Проводной петличный микрофон с переключателем OFF / Smartphone.",
+  "id": "pins",
+  "ref": "V013, V015, V017, V069",
+  "title": "Значки (пины)",
+  "category": "jewelry",
+  "subcategory": "значки и броши",
+  "description": "Шесть значков: «Спальня в Арле» Ван Гога, сигарета из аниме FLCL с надписью «Never knows best», мороженое, облачко, онигири и губы. Можно выбрать один или несколько.",
   "specs": [
    [
-    "бренд",
-    "BOYA"
+    "штук",
+    "6"
    ]
   ],
-  "condition": {
-   "label": "работает (со слов владелицы)"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 1000,
-   "max": 1800,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 400,
-   "max": 900,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим петличкам; модель не подтверждена",
-   "sources": [
-    {
-     "title": "iXBT — обзор BOYA BY-M1, $19,95 (2019)",
-     "url": "https://www.ixbt.com/live/comments/1803134"
-    }
-   ]
-  },
-  "todo": [
-   "модель (похоже на BY-M1)",
-   "комплект"
-  ],
-  "photos": [
-   {
-    "src": "images/v040-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v041",
-  "ref": "V041",
-  "title": "Помада Yves Rocher Grand Rouge 111 Satiné",
-  "category": "beauty",
-  "subcategory": "декоративная косметика",
-  "description": "Помада в золотистом футляре, оттенок 111.",
-  "specs": [
-   [
-    "бренд",
-    "Yves Rocher"
-   ],
-   [
-    "вес",
-    "3,7 г"
-   ]
-  ],
-  "condition": {
-   "label": "со следами использования"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 900,
-   "max": 1500,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 100,
-   "max": 300,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожей косметике",
-   "sources": []
-  },
-  "todo": [],
-  "photos": [
-   {
-    "src": "images/v041-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v041-2.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v041-3.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "draft",
-  "draft_reason": "помадой пользовались — её нельзя предлагать другим из соображений гигиены"
- },
- {
-  "id": "v042",
-  "ref": "V042",
-  "title": "Игрушка-подвеска — барашек с крылышками",
-  "category": "toys",
-  "subcategory": "мягкие игрушки",
-  "description": "Светлый плюшевый барашек или альпака с крылышками и бордовой лентой для подвешивания.",
-  "specs": [],
   "condition": {
    "label": "состояние уточняется"
   },
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 300,
-   "max": 700,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 150,
-   "max": 400,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим игрушкам",
-   "sources": []
-  },
-  "todo": [
-   "размер"
-  ],
-  "photos": [
-   {
-    "src": "images/v042-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v042-2.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v042-3.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v042-4.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v043",
-  "ref": "V043",
-  "title": "Мягкий брелок — одноглазый монстрик",
-  "category": "toys",
-  "subcategory": "брелоки",
-  "description": "Красно-коралловый одноглазый плюшевый монстрик на брелоке (в базе записан как розовый дракон).",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 200,
-   "max": 500,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 100,
-   "max": 300,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим брелокам",
-   "sources": []
-  },
-  "todo": [],
-  "photos": [
-   {
-    "src": "images/v043-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v043-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v044",
-  "ref": "V044",
-  "title": "Блокнот НИУ ВШЭ «Поступаем в бакалавриат»",
-  "category": "stationery",
-  "subcategory": "блокноты",
-  "description": "Блокнот на пружине с символикой факультета социальных наук ВШЭ.",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 150,
+   "per": "за штуку"
   },
   "nominal": {
    "min": 200,
    "max": 400,
-   "date": "2026-10-23",
-   "note": "мерч; оценка по похожим блокнотам"
-  },
-  "estimate": {
-   "min": 100,
-   "max": 250,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим блокнотам",
-   "sources": []
-  },
-  "todo": [
-   "чистый ли"
-  ],
-  "photos": [
-   {
-    "src": "images/v044-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v045",
-  "ref": "V045",
-  "title": "Скетчбук на спирали, 60 листов",
-  "category": "craft",
-  "subcategory": "скетчбуки",
-  "description": "Скетчбук с чёрно-белой обложкой.",
-  "specs": [
-   [
-    "листов",
-    "60"
-   ],
-   [
-    "плотность",
-    "120 г/м²"
-   ]
-  ],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 350,
-   "max": 700,
    "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 200,
-   "max": 450,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим скетчбукам",
-   "sources": []
-  },
-  "todo": [
-   "чистый ли"
-  ],
-  "photos": [
-   {
-    "src": "images/v045-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v046",
-  "ref": "V046",
-  "title": "Акварель «Гамма Студия», 12 цветов",
-  "category": "craft",
-  "subcategory": "рисование",
-  "description": "Художественная акварель в тубах.",
-  "specs": [
-   [
-    "бренд",
-    "Гамма"
-   ],
-   [
-    "комплект",
-    "12 туб по 9 мл"
-   ],
-   [
-    "артикул",
-    "213007"
-   ]
-  ],
-  "condition": {
-   "label": "коробка открыта"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 700,
-   "max": 1100,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 300,
-   "max": 600,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим наборам",
-   "sources": [
-    {
-     "title": "Детский мир — краски «Гамма» 12 цв., 650 ₽ (аналог)",
-     "url": "https://www.detmir.ru/product/index/id/5127219/"
-    }
-   ]
-  },
-  "todo": [
-   "пользовались ли тубами"
-  ],
-  "photos": [
-   {
-    "src": "images/v046-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v046-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v047",
-  "ref": "V047",
-  "title": "Джутовый шпагат",
-  "category": "craft",
-  "subcategory": "рукоделие",
-  "description": "Несколько мотков джутового шпагата — натуральный и зелёный.",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 300,
-   "max": 600,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 150,
-   "max": 400,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожему шпагату",
-   "sources": []
-  },
-  "todo": [
-   "сколько мотков",
-   "длина"
-  ],
-  "photos": [
-   {
-    "src": "images/v047-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v047-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v048",
-  "ref": "V048",
-  "title": "Пряжа кремовая",
-  "category": "craft",
-  "subcategory": "рукоделие",
-  "description": "Моток пряжи кремового цвета, похоже, начатый.",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 150,
-   "max": 350,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 50,
-   "max": 200,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожей пряже",
-   "sources": []
-  },
-  "todo": [
-   "состав",
-   "вес / метраж"
-  ],
-  "photos": [
-   {
-    "src": "images/v048-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v049",
-  "ref": "V049",
-  "title": "Шпажки бамбуковые Paterra, 100 шт.",
-  "category": "home",
-  "subcategory": "кухня",
-  "description": "Короткие бамбуковые шпажки для канапе и шашлычков.",
-  "specs": [
-   [
-    "бренд",
-    "Paterra"
-   ],
-   [
-    "количество",
-    "100 шт."
-   ]
-  ],
-  "condition": {
-   "label": "в упаковке"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 100,
-   "max": 250,
-   "date": "2026-10-23",
-   "note": "аналог: шпажки 100 шт. — 225 ₽"
-  },
-  "estimate": {
-   "min": 80,
-   "max": 180,
-   "date": "2026-10-23",
-   "confidence": "средняя",
-   "by_analogs": true,
-   "note": "по похожим шпажкам",
-   "sources": [
-    {
-     "title": "Детский мир — шпажки бамбуковые 200 мм, 100 шт., 225 ₽ (аналог)",
-     "url": "https://www.detmir.ru/product/index/id/6170787/"
-    }
-   ]
-  },
-  "todo": [],
-  "photos": [
-   {
-    "src": "images/v049-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v050",
-  "ref": "V050",
-  "title": "Бисер, бусины-буквы и резинка",
-  "category": "craft",
-  "subcategory": "рукоделие",
-  "description": "Баночка с бисером-миксом, бусины с буквами и резинка Crystal line 0,6 мм.",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 300,
-   "max": 600,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 150,
-   "max": 400,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим наборам",
-   "sources": []
-  },
-  "todo": [],
-  "photos": [
-   {
-    "src": "images/v050-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v050-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v052",
-  "ref": "V052",
-  "title": "Тетрадь Shiba Love",
-  "category": "stationery",
-  "subcategory": "тетради",
-  "description": "Тетрадь с собачкой сиба-ину. В базе записана как Shiba Cute, на обложке — Shiba Love.",
-  "specs": [
-   [
-    "листов",
-    "60"
-   ],
-   [
-    "формат",
-    "150 × 215 мм"
-   ],
-   [
-    "артикул",
-    "ZKMG-0131 (по ярлыку)"
-   ]
-  ],
-  "condition": {
-   "label": "с ярлыком магазина"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 135,
-   "max": 135,
-   "date": "2026-10-23",
-   "note": "по ярлыку zakka.ru"
   },
   "estimate": {
    "min": 100,
    "max": 200,
    "date": "2026-10-23",
-   "confidence": "средняя",
-   "by_analogs": false,
-   "note": "цена на ярлыке — 135 р.",
-   "sources": [
-    {
-     "title": "Ярлык zakka.ru на тетради: 135 р.",
-     "url": ""
-    }
-   ]
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим значкам, за штуку",
+   "sources": []
   },
   "todo": [],
   "photos": [
    {
-    "src": "images/v052-1.jpg",
+    "src": "images/pin-1.jpg",
     "kind": "real"
    },
    {
-    "src": "images/v052-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v053",
-  "ref": "V053",
-  "title": "Шоппер с оленем",
-  "category": "bags",
-  "subcategory": "шопперы",
-  "description": "Тканевая сумка-шоппер с рисунком оленя.",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 300,
-   "max": 700,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 150,
-   "max": 400,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим шопперам",
-   "sources": []
-  },
-  "todo": [
-   "размер",
-   "носили ли"
-  ],
-  "photos": [
-   {
-    "src": "images/v053-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v054",
-  "ref": "V054",
-  "title": "Дорожный набор кабелей в футляре",
-  "category": "tech",
-  "subcategory": "аксессуары",
-  "description": "Круглый футляр с кабелями и переходниками, внутри есть скрепка для SIM-карты.",
-  "specs": [],
-  "condition": {
-   "label": "работает (со слов владелицы)"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 600,
-   "max": 1500,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 300,
-   "max": 800,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим наборам",
-   "sources": []
-  },
-  "todo": [
-   "какие разъёмы"
-  ],
-  "photos": [
-   {
-    "src": "images/v054-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v055",
-  "ref": "V055",
-  "title": "Стилус белый",
-  "category": "tech",
-  "subcategory": "аксессуары",
-  "description": "Белый активный стилус с кнопкой и индикатором.",
-  "specs": [],
-  "condition": {
-   "label": "работает (со слов владелицы)"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 800,
-   "max": 2000,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 300,
-   "max": 900,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим стилусам",
-   "sources": []
-  },
-  "todo": [
-   "бренд",
-   "с какими устройствами работает",
-   "как заряжается"
-  ],
-  "photos": [
-   {
-    "src": "images/v055-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v056",
-  "ref": "V056",
-  "title": "Скетчбук с авокадо",
-  "category": "craft",
-  "subcategory": "скетчбуки",
-  "description": "Скетчбук с обложкой, на которой авокадо-птички.",
-  "specs": [
-   [
-    "плотность",
-    "100 г/м² (по обложке)"
-   ],
-   [
-    "листов",
-    "64 (по обложке)"
-   ]
-  ],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 350,
-   "max": 600,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 200,
-   "max": 400,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим скетчбукам",
-   "sources": []
-  },
-  "todo": [
-   "чистый ли"
-  ],
-  "photos": [
-   {
-    "src": "images/v056-1.jpg",
+    "src": "images/pin-2.jpg",
     "kind": "real"
    },
    {
-    "src": "images/v056-2.jpg",
+    "src": "images/pin-3.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/pin-4.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/pin-5.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/pin-6.jpg",
     "kind": "real"
    }
   ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v057",
-  "ref": "V057",
-  "title": "Масляная пастель Auchan, 12 цветов",
-  "category": "craft",
-  "subcategory": "рисование",
-  "description": "Набор масляной пастели.",
-  "specs": [
-   [
-    "бренд",
-    "Auchan"
-   ],
-   [
-    "цветов",
-    "12"
-   ]
-  ],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 150,
-   "max": 300,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 80,
-   "max": 200,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим наборам",
-   "sources": []
-  },
-  "todo": [
-   "пользовались ли"
-  ],
-  "photos": [
+  "variants": [
    {
-    "src": "images/v057-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v058",
-  "ref": "V058",
-  "title": "Лампа для маникюра SUN X5 MAX",
-  "category": "tech",
-  "subcategory": "для маникюра",
-  "description": "UV/LED-лампа для сушки гель-лака.",
-  "specs": [
-   [
-    "модель",
-    "SUN X5 MAX (по корпусу)"
-   ]
-  ],
-  "condition": {
-   "label": "работает (со слов владелицы)"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 1000,
-   "max": 2000,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 500,
-   "max": 1200,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим лампам",
-   "sources": []
-  },
-  "todo": [
-   "есть ли блок питания"
-  ],
-  "photos": [
-   {
-    "src": "images/v058-1.jpg",
-    "kind": "real"
+    "label": "Спальня в Арле (Ван Гог)",
+    "src": "images/pin-1.jpg"
    },
    {
-    "src": "images/v058-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v059",
-  "ref": "V059",
-  "title": "Чёрная бейсболка",
-  "category": "accessories",
-  "subcategory": "головные уборы",
-  "description": "Чёрная бейсболка с эффектом варёной ткани.",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 500,
-   "max": 1200,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 200,
-   "max": 600,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим бейсболкам",
-   "sources": []
-  },
-  "todo": [
-   "бренд",
-   "регулируется ли размер"
-  ],
-  "photos": [
-   {
-    "src": "images/v059-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v060",
-  "ref": "V060",
-  "title": "Стеклянный контейнер с рифлёной крышкой",
-  "category": "dishes",
-  "subcategory": "хранение",
-  "description": "Прямоугольный контейнер из дымчато-коричневого стекла.",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 400,
-   "max": 900,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 200,
-   "max": 500,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим контейнерам",
-   "sources": []
-  },
-  "todo": [
-   "объём",
-   "материал крышки"
-  ],
-  "photos": [
-   {
-    "src": "images/v060-1.jpg",
-    "kind": "real"
+    "label": "Сигарета из FLCL — «Never knows best»",
+    "src": "images/pin-2.jpg"
    },
    {
-    "src": "images/v060-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v061",
-  "ref": "V061",
-  "title": "Бутылка для воды «Мой район»",
-  "category": "dishes",
-  "subcategory": "бутылки",
-  "description": "Синяя бутылка с петлёй и логотипами «Мой район» / «Наш двор».",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 400,
-   "max": 900,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 200,
-   "max": 500,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим бутылкам",
-   "sources": []
-  },
-  "todo": [
-   "объём",
-   "пользовались ли"
-  ],
-  "photos": [
-   {
-    "src": "images/v061-1.jpg",
-    "kind": "real"
+    "label": "Мороженое",
+    "src": "images/pin-3.jpg"
    },
    {
-    "src": "images/v061-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v062",
-  "ref": "V062",
-  "title": "Ланчбокс-сердце с сиба-ину",
-  "category": "dishes",
-  "subcategory": "ланчбоксы",
-  "description": "Розовый ланчбокс в форме сердца с собачкой. В базе записан как круглый.",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 500,
-   "max": 1000,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 300,
-   "max": 700,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим ланчбоксам",
-   "sources": []
-  },
-  "todo": [
-   "объём",
-   "пользовались ли"
-  ],
-  "photos": [
-   {
-    "src": "images/v062-1.jpg",
-    "kind": "real"
+    "label": "Облачко",
+    "src": "images/pin-4.jpg"
    },
    {
-    "src": "images/v062-2.jpg",
-    "kind": "real"
+    "label": "Онигири",
+    "src": "images/pin-5.jpg"
    },
    {
-    "src": "images/v062-3.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v063",
-  "ref": "V063",
-  "title": "Пароварка Braun",
-  "category": "tech",
-  "subcategory": "кухня",
-  "description": "Пароварка Braun с двумя ярусами.",
-  "specs": [
-   [
-    "бренд",
-    "Braun"
-   ]
-  ],
-  "condition": {
-   "label": "работает (со слов владелицы)"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 7700,
-   "max": 8200,
-   "date": "2026-10-23",
-   "note": "аналог: Braun FS 3000 — от 7 729 ₽; модель не подтверждена"
-  },
-  "estimate": {
-   "min": 1500,
-   "max": 3500,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "б/у пароварки; модель не подтверждена",
-   "sources": [
-    {
-     "title": "Expertcen — Braun FS 3000, новые, от 7 729 до 8 192 ₽ (аналог, модель не подтверждена)",
-     "url": "https://www.expertcen.ru/product/model-braun-fs-3000.html"
-    }
-   ]
-  },
-  "todo": [
-   "модель",
-   "комплект"
-  ],
-  "photos": [
-   {
-    "src": "images/v063-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v064",
-  "ref": "V064",
-  "title": "Платье OPUS миди",
-  "category": "clothes",
-  "subcategory": "платья",
-  "description": "Молочное платье миди с длинными рукавами и ярусной юбкой из фактурной ткани.",
-  "specs": [
-   [
-    "бренд",
-    "OPUS"
-   ]
-  ],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 7000,
-   "max": 12000,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 1500,
-   "max": 3500,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим платьям OPUS б/у",
-   "sources": []
-  },
-  "todo": [
-   "размер",
-   "состав ткани",
-   "носили ли"
-  ],
-  "photos": [
-   {
-    "src": "images/v064-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v064-2.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v064-3.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v064-4.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v064-5.jpg",
-    "kind": "tryon"
+    "label": "Губы",
+    "src": "images/pin-6.jpg"
    }
   ],
   "added": "2026-10-23",
@@ -3297,7 +413,7 @@
   "title": "Ремень galliano",
   "category": "accessories",
   "subcategory": "ремни",
-  "description": "Чёрный кожаный ремень с пряжкой. Кромки заметно потёрты.",
+  "description": "Чёрный кожаный ремень с пряжкой и эффектом состаренной кожи.",
   "specs": [
    [
     "подлинность",
@@ -3309,14 +425,13 @@
    ]
   ],
   "condition": {
-   "label": "б/у, есть следы носки"
+   "label": "б/у; потёртый вид — это дизайн ремня, не дефект (со слов владелицы)"
   },
   "features": [],
-  "defects": [
-   "потёртости кромок"
-  ],
+  "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 2000
   },
   "nominal": {
    "min": 8000,
@@ -3364,313 +479,6 @@
   "status": "available"
  },
  {
-  "id": "v066",
-  "ref": "V066",
-  "title": "Бежевая сумка через плечо",
-  "category": "bags",
-  "subcategory": "сумки",
-  "description": "Небольшая бежевая сумка на шнурке с поворотным замком.",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 1000,
-   "max": 2500,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 400,
-   "max": 1000,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим сумкам",
-   "sources": []
-  },
-  "todo": [
-   "бренд",
-   "материал",
-   "размер"
-  ],
-  "photos": [
-   {
-    "src": "images/v066-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v066-2.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v066-3.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v067",
-  "ref": "V067",
-  "title": "Сумка Michael Kors, светло-розовая",
-  "category": "bags",
-  "subcategory": "сумки",
-  "description": "Светло-розовая сумка с сафьяновой фактурой и короткими ручками. Видны следы носки.",
-  "specs": [
-   [
-    "бренд",
-    "Michael Kors"
-   ],
-   [
-    "подлинность",
-    "оригинал (со слов владелицы)"
-   ]
-  ],
-  "condition": {
-   "label": "б/у, есть следы носки"
-  },
-  "features": [],
-  "defects": [
-   "следы носки"
-  ],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 15000,
-   "max": 30000,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 2500,
-   "max": 6000,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим б/у моделям",
-   "sources": [
-    {
-     "title": "Alania Zapoved — Michael Kors Jet Set Travel Tote, б/у, $55 (зарубежная площадка, аналог)",
-     "url": "https://alaniazapoved.ru/products/michael-kors-jet-set-red-travel-tote-saffiano-leather/6422071"
-    }
-   ]
-  },
-  "todo": [
-   "модель",
-   "размер"
-  ],
-  "photos": [
-   {
-    "src": "images/v067-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v067-2.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v067-3.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v067-4.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v067-5.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v068",
-  "ref": "V068",
-  "title": "Колба с розовыми сердечками",
-  "category": "decor",
-  "subcategory": "мелочи",
-  "description": "Маленькая пробирка, наполненная розовыми сердечками.",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 150,
-   "max": 350,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 100,
-   "max": 250,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим мелочам",
-   "sources": []
-  },
-  "todo": [
-   "что внутри: бумажное мыло или конфетти"
-  ],
-  "photos": [
-   {
-    "src": "images/v068-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v069",
-  "ref": "V069",
-  "title": "Магниты: облако, онигири, губы",
-  "category": "decor",
-  "subcategory": "магниты",
-  "description": "Три декоративных магнита.",
-  "specs": [
-   [
-    "количество",
-    "3"
-   ]
-  ],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 300,
-   "max": 600,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 150,
-   "max": 400,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим магнитам",
-   "sources": []
-  },
-  "todo": [],
-  "photos": [
-   {
-    "src": "images/v069-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v070",
-  "ref": "V070",
-  "title": "Скрепки-слоники, 4 шт.",
-  "category": "stationery",
-  "subcategory": "мелочи",
-  "description": "Четыре фигурные скрепки в виде слоников.",
-  "specs": [
-   [
-    "количество",
-    "4"
-   ]
-  ],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 100,
-   "max": 250,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 50,
-   "max": 150,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим скрепкам",
-   "sources": []
-  },
-  "todo": [],
-  "photos": [
-   {
-    "src": "images/v070-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v071",
-  "ref": "V071",
-  "title": "Солнцезащитные очки с градиентными линзами",
-  "category": "accessories",
-  "subcategory": "очки",
-  "description": "Прямоугольные очки в золотистой оправе с оранжево-розовыми градиентными линзами.",
-  "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 400,
-   "max": 1200,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 200,
-   "max": 600,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим очкам",
-   "sources": []
-  },
-  "todo": [
-   "бренд",
-   "UV-защита",
-   "царапины на линзах"
-  ],
-  "photos": [
-   {
-    "src": "images/v071-1.jpg",
-    "kind": "real"
-   },
-   {
-    "src": "images/v071-2.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
   "id": "v072",
   "ref": "V072",
   "title": "Светлый рюкзак",
@@ -3684,7 +492,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 1000
   },
   "nominal": {
    "min": 1500,
@@ -3723,29 +532,25 @@
   "status": "available"
  },
  {
-  "id": "v077",
-  "ref": "V077",
-  "title": "Тетради с иллюстрациями, 4 шт.",
-  "category": "stationery",
-  "subcategory": "тетради",
-  "description": "Четыре тонкие тетради с забавными рисунками — кит, слон и другие.",
-  "specs": [
-   [
-    "количество",
-    "4"
-   ]
-  ],
+  "id": "v053",
+  "ref": "V053",
+  "title": "Шоппер с оленем",
+  "category": "bags",
+  "subcategory": "шопперы",
+  "description": "Тканевая сумка-шоппер с рисунком оленя.",
+  "specs": [],
   "condition": {
    "label": "состояние уточняется"
   },
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 300
   },
   "nominal": {
-   "min": 200,
-   "max": 500,
+   "min": 300,
+   "max": 700,
    "date": "2026-10-23"
   },
   "estimate": {
@@ -3754,16 +559,16 @@
    "date": "2026-10-23",
    "confidence": "низкая",
    "by_analogs": true,
-   "note": "по похожим тетрадям",
+   "note": "по похожим шопперам",
    "sources": []
   },
   "todo": [
-   "количество листов",
-   "чистые ли"
+   "размер",
+   "носили ли"
   ],
   "photos": [
    {
-    "src": "images/v077-1.jpg",
+    "src": "images/v053-1.jpg",
     "kind": "real"
    }
   ],
@@ -3771,99 +576,523 @@
   "status": "available"
  },
  {
-  "id": "v078",
-  "ref": "V078",
-  "title": "Скетчбук «Sketch» с мраморной обложкой",
-  "category": "craft",
-  "subcategory": "скетчбуки",
-  "description": "Скетчбук с мраморной обложкой, у обложки отогнут угол.",
+  "id": "v066",
+  "ref": "V066",
+  "title": "Бежевая сумка через плечо",
+  "category": "bags",
+  "subcategory": "сумки",
+  "description": "Небольшая бежевая сумка на шнурке с поворотным замком.",
   "specs": [],
-  "condition": {
-   "label": "состояние уточняется"
-  },
-  "features": [],
-  "defects": [
-   "отогнут угол обложки"
-  ],
-  "deal": {
-   "mode": "tbd"
-  },
-  "nominal": {
-   "min": 250,
-   "max": 500,
-   "date": "2026-10-23"
-  },
-  "estimate": {
-   "min": 150,
-   "max": 350,
-   "date": "2026-10-23",
-   "confidence": "низкая",
-   "by_analogs": true,
-   "note": "по похожим скетчбукам",
-   "sources": []
-  },
-  "todo": [
-   "количество листов",
-   "чистый ли"
-  ],
-  "photos": [
-   {
-    "src": "images/v078-1.jpg",
-    "kind": "real"
-   }
-  ],
-  "added": "2026-10-23",
-  "status": "available"
- },
- {
-  "id": "v079",
-  "ref": "V079",
-  "title": "Тетрадь hatber CopyBook «LIFE»",
-  "category": "stationery",
-  "subcategory": "тетради",
-  "description": "Тетрадь на гребне формата A5. В базе записана как ежедневник.",
-  "specs": [
-   [
-    "бренд",
-    "hatber"
-   ],
-   [
-    "формат",
-    "A5"
-   ],
-   [
-    "листов",
-    "48"
-   ]
-  ],
   "condition": {
    "label": "состояние уточняется"
   },
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 500
   },
   "nominal": {
-   "min": 150,
-   "max": 300,
+   "min": 800,
+   "max": 2000,
    "date": "2026-10-23"
   },
   "estimate": {
-   "min": 100,
-   "max": 250,
+   "min": 300,
+   "max": 700,
    "date": "2026-10-23",
    "confidence": "низкая",
    "by_analogs": true,
-   "note": "по похожим тетрадям",
+   "note": "по похожим сумкам",
    "sources": []
   },
   "todo": [
-   "чистая ли"
+   "бренд",
+   "материал",
+   "размер"
   ],
   "photos": [
    {
-    "src": "images/v079-1.jpg",
+    "src": "images/v066-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v066-2.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v066-3.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v071",
+  "ref": "V071",
+  "title": "Солнцезащитные очки с градиентными линзами",
+  "category": "accessories",
+  "subcategory": "очки",
+  "description": "Прямоугольные очки в золотистой оправе с оранжево-розовыми градиентными линзами.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 400
+  },
+  "nominal": {
+   "min": 400,
+   "max": 1200,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 200,
+   "max": 600,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим очкам",
+   "sources": []
+  },
+  "todo": [
+   "бренд",
+   "UV-защита",
+   "царапины на линзах"
+  ],
+  "photos": [
+   {
+    "src": "images/v071-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v071-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v062",
+  "ref": "V062",
+  "title": "Ланчбокс-сердце с сиба-ину",
+  "category": "dishes",
+  "subcategory": "ланчбоксы",
+  "description": "Розовый ланчбокс в форме сердца с собачкой. В базе записан как круглый.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 500
+  },
+  "nominal": {
+   "min": 500,
+   "max": 1000,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 300,
+   "max": 700,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим ланчбоксам",
+   "sources": []
+  },
+  "todo": [
+   "объём",
+   "пользовались ли"
+  ],
+  "photos": [
+   {
+    "src": "images/v062-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v062-2.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v062-3.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v016",
+  "ref": "V016",
+  "title": "Серьги-пусеты с котиками Zed & Two",
+  "category": "jewelry",
+  "subcategory": "серьги",
+  "description": "Маленькие пусеты с чёрными котиками на карточке Zed & Two, в пакетике.",
+  "specs": [
+   [
+    "на карточке",
+    "Zed & Two, «S925 Post»"
+   ]
+  ],
+  "condition": {
+   "label": "в пакете, состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 900
+  },
+  "nominal": {
+   "min": 900,
+   "max": 1500,
+   "date": "2026-10-23",
+   "note": "аналог: серебряные пусеты «Котики» на Ozon — 962 ₽"
+  },
+  "estimate": {
+   "min": 500,
+   "max": 1200,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим серебряным пусетам",
+   "sources": [
+    {
+     "title": "Ozon — серьги-пусеты «Котики», серебро 925, 962 ₽ (аналог)",
+     "url": "https://www.ozon.ru/product/sergi-gvozdiki-zolotoy-merkuriy-pusety-serebro-925-kotiki-silikonovyy-zamok-v-podarok-2086217873/"
+    }
+   ]
+  },
+  "todo": [
+   "проба подтверждена только надписью на карточке",
+   "носили ли"
+  ],
+  "photos": [
+   {
+    "src": "images/v016-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v002",
+  "ref": "V002",
+  "title": "Кружка Lefard «Щелкунчик»",
+  "category": "dishes",
+  "subcategory": "кружки",
+  "description": "Кружка Lefard с рисунком по мотивам «Щелкунчика», в подарочной коробке.",
+  "specs": [
+   [
+    "бренд",
+    "Lefard"
+   ],
+   [
+    "артикул",
+    "760-822 (по коробке)"
+   ]
+  ],
+  "condition": {
+   "label": "в коробке, состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 600
+  },
+  "nominal": {
+   "min": 600,
+   "max": 1200,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 400,
+   "max": 800,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по кружкам Lefard",
+   "sources": []
+  },
+  "todo": [
+   "объём",
+   "пользовались ли кружкой"
+  ],
+  "photos": [
+   {
+    "src": "images/v002-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v002-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v001",
+  "ref": "V001",
+  "title": "Кружка «А вот увидишь!»",
+  "category": "dishes",
+  "subcategory": "кружки",
+  "description": "Кружка с мультяшным котёнком и надписями «А вот увидишь!» и «А какие они, эти неприятности?». Лежит в своей коробке.",
+  "specs": [
+   [
+    "объём",
+    "420 мл (по коробке)"
+   ]
+  ],
+  "condition": {
+   "label": "в коробке, состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 400
+  },
+  "nominal": {
+   "min": 400,
+   "max": 700,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 250,
+   "max": 500,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим кружкам с принтом",
+   "sources": []
+  },
+  "todo": [
+   "пользовались ли кружкой",
+   "бренд"
+  ],
+  "photos": [
+   {
+    "src": "images/v001-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v001-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v063",
+  "ref": "V063",
+  "title": "Пароварка Braun",
+  "category": "tech",
+  "subcategory": "кухня",
+  "description": "Пароварка Braun с двумя ярусами.",
+  "specs": [
+   [
+    "бренд",
+    "Braun"
+   ]
+  ],
+  "condition": {
+   "label": "работает (со слов владелицы)"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 2500
+  },
+  "nominal": {
+   "min": 7700,
+   "max": 8200,
+   "date": "2026-10-23",
+   "note": "аналог: Braun FS 3000 — от 7 729 ₽; модель не подтверждена"
+  },
+  "estimate": {
+   "min": 1500,
+   "max": 3500,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "б/у пароварки; модель не подтверждена",
+   "sources": [
+    {
+     "title": "Expertcen — Braun FS 3000, новые, от 7 729 до 8 192 ₽ (аналог, модель не подтверждена)",
+     "url": "https://www.expertcen.ru/product/model-braun-fs-3000.html"
+    }
+   ]
+  },
+  "todo": [
+   "модель",
+   "комплект"
+  ],
+  "photos": [
+   {
+    "src": "images/v063-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v058",
+  "ref": "V058",
+  "title": "Лампа для маникюра SUN X5 MAX",
+  "category": "tech",
+  "subcategory": "для маникюра",
+  "description": "UV/LED-лампа для сушки гель-лака.",
+  "specs": [
+   [
+    "модель",
+    "SUN X5 MAX (по корпусу)"
+   ]
+  ],
+  "condition": {
+   "label": "работает (со слов владелицы)"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 900
+  },
+  "nominal": {
+   "min": 1000,
+   "max": 2000,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 500,
+   "max": 1200,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим лампам",
+   "sources": []
+  },
+  "todo": [
+   "есть ли блок питания"
+  ],
+  "photos": [
+   {
+    "src": "images/v058-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v058-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v040",
+  "ref": "V040",
+  "title": "Петличный микрофон BOYA",
+  "category": "tech",
+  "subcategory": "аудио",
+  "description": "Проводной петличный микрофон с переключателем OFF / Smartphone.",
+  "specs": [
+   [
+    "бренд",
+    "BOYA"
+   ]
+  ],
+  "condition": {
+   "label": "работает (со слов владелицы)"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 700
+  },
+  "nominal": {
+   "min": 1000,
+   "max": 1800,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 400,
+   "max": 900,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим петличкам; модель не подтверждена",
+   "sources": [
+    {
+     "title": "iXBT — обзор BOYA BY-M1, $19,95 (2019)",
+     "url": "https://www.ixbt.com/live/comments/1803134"
+    }
+   ]
+  },
+  "todo": [
+   "модель (похоже на BY-M1)",
+   "комплект"
+  ],
+  "photos": [
+   {
+    "src": "images/v040-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v059",
+  "ref": "V059",
+  "title": "Чёрная бейсболка",
+  "category": "accessories",
+  "subcategory": "головные уборы",
+  "description": "Чёрная бейсболка с эффектом варёной ткани.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 400
+  },
+  "nominal": {
+   "min": 500,
+   "max": 1200,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 200,
+   "max": 600,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим бейсболкам",
+   "sources": []
+  },
+  "todo": [
+   "бренд",
+   "регулируется ли размер"
+  ],
+  "photos": [
+   {
+    "src": "images/v059-1.jpg",
     "kind": "real"
    }
   ],
@@ -3884,7 +1113,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 400
   },
   "nominal": {
    "min": 600,
@@ -3918,6 +1148,2849 @@
   "status": "available"
  },
  {
+  "id": "v042",
+  "ref": "V042",
+  "title": "Игрушка-подвеска — барашек с крылышками",
+  "category": "toys",
+  "subcategory": "мягкие игрушки",
+  "description": "Светлый плюшевый барашек или альпака с крылышками и бордовой лентой для подвешивания.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 300
+  },
+  "nominal": {
+   "min": 300,
+   "max": 700,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 150,
+   "max": 400,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим игрушкам",
+   "sources": []
+  },
+  "todo": [
+   "размер"
+  ],
+  "photos": [
+   {
+    "src": "images/v042-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v042-2.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v042-3.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v042-4.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v027",
+  "ref": "V027",
+  "title": "Мягкая игрушка — капибара, малютка",
+  "category": "toys",
+  "subcategory": "мягкие игрушки",
+  "description": "Маленькая коричневая плюшевая капибара.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 200
+  },
+  "nominal": {
+   "min": 250,
+   "max": 500,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 100,
+   "max": 250,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим игрушкам",
+   "sources": []
+  },
+  "todo": [],
+  "photos": [
+   {
+    "src": "images/v027-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v027-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v024",
+  "ref": "V024",
+  "title": "Твёрдые духи YOKITOKI «Яркий букет»",
+  "category": "beauty",
+  "subcategory": "ароматы",
+  "description": "Твёрдые духи в стике, Vibrant Bouquet.",
+  "specs": [
+   [
+    "бренд",
+    "YOKITOKI"
+   ],
+   [
+    "вес",
+    "5 г"
+   ],
+   [
+    "срок годности",
+    "36 месяцев (по упаковке)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 300
+  },
+  "nominal": {
+   "min": 350,
+   "max": 700,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 200,
+   "max": 400,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим твёрдым духам",
+   "sources": []
+  },
+  "todo": [
+   "дата изготовления",
+   "открывали ли"
+  ],
+  "photos": [
+   {
+    "src": "images/v024-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v024-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v030",
+  "ref": "V030",
+  "title": "Тени Farres 7 Colors, № 04",
+  "category": "beauty",
+  "subcategory": "декоративная косметика",
+  "description": "Палетка из семи оттенков теней.",
+  "specs": [
+   [
+    "бренд",
+    "Farres"
+   ],
+   [
+    "номер",
+    "04, артикул 1242"
+   ],
+   [
+    "годен до",
+    "06.2028 (по упаковке)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 250
+  },
+  "nominal": {
+   "min": 250,
+   "max": 450,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 150,
+   "max": 300,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим палеткам",
+   "sources": []
+  },
+  "todo": [
+   "открывали ли палетку"
+  ],
+  "photos": [
+   {
+    "src": "images/v030-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v030-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v003",
+  "ref": "V003",
+  "title": "Набор для сыра modi, 3 предмета",
+  "category": "dishes",
+  "subcategory": "сервировка",
+  "description": "Подарочный набор для подачи сыра: доска и ножи. В базе он записан как набор для вина, но на коробке написано «Набор для сыра (3 предмета)».",
+  "specs": [
+   [
+    "бренд",
+    "modi (по коробке)"
+   ],
+   [
+    "комплект",
+    "3 предмета"
+   ]
+  ],
+  "condition": {
+   "label": "в коробке, состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 600
+  },
+  "nominal": {
+   "min": 700,
+   "max": 1200,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 400,
+   "max": 700,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим наборам; точного совпадения нет",
+   "sources": [
+    {
+     "title": "Яндекс Маркет — набор для сыра Kuchenland, 4 пр., 1 690 ₽ (аналог)",
+     "url": "https://market.yandex.ru/cc/Aw5e2Y"
+    }
+   ]
+  },
+  "todo": [
+   "материал доски",
+   "вскрывали ли коробку"
+  ],
+  "photos": [
+   {
+    "src": "images/v003-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v003-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v060",
+  "ref": "V060",
+  "title": "Стеклянная маслёнка с рифлёной крышкой",
+  "category": "dishes",
+  "subcategory": "хранение",
+  "description": "Маслёнка из дымчато-коричневого стекла.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 400
+  },
+  "nominal": {
+   "min": 400,
+   "max": 900,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 200,
+   "max": 500,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим контейнерам",
+   "sources": []
+  },
+  "todo": [
+   "размер"
+  ],
+  "photos": [
+   {
+    "src": "images/v060-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v060-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v061",
+  "ref": "V061",
+  "title": "Бутылка для воды «Мой район»",
+  "category": "dishes",
+  "subcategory": "бутылки",
+  "description": "Синяя бутылка с петлёй и логотипами «Мой район» / «Наш двор».",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 400
+  },
+  "nominal": {
+   "min": 400,
+   "max": 900,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 200,
+   "max": 500,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим бутылкам",
+   "sources": []
+  },
+  "todo": [
+   "объём",
+   "пользовались ли"
+  ],
+  "photos": [
+   {
+    "src": "images/v061-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v061-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v021",
+  "ref": "V021",
+  "title": "Крем для тела Green Crimea с мочевиной 10%",
+  "category": "beauty",
+  "subcategory": "кремы",
+  "description": "Крем для тела «Интенсивный уход» с мочевиной, флакон с дозатором 200 мл.",
+  "specs": [
+   [
+    "бренд",
+    "Green Crimea"
+   ],
+   [
+    "объём",
+    "200 мл"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 500
+  },
+  "nominal": {
+   "min": 400,
+   "max": 700,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 300,
+   "max": 600,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим кремам",
+   "sources": []
+  },
+  "todo": [
+   "срок годности (на фото не виден)",
+   "вскрыт ли",
+   "тексты этикетки на фото различаются — нужно реальное фото"
+  ],
+  "photos": [
+   {
+    "src": "images/v021-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v021-2.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v021-3.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v032",
+  "ref": "V032",
+  "title": "Бижутерия поштучно",
+  "category": "jewelry",
+  "subcategory": "наборы",
+  "description": "19 браслетов, бус и других украшений. Можно выбрать одну или несколько штук — ниже плиткой.",
+  "specs": [
+   [
+    "штук",
+    "19"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 100,
+   "per": "за штуку"
+  },
+  "nominal": {
+   "min": 1000,
+   "max": 3000,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 300,
+   "max": 1000,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим лотам бижутерии",
+   "sources": []
+  },
+  "todo": [],
+  "photos": [
+   {
+    "src": "images/v032-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v032-p1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v032-p2.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v032-p3.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v032-p4.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v032-p5.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v032-p6.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available",
+  "variants": [
+   {
+    "label": "Два разноцветных браслета",
+    "src": "images/v032-p1.jpg"
+   },
+   {
+    "label": "Чёрные браслеты на шнурке",
+    "src": "images/v032-p2.jpg"
+   },
+   {
+    "label": "Синий и розовый браслеты на шнурке",
+    "src": "images/v032-p3.jpg"
+   },
+   {
+    "label": "Серый двойной браслет",
+    "src": "images/v032-p4.jpg"
+   },
+   {
+    "label": "Чёрный браслет из крупных бусин",
+    "src": "images/v032-p5.jpg"
+   },
+   {
+    "label": "Два серых браслета",
+    "src": "images/v032-p6.jpg"
+   },
+   {
+    "label": "Коричневый браслет с крючком",
+    "src": "images/v032-p7.jpg"
+   },
+   {
+    "label": "Золотисто-серебристый бисерный браслет",
+    "src": "images/v032-p8.jpg"
+   },
+   {
+    "label": "Жёлтый браслет из бусин",
+    "src": "images/v032-p9.jpg"
+   },
+   {
+    "label": "Фиолетовый бисерный браслет",
+    "src": "images/v032-p10.jpg"
+   },
+   {
+    "label": "Тёмно-синий бисерный браслет",
+    "src": "images/v032-p11.jpg"
+   },
+   {
+    "label": "Бордовый браслет из бусин",
+    "src": "images/v032-p12.jpg"
+   },
+   {
+    "label": "Маленький медный шарм",
+    "src": "images/v032-p13.jpg"
+   },
+   {
+    "label": "Коричневое кольцо",
+    "src": "images/v032-p14.jpg"
+   },
+   {
+    "label": "Шнурок с золотистой бусиной",
+    "src": "images/v032-p15.jpg"
+   },
+   {
+    "label": "Прозрачный бисерный браслет с цветочками",
+    "src": "images/v032-p16.jpg"
+   },
+   {
+    "label": "Белый бисерный браслет с зелёными цветочками",
+    "src": "images/v032-p17.jpg"
+   },
+   {
+    "label": "Золотисто-зелёный бисерный браслет",
+    "src": "images/v032-p18.jpg"
+   },
+   {
+    "label": "Коричневый бисерный браслет с подвеской",
+    "src": "images/v032-p19.jpg"
+   }
+  ]
+ },
+ {
+  "id": "v019",
+  "ref": "V019",
+  "title": "Крем для рук «Бархатные ручки», ночной",
+  "category": "beauty",
+  "subcategory": "кремы",
+  "description": "Питательный ночной крем для рук с маслом ши, туба 80 мл.",
+  "specs": [
+   [
+    "бренд",
+    "Бархатные ручки"
+   ],
+   [
+    "объём",
+    "80 мл"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 100
+  },
+  "nominal": {
+   "min": 120,
+   "max": 200,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 80,
+   "max": 150,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по рознице и б/у косметике",
+   "sources": []
+  },
+  "todo": [
+   "вскрыт ли",
+   "срок годности"
+  ],
+  "photos": [
+   {
+    "src": "images/v019-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v019-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v008",
+  "ref": "V008",
+  "title": "Твёрдый шампунь «Крымские сказки» с маклюрой",
+  "category": "beauty",
+  "subcategory": "уход за волосами",
+  "description": "Твёрдый шампунь ручной работы в плёнке.",
+  "specs": [
+   [
+    "бренд",
+    "Крымские сказки"
+   ]
+  ],
+  "condition": {
+   "label": "в упаковке"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 300
+  },
+  "nominal": {
+   "min": 350,
+   "max": 550,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 250,
+   "max": 400,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим твёрдым шампуням",
+   "sources": []
+  },
+  "todo": [
+   "вес",
+   "срок годности"
+  ],
+  "photos": [
+   {
+    "src": "images/v008-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v008-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v009",
+  "ref": "V009",
+  "title": "Джутовая мочалка с мылом «Морской микс»",
+  "category": "beauty",
+  "subcategory": "для душа",
+  "description": "Мочалка из джута с кусочком крымского мыла внутри, в упаковке.",
+  "specs": [
+   [
+    "бренд",
+    "Крымская линия (по упаковке)"
+   ]
+  ],
+  "condition": {
+   "label": "в упаковке"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 300
+  },
+  "nominal": {
+   "min": 300,
+   "max": 500,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 200,
+   "max": 400,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим мочалкам с мылом",
+   "sources": []
+  },
+  "todo": [
+   "срок годности мыла"
+  ],
+  "photos": [
+   {
+    "src": "images/v009-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v009-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v022",
+  "ref": "V022",
+  "title": "Мыло-скраб «Лавандовое» в сетке",
+  "category": "beauty",
+  "subcategory": "мыло",
+  "description": "Натуральное мыло-скраб «Крымские сказки» в сетчатом мешочке. В базе записано как мочалка.",
+  "specs": [
+   [
+    "бренд",
+    "Крымские сказки"
+   ]
+  ],
+  "condition": {
+   "label": "в упаковке"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 250
+  },
+  "nominal": {
+   "min": 250,
+   "max": 400,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 150,
+   "max": 300,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожему мылу",
+   "sources": []
+  },
+  "todo": [
+   "вес",
+   "срок годности"
+  ],
+  "photos": [
+   {
+    "src": "images/v022-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v022-2.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v022-3.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v011",
+  "ref": "V011",
+  "title": "Мыло «Лаванда», 50 г",
+  "category": "beauty",
+  "subcategory": "мыло",
+  "description": "Крымское мыло ручной работы с лавандой.",
+  "specs": [
+   [
+    "вес",
+    "50 г (по базе)"
+   ],
+   [
+    "дата на упаковке",
+    "23 авг 2025"
+   ],
+   [
+    "срок годности",
+    "24 месяца (по базе)"
+   ]
+  ],
+  "condition": {
+   "label": "в упаковке"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 150
+  },
+  "nominal": {
+   "min": 120,
+   "max": 200,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 100,
+   "max": 200,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожему мылу",
+   "sources": []
+  },
+  "todo": [
+   "марка: на фото «Ялта», в базе «Крымская линия»"
+  ],
+  "photos": [
+   {
+    "src": "images/v011-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v011-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v068",
+  "ref": "V068",
+  "title": "Лепестковое мыло в колбе",
+  "category": "beauty",
+  "subcategory": "мыло",
+  "description": "Колба с мылом-лепестками в форме розовых сердечек.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 100
+  },
+  "nominal": {
+   "min": 150,
+   "max": 300,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 80,
+   "max": 150,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим мелочам",
+   "sources": []
+  },
+  "todo": [],
+  "photos": [
+   {
+    "src": "images/v068-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v012",
+  "ref": "V012",
+  "title": "Серьги-петли",
+  "category": "jewelry",
+  "subcategory": "серьги",
+  "description": "Серьги серебристого цвета с объёмными петлями, в пакетике.",
+  "specs": [],
+  "condition": {
+   "label": "в пакете, состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 400
+  },
+  "nominal": {
+   "min": 250,
+   "max": 500,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 200,
+   "max": 500,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожей бижутерии",
+   "sources": []
+  },
+  "todo": [
+   "металл / покрытие",
+   "носили ли"
+  ],
+  "photos": [
+   {
+    "src": "images/v012-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v012-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v014",
+  "ref": "V014",
+  "title": "Браслет-кафф бронзового цвета",
+  "category": "jewelry",
+  "subcategory": "браслеты",
+  "description": "Открытый браслет-кафф с петлями, цвет бронзы.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 400
+  },
+  "nominal": {
+   "min": 250,
+   "max": 600,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 200,
+   "max": 500,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожей бижутерии",
+   "sources": []
+  },
+  "todo": [
+   "металл",
+   "носили ли"
+  ],
+  "photos": [
+   {
+    "src": "images/v014-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v028",
+  "ref": "V028",
+  "title": "Браслеты с бусинами, 2 шт.",
+  "category": "jewelry",
+  "subcategory": "браслеты",
+  "description": "Два тонких браслета с бусинами — розовый и зелёный, в пакетиках с карточками Fashion Jewelry.",
+  "specs": [],
+  "condition": {
+   "label": "в пакетах"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 200
+  },
+  "nominal": {
+   "min": 150,
+   "max": 350,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 100,
+   "max": 300,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожей бижутерии",
+   "sources": []
+  },
+  "todo": [],
+  "photos": [
+   {
+    "src": "images/v028-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v043",
+  "ref": "V043",
+  "title": "Мягкий брелок — одноглазый монстрик",
+  "category": "toys",
+  "subcategory": "брелоки",
+  "description": "Красно-коралловый одноглазый плюшевый монстрик на брелоке (в базе записан как розовый дракон).",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 200
+  },
+  "nominal": {
+   "min": 150,
+   "max": 350,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 100,
+   "max": 300,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим брелокам",
+   "sources": []
+  },
+  "todo": [],
+  "photos": [
+   {
+    "src": "images/v043-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v043-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v005",
+  "ref": "V005",
+  "title": "Кисти для тонального крема, 2 шт.",
+  "category": "beauty",
+  "subcategory": "кисти",
+  "description": "Две кисти для тонального средства с синтетическим ворсом, в упаковке.",
+  "specs": [
+   [
+    "артикул",
+    "D-2055 (по упаковке)"
+   ],
+   [
+    "ворс",
+    "синтетический (по упаковке)"
+   ],
+   [
+    "дата производства",
+    "30.06.2025 (по упаковке)"
+   ]
+  ],
+  "condition": {
+   "label": "в упаковке"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 250
+  },
+  "nominal": {
+   "min": 200,
+   "max": 400,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 150,
+   "max": 300,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим наборам кистей",
+   "sources": []
+  },
+  "todo": [],
+  "photos": [
+   {
+    "src": "images/v005-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v005-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v006",
+  "ref": "V006",
+  "title": "Набор кистей для макияжа",
+  "category": "beauty",
+  "subcategory": "кисти",
+  "description": "Набор косметических кистей: для пудры, теней, растушёвки и бровей. В базе записан как художественные кисти, но на упаковке — кисти для макияжа.",
+  "specs": [],
+  "condition": {
+   "label": "в упаковке"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 250
+  },
+  "nominal": {
+   "min": 250,
+   "max": 500,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 150,
+   "max": 300,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим наборам",
+   "sources": []
+  },
+  "todo": [
+   "количество кистей"
+  ],
+  "photos": [
+   {
+    "src": "images/v006-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v006-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v025",
+  "ref": "V025",
+  "title": "Головоломка-змейка",
+  "category": "toys",
+  "subcategory": "головоломки",
+  "description": "Разноцветная головоломка-змейка.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 200
+  },
+  "nominal": {
+   "min": 100,
+   "max": 250,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 100,
+   "max": 250,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим головоломкам",
+   "sources": []
+  },
+  "todo": [],
+  "photos": [
+   {
+    "src": "images/v025-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v026",
+  "ref": "V026",
+  "title": "Брелок-кубик 3 × 3",
+  "category": "toys",
+  "subcategory": "брелоки",
+  "description": "Маленький кубик-головоломка на брелоке.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 150
+  },
+  "nominal": {
+   "min": 80,
+   "max": 200,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 80,
+   "max": 200,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим брелокам",
+   "sources": []
+  },
+  "todo": [],
+  "photos": [
+   {
+    "src": "images/v026-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v031",
+  "ref": "V031",
+  "title": "Поющие магниты-«трещалки», 2 шт.",
+  "category": "toys",
+  "subcategory": "антистресс",
+  "description": "Два чёрных овальных магнита — если подбросить, они сталкиваются в воздухе и трещат. Популярная детская игрушка.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 100
+  },
+  "nominal": {
+   "min": 100,
+   "max": 250,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 50,
+   "max": 150,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим магнитным камням — если это они",
+   "sources": []
+  },
+  "todo": [],
+  "photos": [
+   {
+    "src": "images/v031-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v054",
+  "ref": "V054",
+  "title": "Дорожный набор кабелей в футляре",
+  "category": "tech",
+  "subcategory": "аксессуары",
+  "description": "Круглый футляр с кабелями и переходниками, внутри есть скрепка для SIM-карты.",
+  "specs": [],
+  "condition": {
+   "label": "работает (со слов владелицы)"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 150
+  },
+  "nominal": {
+   "min": 200,
+   "max": 200,
+   "date": "2026-10-23",
+   "note": "со слов владелицы"
+  },
+  "estimate": {
+   "min": 100,
+   "max": 150,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим наборам",
+   "sources": []
+  },
+  "todo": [
+   "какие разъёмы"
+  ],
+  "photos": [
+   {
+    "src": "images/v054-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v055",
+  "ref": "V055",
+  "title": "Стилус белый",
+  "category": "tech",
+  "subcategory": "аксессуары",
+  "description": "Белый активный стилус с кнопкой и индикатором.",
+  "specs": [],
+  "condition": {
+   "label": "работает (со слов владелицы)"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 250
+  },
+  "nominal": {
+   "min": 400,
+   "max": 800,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 150,
+   "max": 300,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим стилусам",
+   "sources": []
+  },
+  "todo": [
+   "бренд",
+   "с какими устройствами работает",
+   "как заряжается"
+  ],
+  "photos": [
+   {
+    "src": "images/v055-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v029",
+  "ref": "V029",
+  "title": "Карманный компас",
+  "category": "home",
+  "subcategory": "полезные мелочи",
+  "description": "Небольшой карманный компас.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 300
+  },
+  "nominal": {
+   "min": 150,
+   "max": 350,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 150,
+   "max": 400,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим компасам",
+   "sources": []
+  },
+  "todo": [
+   "работает ли стрелка"
+  ],
+  "photos": [
+   {
+    "src": "images/v029-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v004",
+  "ref": "V004",
+  "title": "Штора для ванной 180 × 180",
+  "category": "home",
+  "subcategory": "ванная",
+  "description": "Тканевая штора для ванной в упаковке, кольца в комплекте по информации на упаковке.",
+  "specs": [
+   [
+    "размер",
+    "180 × 180 см"
+   ],
+   [
+    "состав",
+    "100% полиэстер (по упаковке)"
+   ]
+  ],
+  "condition": {
+   "label": "в упаковке"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 500
+  },
+  "nominal": {
+   "min": 400,
+   "max": 800,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 300,
+   "max": 600,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим шторам",
+   "sources": []
+  },
+  "todo": [
+   "рисунок / цвет шторы"
+  ],
+  "photos": [
+   {
+    "src": "images/v004-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v004-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v023",
+  "ref": "V023",
+  "title": "Наборы наклеек с персонажами, 2 шт.",
+  "category": "stationery",
+  "subcategory": "наклейки",
+  "description": "Два набора наклеек с милыми персонажами и пластиковыми лопатками, в упаковке.",
+  "specs": [],
+  "condition": {
+   "label": "в упаковке"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 200
+  },
+  "nominal": {
+   "min": 200,
+   "max": 400,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 100,
+   "max": 250,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим наборам",
+   "sources": []
+  },
+  "todo": [],
+  "photos": [
+   {
+    "src": "images/v023-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v023-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v070",
+  "ref": "V070",
+  "title": "Скрепки-слоники, 4 шт.",
+  "category": "stationery",
+  "subcategory": "мелочи",
+  "description": "Четыре фигурные скрепки в виде слоников.",
+  "specs": [
+   [
+    "количество",
+    "4"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 100
+  },
+  "nominal": {
+   "min": 80,
+   "max": 200,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 50,
+   "max": 150,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим скрепкам",
+   "sources": []
+  },
+  "todo": [],
+  "photos": [
+   {
+    "src": "images/v070-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v077",
+  "ref": "V077",
+  "title": "Тетради с иллюстрациями, 4 шт.",
+  "category": "stationery",
+  "subcategory": "тетради",
+  "description": "Четыре тонкие тетради с забавными рисунками — кит, слон и другие.",
+  "specs": [
+   [
+    "количество",
+    "4"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 150
+  },
+  "nominal": {
+   "min": 150,
+   "max": 300,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 80,
+   "max": 200,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим тетрадям",
+   "sources": []
+  },
+  "todo": [
+   "количество листов",
+   "чистые ли"
+  ],
+  "photos": [
+   {
+    "src": "images/v077-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v079",
+  "ref": "V079",
+  "title": "Тетрадь hatber CopyBook «LIFE»",
+  "category": "stationery",
+  "subcategory": "тетради",
+  "description": "Тетрадь на гребне формата A5. В базе записана как ежедневник.",
+  "specs": [
+   [
+    "бренд",
+    "hatber"
+   ],
+   [
+    "формат",
+    "A5"
+   ],
+   [
+    "листов",
+    "48"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 200
+  },
+  "nominal": {
+   "min": 150,
+   "max": 300,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 100,
+   "max": 250,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим тетрадям",
+   "sources": []
+  },
+  "todo": [
+   "чистая ли"
+  ],
+  "photos": [
+   {
+    "src": "images/v079-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v052",
+  "ref": "V052",
+  "title": "Тетрадь Shiba Love",
+  "category": "stationery",
+  "subcategory": "тетради",
+  "description": "Тетрадь с собачкой сиба-ину. В базе записана как Shiba Cute, на обложке — Shiba Love.",
+  "specs": [
+   [
+    "листов",
+    "60"
+   ],
+   [
+    "формат",
+    "150 × 215 мм"
+   ],
+   [
+    "артикул",
+    "ZKMG-0131 (по ярлыку)"
+   ]
+  ],
+  "condition": {
+   "label": "с ярлыком магазина"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 150
+  },
+  "nominal": {
+   "min": 135,
+   "max": 135,
+   "date": "2026-10-23",
+   "note": "по ярлыку zakka.ru"
+  },
+  "estimate": {
+   "min": 100,
+   "max": 200,
+   "date": "2026-10-23",
+   "confidence": "средняя",
+   "by_analogs": false,
+   "note": "цена на ярлыке — 135 р.",
+   "sources": [
+    {
+     "title": "Ярлык zakka.ru на тетради: 135 р.",
+     "url": ""
+    }
+   ]
+  },
+  "todo": [],
+  "photos": [
+   {
+    "src": "images/v052-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v052-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v056",
+  "ref": "V056",
+  "title": "Скетчбук с авокадо",
+  "category": "craft",
+  "subcategory": "скетчбуки",
+  "description": "Скетчбук с обложкой, на которой авокадо-птички.",
+  "specs": [
+   [
+    "плотность",
+    "100 г/м² (по обложке)"
+   ],
+   [
+    "листов",
+    "64 (по обложке)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 200
+  },
+  "nominal": {
+   "min": 300,
+   "max": 500,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 100,
+   "max": 250,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим скетчбукам",
+   "sources": []
+  },
+  "todo": [
+   "чистый ли"
+  ],
+  "photos": [
+   {
+    "src": "images/v056-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v056-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v078",
+  "ref": "V078",
+  "title": "Скетчбук «Sketch» с мраморной обложкой",
+  "category": "craft",
+  "subcategory": "скетчбуки",
+  "description": "Скетчбук с мраморной обложкой, у обложки отогнут угол.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [
+   "отогнут угол обложки"
+  ],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 150
+  },
+  "nominal": {
+   "min": 200,
+   "max": 400,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 100,
+   "max": 200,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим скетчбукам",
+   "sources": []
+  },
+  "todo": [
+   "количество листов",
+   "чистый ли"
+  ],
+  "photos": [
+   {
+    "src": "images/v078-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v045",
+  "ref": "V045",
+  "title": "Скетчбук на спирали, 60 листов",
+  "category": "craft",
+  "subcategory": "скетчбуки",
+  "description": "Скетчбук с чёрно-белой обложкой.",
+  "specs": [
+   [
+    "формат",
+    "A5 (со слов владелицы)"
+   ],
+   [
+    "листов",
+    "60"
+   ],
+   [
+    "плотность",
+    "120 г/м²"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 150
+  },
+  "nominal": {
+   "min": 250,
+   "max": 450,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 100,
+   "max": 200,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим скетчбукам",
+   "sources": []
+  },
+  "todo": [
+   "чистый ли"
+  ],
+  "photos": [
+   {
+    "src": "images/v045-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v044",
+  "ref": "V044",
+  "title": "Блокнот НИУ ВШЭ «Поступаем в бакалавриат»",
+  "category": "stationery",
+  "subcategory": "блокноты",
+  "description": "Блокнот на пружине с символикой факультета социальных наук ВШЭ — мерч.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 0
+  },
+  "nominal": {
+   "text": "мерч — в продаже нет"
+  },
+  "estimate": {
+   "min": 0,
+   "max": 0,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим блокнотам",
+   "sources": []
+  },
+  "todo": [],
+  "photos": [
+   {
+    "src": "images/v044-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v046",
+  "ref": "V046",
+  "title": "Акварель «Гамма Студия», 12 цветов",
+  "category": "craft",
+  "subcategory": "рисование",
+  "description": "Художественная акварель в тубах.",
+  "specs": [
+   [
+    "бренд",
+    "Гамма"
+   ],
+   [
+    "комплект",
+    "12 туб по 9 мл"
+   ],
+   [
+    "артикул",
+    "213007"
+   ]
+  ],
+  "condition": {
+   "label": "часть туб открыта, набор не новый (со слов владелицы)"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 300
+  },
+  "nominal": {
+   "min": 600,
+   "max": 900,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 200,
+   "max": 400,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим наборам",
+   "sources": [
+    {
+     "title": "Детский мир — краски «Гамма» 12 цв., 650 ₽ (аналог)",
+     "url": "https://www.detmir.ru/product/index/id/5127219/"
+    }
+   ]
+  },
+  "todo": [],
+  "photos": [
+   {
+    "src": "images/v046-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v046-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v057",
+  "ref": "V057",
+  "title": "Масляная пастель Auchan, 12 цветов",
+  "category": "craft",
+  "subcategory": "рисование",
+  "description": "Набор масляной пастели.",
+  "specs": [
+   [
+    "бренд",
+    "Auchan"
+   ],
+   [
+    "цветов",
+    "12"
+   ]
+  ],
+  "condition": {
+   "label": "немного использована: мелки покоцанные — на фото выглядят лучше, чем вживую (со слов владелицы)"
+  },
+  "features": [
+   "мелки покоцанные — на фото выглядят лучше, чем вживую"
+  ],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 100
+  },
+  "nominal": {
+   "min": 150,
+   "max": 300,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 50,
+   "max": 100,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим наборам",
+   "sources": []
+  },
+  "todo": [],
+  "photos": [
+   {
+    "src": "images/v057-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v050",
+  "ref": "V050",
+  "title": "Бисер, бусины-буквы и резинка",
+  "category": "craft",
+  "subcategory": "рукоделие",
+  "description": "Баночка с бисером-миксом, бусины с буквами и резинка Crystal line 0,6 мм.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 300
+  },
+  "nominal": {
+   "min": 200,
+   "max": 450,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 150,
+   "max": 400,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим наборам",
+   "sources": []
+  },
+  "todo": [],
+  "photos": [
+   {
+    "src": "images/v050-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v050-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v047",
+  "ref": "V047",
+  "title": "Джутовый шпагат",
+  "category": "craft",
+  "subcategory": "рукоделие",
+  "description": "Несколько мотков джутового шпагата — натуральный и зелёный.",
+  "specs": [],
+  "condition": {
+   "label": "не использовался, но упаковка открыта (со слов владелицы)"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 100
+  },
+  "nominal": {
+   "min": 150,
+   "max": 150,
+   "date": "2026-10-23",
+   "note": "со слов владелицы"
+  },
+  "estimate": {
+   "min": 50,
+   "max": 100,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожему шпагату",
+   "sources": []
+  },
+  "todo": [
+   "сколько мотков"
+  ],
+  "photos": [
+   {
+    "src": "images/v047-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v047-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v048",
+  "ref": "V048",
+  "title": "Пряжа кремовая",
+  "category": "craft",
+  "subcategory": "рукоделие",
+  "description": "Моток пряжи кремового цвета, похоже, начатый.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 150
+  },
+  "nominal": {
+   "min": 100,
+   "max": 250,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 50,
+   "max": 200,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожей пряже",
+   "sources": []
+  },
+  "todo": [
+   "состав",
+   "вес / метраж"
+  ],
+  "photos": [
+   {
+    "src": "images/v048-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v037",
+  "ref": "V037",
+  "title": "Краситель для ткани radupro, чёрный",
+  "category": "craft",
+  "subcategory": "рукоделие",
+  "description": "Универсальный краситель для ткани, интенсивный чёрный.",
+  "specs": [
+   [
+    "бренд",
+    "radupro"
+   ],
+   [
+    "вес",
+    "2 × 20 г"
+   ],
+   [
+    "дата изготовления",
+    "04.2024 (по упаковке)"
+   ]
+  ],
+  "condition": {
+   "label": "в упаковке"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 150
+  },
+  "nominal": {
+   "min": 150,
+   "max": 300,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 100,
+   "max": 200,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим красителям",
+   "sources": []
+  },
+  "todo": [
+   "срок годности"
+  ],
+  "photos": [
+   {
+    "src": "images/v037-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v037-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v049",
+  "ref": "V049",
+  "title": "Шпажки бамбуковые Paterra, 100 шт.",
+  "category": "home",
+  "subcategory": "кухня",
+  "description": "Бамбуковые шпажки для канапе и шашлычков — подойдут и для рукоделия.",
+  "specs": [
+   [
+    "бренд",
+    "Paterra"
+   ],
+   [
+    "количество",
+    "немного меньше 100 шт. (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "упаковка открыта (со слов владелицы)"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 100
+  },
+  "nominal": {
+   "min": 100,
+   "max": 250,
+   "date": "2026-10-23",
+   "note": "аналог: шпажки 100 шт. — 225 ₽"
+  },
+  "estimate": {
+   "min": 50,
+   "max": 100,
+   "date": "2026-10-23",
+   "confidence": "средняя",
+   "by_analogs": true,
+   "note": "по похожим шпажкам",
+   "sources": [
+    {
+     "title": "Детский мир — шпажки бамбуковые 200 мм, 100 шт., 225 ₽ (аналог)",
+     "url": "https://www.detmir.ru/product/index/id/6170787/"
+    }
+   ]
+  },
+  "todo": [],
+  "photos": [
+   {
+    "src": "images/v049-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v038",
+  "ref": "V038",
+  "title": "Малярная лента MONLID 48 мм × 50 м",
+  "category": "repair",
+  "subcategory": "малярные материалы",
+  "description": "Рулон малярной ленты. В базе записана как MONO, на упаковке — MONLID.",
+  "specs": [
+   [
+    "бренд",
+    "MONLID"
+   ],
+   [
+    "размер",
+    "48 мм × 50 м"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 200
+  },
+  "nominal": {
+   "min": 150,
+   "max": 350,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 100,
+   "max": 250,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим лентам",
+   "sources": []
+  },
+  "todo": [
+   "начатая или нет"
+  ],
+  "photos": [
+   {
+    "src": "images/v038-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v038-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v033",
+  "ref": "V033",
+  "title": "Краска LUXENS для кухни и ванной, 5 л",
+  "category": "repair",
+  "subcategory": "краски",
+  "description": "Белоснежная матовая краска для стен и потолков в кухне и ванной.",
+  "specs": [
+   [
+    "бренд",
+    "LUXENS"
+   ],
+   [
+    "объём",
+    "5 л"
+   ],
+   [
+    "финиш",
+    "матовая"
+   ]
+  ],
+  "condition": {
+   "label": "открыта; срок годности мог истечь (со слов владелицы)"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 800
+  },
+  "nominal": {
+   "min": 2000,
+   "max": 3200,
+   "date": "2026-10-23",
+   "note": "аналог: эмаль Luxens 2,5 кг — 1 989 ₽"
+  },
+  "estimate": {
+   "min": 500,
+   "max": 1000,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим краскам; точного совпадения нет",
+   "sources": [
+    {
+     "title": "Яндекс Маркет — эмаль Luxens универсальная, 2,5 кг, 1 989 ₽ (аналог)",
+     "url": "https://market.yandex.ru/cc/9KfgRT"
+    }
+   ]
+  },
+  "todo": [
+   "срок годности"
+  ],
+  "photos": [
+   {
+    "src": "images/v033-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v035",
+  "ref": "V035",
+  "title": "Эмаль NOVAX для радиаторов, 3 л",
+  "category": "repair",
+  "subcategory": "краски",
+  "description": "Белая эмаль для радиаторов отопления.",
+  "specs": [
+   [
+    "бренд",
+    "NOVAX"
+   ],
+   [
+    "объём",
+    "3 л"
+   ]
+  ],
+  "condition": {
+   "label": "открыта; срок годности мог истечь (со слов владелицы)"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 500
+  },
+  "nominal": {
+   "min": 1500,
+   "max": 2500,
+   "date": "2026-10-23",
+   "note": "аналог: эмаль для радиаторов Erica 1,8 кг — 1 376 ₽"
+  },
+  "estimate": {
+   "min": 300,
+   "max": 600,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим эмалям",
+   "sources": [
+    {
+     "title": "Яндекс Маркет — эмаль для радиаторов Erica, 1,8 кг, 1 376 ₽ (аналог)",
+     "url": "https://market.yandex.ru/cc/9Cy29F"
+    }
+   ]
+  },
+  "todo": [
+   "срок годности"
+  ],
+  "photos": [
+   {
+    "src": "images/v035-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v036",
+  "ref": "V036",
+  "title": "Герметик силиконовый бесцветный",
+  "category": "repair",
+  "subcategory": "герметики",
+  "description": "Универсальный силиконовый герметик.",
+  "specs": [
+   [
+    "марка",
+    "на фото читается «OPPA», в базе — «OPERA»"
+   ]
+  ],
+  "condition": {
+   "label": "открыт; срок годности мог истечь (со слов владелицы)"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 100
+  },
+  "nominal": {
+   "min": 200,
+   "max": 400,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 50,
+   "max": 150,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим герметикам",
+   "sources": []
+  },
+  "todo": [
+   "марка",
+   "срок годности"
+  ],
+  "photos": [
+   {
+    "src": "images/v036-1.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v034",
+  "ref": "V034",
+  "title": "Масляная краска «Лакра», сурик железный",
+  "category": "repair",
+  "subcategory": "краски",
+  "description": "Масляная краска «Выбор мастера» цвета сурик железный.",
+  "specs": [
+   [
+    "бренд",
+    "Лакра"
+   ]
+  ],
+  "condition": {
+   "label": "открыта; срок годности мог истечь (со слов владелицы); на банке следы ржавчины"
+  },
+  "features": [
+   "на банке следы ржавчины"
+  ],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 100
+  },
+  "nominal": {
+   "min": 300,
+   "max": 600,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 50,
+   "max": 150,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим краскам",
+   "sources": []
+  },
+  "todo": [
+   "объём",
+   "не загустела ли краска"
+  ],
+  "photos": [
+   {
+    "src": "images/v034-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v034-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v010",
+  "ref": "V010",
+  "title": "Мыло «Айва», 2 × 100 г",
+  "category": "beauty",
+  "subcategory": "мыло",
+  "description": "Набор из двух кусков натурального мыла: лимонная айва и мускатная айва.",
+  "specs": [
+   [
+    "производитель",
+    "ООО «Мануфактура Дом Природы» (по коробке)"
+   ],
+   [
+    "вес",
+    "2 × 100 г"
+   ],
+   [
+    "срок годности",
+    "18 месяцев; на коробке 04.2025 и 10.2026"
+   ]
+  ],
+  "condition": {
+   "label": "в коробке"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 400
+  },
+  "nominal": {
+   "min": 450,
+   "max": 700,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 300,
+   "max": 500,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим наборам мыла",
+   "sources": []
+  },
+  "todo": [
+   "что можно сделать с истекающим сроком"
+  ],
+  "photos": [
+   {
+    "src": "images/v010-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v010-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "draft",
+  "draft_reason": "на коробке 04.2025 и 10.2026 при сроке годности 18 месяцев — похоже, срок истекает в октябре 2026"
+ },
+ {
+  "id": "v018",
+  "ref": "V018",
+  "title": "Набор для пирсинга, мод. 203",
+  "category": "beauty",
+  "subcategory": "разное",
+  "description": "Стерильный набор для прокола ушей с серебряным украшением-шариком и спиртовыми салфетками, в упаковке.",
+  "specs": [
+   [
+    "на упаковке",
+    "«Пистолет для пирсинга в стерильной упаковке мод. 203 с серебряным украшением шарик 3», ПИ-00036"
+   ]
+  ],
+  "condition": {
+   "label": "в упаковке"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 600
+  },
+  "nominal": {
+   "min": 600,
+   "max": 1000,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 400,
+   "max": 800,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим наборам",
+   "sources": []
+  },
+  "todo": [
+   "срок стерильности на упаковке"
+  ],
+  "photos": [
+   {
+    "src": "images/v018-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v018-2.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "draft",
+  "draft_reason": "изделие для прокола кожи — нужен видимый срок стерильности и целостность упаковки"
+ },
+ {
+  "id": "v020",
+  "ref": "V020",
+  "title": "Крем для лица Green Crimea с мочевиной 10%",
+  "category": "beauty",
+  "subcategory": "кремы",
+  "description": "Крем для лица, шеи и зоны декольте с мочевиной, флакон с дозатором 200 мл.",
+  "specs": [
+   [
+    "бренд",
+    "Green Crimea"
+   ],
+   [
+    "объём",
+    "200 мл"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 300
+  },
+  "nominal": {
+   "min": 400,
+   "max": 700,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 200,
+   "max": 400,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожим кремам",
+   "sources": []
+  },
+  "todo": [
+   "реальное фото этикетки с датой",
+   "вскрыт ли"
+  ],
+  "photos": [
+   {
+    "src": "images/v020-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v020-2.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v020-3.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "draft",
+  "draft_reason": "на одном фото «годен до 03.2026» — срок мог истечь; тексты этикетки на двух фото различаются"
+ },
+ {
+  "id": "v041",
+  "ref": "V041",
+  "title": "Помада Yves Rocher Grand Rouge 111 Satiné",
+  "category": "beauty",
+  "subcategory": "декоративная косметика",
+  "description": "Помада в золотистом футляре, оттенок 111.",
+  "specs": [
+   [
+    "бренд",
+    "Yves Rocher"
+   ],
+   [
+    "вес",
+    "3,7 г"
+   ]
+  ],
+  "condition": {
+   "label": "со следами использования"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 200
+  },
+  "nominal": {
+   "min": 900,
+   "max": 1500,
+   "date": "2026-10-23"
+  },
+  "estimate": {
+   "min": 100,
+   "max": 300,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по похожей косметике",
+   "sources": []
+  },
+  "todo": [],
+  "photos": [
+   {
+    "src": "images/v041-1.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v041-2.jpg",
+    "kind": "real"
+   },
+   {
+    "src": "images/v041-3.jpg",
+    "kind": "real"
+   }
+  ],
+  "added": "2026-10-23",
+  "status": "draft",
+  "draft_reason": "помадой пользовались — её нельзя предлагать другим из соображений гигиены"
+ },
+ {
   "id": "book-bradbury-martian",
   "ref": "V088",
   "title": "Марсианские хроники",
@@ -3937,7 +4010,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -3986,7 +4060,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -4030,7 +4105,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 300
   },
   "nominal": {
    "min": 300,
@@ -4080,7 +4156,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -4129,7 +4206,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -4182,7 +4260,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -4235,7 +4314,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -4288,7 +4368,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -4337,7 +4418,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -4386,7 +4468,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -4435,7 +4518,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -4484,7 +4568,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -4533,7 +4618,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -4582,7 +4668,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -4631,7 +4718,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -4680,7 +4768,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -4733,7 +4822,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -4786,7 +4876,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -4839,7 +4930,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 700
   },
   "nominal": {
    "min": 800,
@@ -4883,7 +4975,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 200
   },
   "nominal": {
    "text": "новой в продаже нет"
@@ -4926,7 +5019,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 200
   },
   "nominal": {
    "text": "новой в продаже нет"
@@ -4969,7 +5063,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -5019,7 +5114,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 200
   },
   "nominal": {
    "min": 300,
@@ -5068,7 +5164,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -5117,7 +5214,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -5170,7 +5268,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -5223,7 +5322,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -5272,7 +5372,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 400
   },
   "nominal": {
    "min": 600,
@@ -5325,7 +5426,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 400
   },
   "nominal": {
    "min": 600,
@@ -5374,7 +5476,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 250
   },
   "nominal": {
    "min": 300,
@@ -5423,7 +5526,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 700
   },
   "nominal": {
    "min": 800,
@@ -5476,7 +5580,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 700
   },
   "nominal": {
    "min": 1500,
@@ -5529,7 +5634,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 700
   },
   "nominal": {
    "min": 900,
@@ -5578,7 +5684,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 500
   },
   "nominal": {
    "min": 900,
@@ -5627,7 +5734,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 900
   },
   "nominal": {
    "min": 1500,
@@ -5681,7 +5789,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 100
   },
   "nominal": {
    "text": "новой в продаже нет"
@@ -5732,7 +5841,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 300
   },
   "nominal": {
    "text": "новой в продаже нет"
@@ -5783,7 +5893,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 400
   },
   "nominal": {
    "text": "новой в продаже нет"
@@ -5830,7 +5941,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 400
   },
   "nominal": {
    "min": 400,
@@ -5879,7 +5991,8 @@
   "features": [],
   "defects": [],
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 400
   },
   "nominal": {
    "min": 400,
@@ -5925,7 +6038,8 @@
    "text": "архивный номер — новым не продаётся"
   },
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 300
   },
   "estimate": {
    "min": 150,
@@ -5963,7 +6077,8 @@
    "text": "архивный номер — новым не продаётся"
   },
   "deal": {
-   "mode": "tbd"
+   "mode": "pwyw",
+   "amount": 200
   },
   "estimate": {
    "min": 100,

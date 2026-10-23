@@ -14,6 +14,11 @@
   // черновики видны только по ссылке с ?drafts
   const SHOW_DRAFTS = /[?&]drafts\b/.test(location.search);
   const CAT = Object.fromEntries(CATS);
+  const BOOK_INTENTS = {
+    try: { label: "хочу одолжить почитать", msg: "хочу одолжить почитать" },
+    take: { label: "хочу купить / забрать", msg: "хочу купить" }
+  };
+  const intentsFor = (i) => (i && i.category === "library" ? Object.assign({}, INTENTS, BOOK_INTENTS) : INTENTS);
   const INTENTS = {
     try: { label: "хочу примерить / посмотреть вживую", msg: "хочу примерить" },
     take: { label: "хочу забрать", msg: "хочу забрать" },
@@ -22,7 +27,7 @@
   const PHOTO_NOTE = {
     ai: "ai-фото — цвет, посадка и детали могут отличаться",
     tryon: "Виртуальная примерка — посадка приблизительная",
-    fragment: "фрагмент общего фото подборки",
+    fragment: "",
     model: "фото этой модели из интернета",
     defect: "дефект"
   };
@@ -39,7 +44,7 @@
     error: "что-то пошло не так :(",
     market: "примерная стоимость — ориентир по вторичному рынку, а не цена продажи",
     nominal: "сколько такая вещь стоит новой сейчас — ориентир по рознице, а не цена, за которую я её отдаю",
-    estimate: "это ориентир по похожим предложениям, а не цена продажи. цены в объявлениях — не подтверждённые продажи."
+    estimate: "это ориентир по объявлениям, а не подтверждённые продажи."
   };
 
   // ---------- хранилище в браузере (может быть недоступно) ----------
@@ -50,7 +55,7 @@
 
   const state = {
     items: [],
-    cat: "", sub: "", libSub: "", deal: "", onlyFree: false, onlyLiked: false,
+    cat: "", sub: "", libSub: "", varSel: {}, deal: "", onlyFree: false, onlyLiked: false,
     likes: new Set(store.get("likes", [])),
     mine: store.get("mine", {}),            // id -> { intent, on }
     user: store.get("user", { name: "", tg: "", comment: "" })
@@ -118,10 +123,12 @@
     if (d.mode === "price") return rub(d.amount);
     if (d.mode === "tbd") return CFG.priceTbd || "цена уточняется";
     if (d.mode === "label") return d.text || "";
+    if (d.mode === "pwyw") return d.amount ? "≈ " + rub(d.amount) + (d.per ? " " + d.per : "") : "бесплатно / символически";
     return "отдаю";
   }
   const PODGON_LINK = `<a class="link" href="#podgon">идеи для подгона →</a>`;
   function dealSub(i) {
+    if (i.deal.mode === "pwyw") return `${esc(i.category === "library" ? CFG.pwywBooks : CFG.pwyw)} · ${PODGON_LINK}`;
     if (i.deal.mode === "give") return `донат или подгон по желанию · ${PODGON_LINK}`;
     if (i.deal.mode === "donate") return `или эквивалентный подгон · ${PODGON_LINK}`;
     return "";
@@ -226,6 +233,12 @@
     $("#f-liked").onchange = (e) => { state.onlyLiked = e.target.checked; render(); };
   }
 
+  function inRange(i, r) {
+    if (i.deal.mode !== "pwyw") return false;
+    const [a, b] = r.split("-");
+    const x = Number(i.deal.amount) || 0;
+    return x >= Number(a) && (b === "" || x <= Number(b));
+  }
   function catalog() { return state.items.filter((i) => i.status !== "archive" && i.category !== "library"); }
 
   function subsOf(list) {
@@ -245,7 +258,7 @@
     const base = catalog().filter((i) =>
       (!state.cat || i.category === state.cat) &&
       (!state.sub || i.subcategory === state.sub) &&
-      (!state.deal || i.deal.mode === state.deal) &&
+      (!state.deal || inRange(i, state.deal)) &&
       (!state.onlyLiked || state.likes.has(i.id)));
     const list = state.onlyFree ? base.filter((i) => i.status === "available") : base;
     $("#grid").innerHTML = list.map(cardHTML).join("");
@@ -401,7 +414,7 @@
     if (i.model) rows.push(["модель", i.model]);
     if (i.size) rows.push(["размер", [i.size, i.fit].filter(Boolean).join(" · ")]);
     else if (i.fit) rows.push(["посадка", i.fit]);
-    if (i.author) rows.push(["автор", i.author]);
+    if (i.author && !rows.some((r) => r[0] === "автор")) rows.push(["автор", i.author]);
     if (i.publisher) rows.push(["издательство", i.publisher]);
     if (i.opened === true) rows.push(["упаковка", "открыта"]);
     if (i.opened === false) rows.push(["упаковка", "не открыта"]);
@@ -411,15 +424,21 @@
     const defects = i.defects.map((d) => `<p class="defect">есть дефект → ${esc(d)}</p>`).join("") +
       i.features.filter((f) => !i.defects.includes(f)).map((f) => `<p class="feature">${esc(f)}</p>`).join("");
     const e = i.estimate;
-    const estimate = e ? `<div class="market">предварительная оценка ≈ ${esc(rubRange(e.min, e.max))}
+    const estimate = e && e.max ? `<div class="market">как я считала примерную стоимость
         <button class="market__q" aria-expanded="false" aria-label="что это">?</button>
-        <span class="market__note" hidden>${esc(T.estimate)}<br>
+        <span class="market__note" hidden>по похожим б/у вещам ≈ ${esc(rubRange(e.min, e.max))}. ${esc(T.estimate)}<br>
           ${esc(e.by_analogs ? "оценка по аналогам" : "по похожим предложениям")} · уверенность: ${esc(e.confidence)} · на ${esc(ruDate(e.date))}${e.note ? " · " + esc(e.note) : ""}
           ${(e.sources || []).length ? `<span class="sources">${e.sources.map((s) => s.url
             ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)} ↗</a>` : `<span>${esc(s.title)}</span>`).join("")}</span>` : ""}
         </span></div>` : "";
     const todo = i.todo.length ? `<p class="todo">уточняется: ${esc(i.todo.join("; "))}</p>` : "";
     const draft = i.status === "draft" ? `<p class="defect">черновик, не показывается на сайте → ${esc(i.draft_reason || "")}</p>` : "";
+    const mv = (state.mine[id] && state.mine[id].variants) || state.varSel[id] || [];
+    const variants = i.variants ? `<div class="variants">
+        <div class="variants__h">выбери, что хочешь — можно несколько <span id="var-count">${mv.length ? "· выбрано " + mv.length : ""}</span></div>
+        <div class="variants__grid">${i.variants.map((v, k) => `<button class="var" data-var="${k}" aria-pressed="${mv.includes(k)}" title="${esc(v.label)}">
+          <img src="${esc(v.src)}" alt="${esc(v.label)}" loading="lazy"><span>${esc(v.label)}</span></button>`).join("")}</div>
+      </div>` : "";
     let rel = "";
     if (i.is_collection) {
       const books = (i.books || []).map(byId).filter(Boolean);
@@ -452,7 +471,7 @@
     } else {
       const cur = mine ? effectiveIntent(i, mine.intent) : "try";
       actions = `<fieldset class="intents"><legend class="sr-only">что хочешь</legend>
-          ${["try", "take"].map((k) => `<label class="intent"><input type="radio" name="intent" value="${k}" ${cur === k ? "checked" : ""}><span>${INTENTS[k].label}</span></label>`).join("")}
+          ${["try", "take"].map((k) => `<label class="intent"><input type="radio" name="intent" value="${k}" ${cur === k ? "checked" : ""}><span>${intentsFor(i)[k].label}</span></label>`).join("")}
         </fieldset>
         <div class="row-actions">
           ${mine ? `<button class="btn btn--ghost" id="m-remove">убрать из моего</button>` : `<button class="btn btn--primary" id="m-add">добавить в моё</button>`}
@@ -486,6 +505,7 @@
         ${todo}
         ${market}
         ${estimate}
+        ${variants}
         ${rel}
         ${i.comment ? `<p class="comment">${esc(i.comment)}</p>` : ""}
         <div class="actions">${actions}</div>
@@ -506,6 +526,16 @@
       note.hidden = !note.hidden;
       q.setAttribute("aria-expanded", String(!note.hidden));
     }));
+    body.querySelectorAll(".var").forEach((b) => b.addEventListener("click", () => {
+      const k = Number(b.dataset.var);
+      const cur = new Set((state.mine[id] && state.mine[id].variants) || state.varSel[id] || []);
+      if (cur.has(k)) cur.delete(k); else cur.add(k);
+      const arr = Array.from(cur).sort((x, y) => x - y);
+      state.varSel[id] = arr;
+      if (state.mine[id]) { state.mine[id].variants = arr; saveMine(); }
+      b.setAttribute("aria-pressed", String(cur.has(k)));
+      $("#var-count").textContent = arr.length ? "· выбрано " + arr.length : "";
+    }));
     const like = $("#m-like");
     if (like) like.addEventListener("click", () => toggleLike(id));
     body.querySelectorAll("input[name=intent]").forEach((r) => r.addEventListener("change", () => {
@@ -515,6 +545,7 @@
     if (add) add.addEventListener("click", () => {
       const v = (body.querySelector("input[name=intent]:checked") || {}).value || "try";
       state.mine[id] = { intent: v, on: true };
+      if (state.varSel[id] && state.varSel[id].length) state.mine[id].variants = state.varSel[id];
       saveMine(); toast(T.added); renderItem(id);
     });
     const queue = $("#m-queue");
@@ -552,12 +583,13 @@
       const control = archived
         ? `<p class="mine-item__state">${T.given}</p>`
         : `<select data-intent="${esc(id)}" aria-label="что хочешь">${opts.map((k) =>
-            `<option value="${k}" ${intent === k ? "selected" : ""}>${INTENTS[k].label}</option>`).join("")}</select>`;
+            `<option value="${k}" ${intent === k ? "selected" : ""}>${intentsFor(item)[k].label}</option>`).join("")}</select>`;
       return `<div class="mine-item${archived ? " is-off" : ""}">
         <input type="checkbox" class="check" data-check="${esc(id)}" ${!archived && v.on !== false ? "checked" : ""} ${archived ? "disabled" : ""} aria-label="включить в заявку">
         <img src="${esc((item.photos[0] || {}).src || "")}" alt="">
         <div class="mine-item__body">
           <button class="mine-item__title" data-open="${esc(id)}">${esc(titleOf(item))}</button>
+          ${item.variants ? `<span class="mine-item__state">${v.variants && v.variants.length ? "выбрано: " + esc(v.variants.map((k) => (item.variants[k] || {}).label).filter(Boolean).join(", ")) : "штуки не выбраны — открой и отметь"}</span>` : ""}
           ${control}
           <button class="remove" data-remove="${esc(id)}">убрать из моего</button>
         </div>
@@ -578,7 +610,11 @@
   function buildMessage() {
     const sel = selected();
     const head = sel.length > 1 ? "привет! хочу забрать несколько вещей с сайта:" : "привет! хочу забрать вещь с сайта:";
-    const lines = sel.map(({ v, item }) => `• ${titleOf(item)} - ${INTENTS[effectiveIntent(item, v.intent)].msg}`);
+    const lines = sel.map(({ v, item }) => {
+      const picked = item.variants && v.variants && v.variants.length
+        ? ` (${v.variants.map((k) => item.variants[k] ? item.variants[k].label : "").filter(Boolean).join(", ")})` : "";
+      return `• ${titleOf(item)}${picked} - ${intentsFor(item)[effectiveIntent(item, v.intent)].msg}`;
+    });
     const name = (state.user.name || "").trim() || "…";
     const tg = normTg(state.user.tg) || "@…";
     let text = `${head}\n\n${lines.join("\n")}\n\nя - ${name}, ${tg}`;

@@ -250,3 +250,13 @@ a.chip { text-decoration: none; }
 .deal__nominal { font-size: 14px; margin-top: 8px; }
 .deal__nominal .market__note { font-size: 13px; color: var(--muted); }
 .nw { white-space: nowrap; }
+
+/* выбор поштучно (бижутерия, значки) */
+.variants { border-top: 1px solid var(--ink); padding-top: 12px; }
+.variants__h { font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+.variants__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 8px; }
+.var { all: unset; cursor: pointer; display: flex; flex-direction: column; gap: 4px; font-size: 11px; line-height: 1.2; color: var(--muted); }
+.var img { width: 100%; aspect-ratio: 1; object-fit: contain; border: 1px solid var(--line); background: #fff; }
+.var[aria-pressed="true"] img { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
+.var[aria-pressed="true"] { color: var(--ink); }
+.var[aria-pressed="true"] span::before { content: "✓ "; }
