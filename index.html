@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>ОДНА ВЕЩЬ ТЕБЕ ИЛИ ДВЕ ДРУГОМУ</title>
+  <title>ВЕЩЬ НЕ В СЕБЕ — одна вещь тебе или две другому</title>
   <meta name="description" content="это экспериментальный проект по осознанному потреблению. здесь я собрала вещи, которые хочу передать в добрые или не очень руки.">
-  <meta property="og:title" content="ОДНА ВЕЩЬ ТЕБЕ ИЛИ ДВЕ ДРУГОМУ">
+  <meta property="og:title" content="ВЕЩЬ НЕ В СЕБЕ">
   <meta property="og:description" content="это экспериментальный проект по осознанному потреблению. здесь я собрала вещи, которые хочу передать в добрые или не очень руки.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://zion-zona.github.io/wardrobe/">
@@ -23,8 +23,9 @@
 
   <header class="top">
     <div class="top__inner">
-      <a class="logo" href="#" id="logo">ОДНА ВЕЩЬ ТЕБЕ ИЛИ ДВЕ ДРУГОМУ</a>
+      <a class="logo" href="#" id="logo">ВЕЩЬ НЕ В СЕБЕ</a>
       <nav class="top__nav" aria-label="разделы">
+        <a class="top__link hide-sm" href="#library">библиотека</a>
         <a class="top__link hide-sm" href="#podgon">идеи для подгона</a>
         <a class="top__link hide-sm" href="#archive">архив</a>
         <button class="top__link" id="mine-open">моё <span class="count" id="mine-count">0</span></button>
@@ -36,10 +37,12 @@
     <!-- каталог -->
     <section id="view-catalog">
       <section class="intro">
-        <h1 class="intro__title" id="site-heading" aria-label="ОДНА ВЕЩЬ ТЕБЕ ИЛИ ДВЕ ДРУГОМУ"><span class="tl">ОДНА ВЕЩЬ ТЕБЕ</span><span class="tl">ИЛИ ДВЕ ДРУГОМУ</span></h1>
+        <h1 class="intro__title" id="site-heading" aria-label="ВЕЩЬ НЕ В СЕБЕ"><span class="tl">ВЕЩЬ НЕ В СЕБЕ</span></h1>
+        <p class="intro__slogan" id="slogan">одна вещь тебе или две другому</p>
         <div class="intro__text" id="intro-text"></div>
         <div class="intro__links">
           <button class="link" id="to-items">к вещам ↓</button>
+          <a class="link" href="#library">библиотека →</a>
           <a class="link" href="#podgon">идеи для подгона →</a>
           <a class="link" href="#archive">архив →</a>
         </div>
@@ -49,6 +52,7 @@
       <h2 class="section-title" id="items-title">вещи</h2>
       <section class="filters" aria-label="фильтры">
         <div class="chips" id="cat-chips" role="tablist" aria-label="категории"></div>
+        <div class="chips chips--sub" id="sub-chips" aria-label="подкатегории" hidden></div>
         <div class="filters__row">
           <label class="select">
             <span>условие</span>
@@ -57,6 +61,7 @@
               <option value="give">отдаю</option>
               <option value="donate">донат от</option>
               <option value="price">цена</option>
+              <option value="tbd">цена уточняется</option>
             </select>
           </label>
           <label class="toggle"><input type="checkbox" id="f-free"> только доступные</label>
@@ -74,6 +79,17 @@
       <p class="view-sub" id="archive-sub"></p>
       <p class="empty" id="archive-empty" hidden>пока пусто</p>
       <section class="grid" id="archive-grid"></section>
+    </section>
+
+    <!-- библиотека -->
+    <section id="view-library" hidden>
+      <a class="back" href="#">← к вещам</a>
+      <h1 class="section-title section-title--page">библиотека</h1>
+      <p class="lib-intro" id="lib-intro"></p>
+      <section class="filters filters--lib" aria-label="разделы библиотеки">
+        <div class="chips" id="lib-chips" role="tablist" aria-label="разделы"></div>
+      </section>
+      <section class="grid" id="lib-grid"></section>
     </section>
 
     <!-- идеи для подгона -->

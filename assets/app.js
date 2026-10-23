@@ -5,10 +5,14 @@
   const TG = String(CFG.telegram || "").replace(/^@/, "").trim();
 
   const CATS = [
-    ["", "всё"], ["clothes", "одежда"], ["shoes", "обувь"], ["bags", "сумки"],
-    ["accessories", "аксессуары"], ["jewelry", "украшения"], ["books", "книги"],
-    ["beauty", "косметика и уход"], ["toys", "игрушки"], ["home", "дом"], ["other", "другое"]
+    ["", "всё"], ["clothes", "одежда"], ["bags", "сумки и рюкзаки"], ["accessories", "аксессуары"],
+    ["jewelry", "украшения"], ["beauty", "косметика и уход"], ["tech", "техника"], ["dishes", "посуда"],
+    ["home", "товары для дома"], ["repair", "ремонт"], ["craft", "творчество"], ["stationery", "канцелярия"],
+    ["toys", "игрушки"], ["decor", "декор"], ["library", "библиотека"], ["other", "разное"]
   ];
+  const LIB_SUBS = ["подборка", "художественная", "поэзия", "психология", "искусство и музыка", "учебная и справочная", "журналы", "другие издания"];
+  // черновики видны только по ссылке с ?drafts
+  const SHOW_DRAFTS = /[?&]drafts\b/.test(location.search);
   const CAT = Object.fromEntries(CATS);
   const INTENTS = {
     try: { label: "хочу примерить / посмотреть вживую", msg: "хочу примерить" },
@@ -17,6 +21,8 @@
   };
   const PHOTO_NOTE = {
     ai: "ai-фото — цвет, посадка и детали могут отличаться",
+    tryon: "Виртуальная примерка — посадка приблизительная",
+    fragment: "фрагмент общего фото подборки",
     model: "фото этой модели из интернета",
     defect: "дефект"
   };
@@ -31,7 +37,8 @@
     none: "ничего не нашлось :(",
     noFree: "свободных вещей здесь пока нет :(",
     error: "что-то пошло не так :(",
-    market: "примерная стоимость — ориентир по вторичному рынку, а не цена продажи"
+    market: "примерная стоимость — ориентир по вторичному рынку, а не цена продажи",
+    estimate: "это ориентир по похожим предложениям, а не цена продажи. цены в объявлениях — не подтверждённые продажи."
   };
 
   // ---------- хранилище в браузере (может быть недоступно) ----------
@@ -42,7 +49,7 @@
 
   const state = {
     items: [],
-    cat: "", deal: "", onlyFree: false, onlyLiked: false,
+    cat: "", sub: "", libSub: "", deal: "", onlyFree: false, onlyLiked: false,
     likes: new Set(store.get("likes", [])),
     mine: store.get("mine", {}),            // id -> { intent, on }
     user: store.get("user", { name: "", tg: "", comment: "" })
@@ -51,6 +58,8 @@
   const $ = (s, r) => (r || document).querySelector(s);
   const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const rub = (n) => Number(n).toLocaleString("ru-RU") + " ₽";
+  const rubRange = (a, b) => a === b ? rub(a) : Number(a).toLocaleString("ru-RU") + "–" + rub(b);
+  const ruDate = (d) => { const m = String(d || "").match(/^(\d{4})-(\d{2})-(\d{2})$/); return m ? `${m[3]}.${m[2]}.${m[1]}` : String(d || ""); };
   const byId = (id) => state.items.find((i) => i.id === id);
   const saveLikes = () => store.set("likes", Array.from(state.likes));
   const saveMine = () => { store.set("mine", state.mine); updateMineCount(); };
@@ -76,6 +85,9 @@
       condition: i.condition || {},
       deal: i.deal || { mode: "give" },
       defects: i.defects || [],
+      features: i.features || [],
+      specs: i.specs || [],
+      todo: i.todo || [],
       status: i.status || "available"
     });
   }
@@ -97,6 +109,7 @@
     const d = i.deal;
     if (d.mode === "donate") return "донат от " + rub(d.amount);
     if (d.mode === "price") return rub(d.amount);
+    if (d.mode === "tbd") return CFG.priceTbd || "цена уточняется";
     return "отдаю";
   }
   const PODGON_LINK = `<a class="link" href="#podgon">идеи для подгона →</a>`;
@@ -114,13 +127,14 @@
   // ---------- оформление страницы из config ----------
   function applyConfig() {
     if (CFG.title) {
-      document.title = CFG.title;
+      document.title = CFG.title + (CFG.slogan ? " — " + CFG.slogan : "");
       $("#logo").textContent = CFG.title;
       const h = $("#site-heading");
       const lines = CFG.titleLines && CFG.titleLines.length ? CFG.titleLines : [CFG.title];
       h.setAttribute("aria-label", CFG.title);
       h.innerHTML = lines.map((l) => `<span class="tl">${esc(l)}</span>`).join("");
     }
+    if (CFG.slogan) $("#slogan").textContent = CFG.slogan;
     $("#intro-text").innerHTML = (CFG.intro || []).map((p) => `<p>${esc(p)}</p>`).join("");
     if (CFG.ticker) {
       $("#ticker-track").innerHTML = `<span>${esc(CFG.ticker)}&nbsp;</span>`.repeat(12);
@@ -156,10 +170,8 @@
       const res = await fetch("data/items.json", { cache: "no-store" });
       if (!res.ok) throw new Error(res.status);
       const raw = await res.json();
-      state.items = raw.map(norm).sort((a, b) =>
-        condRank(b) - condRank(a) ||
-        String(b.added || "").localeCompare(String(a.added || "")) ||
-        String(a.id).localeCompare(String(b.id)));
+      // порядок — как в items.json; черновики показываются только по ссылке с ?drafts
+      state.items = raw.map(norm).filter((i) => SHOW_DRAFTS || i.status !== "draft");
     } catch (e) {
       $("#empty").textContent = T.error;
       $("#empty").hidden = false;
@@ -170,6 +182,7 @@
     buildChips();
     render();
     renderArchive();
+    buildLibrary();
     route();
   }
 
@@ -178,11 +191,26 @@
     const chips = $("#cat-chips");
     chips.innerHTML = CATS.map(([id, label]) =>
       `<button class="chip" role="tab" data-cat="${id}" aria-selected="${state.cat === id}">${label}</button>`).join("");
+    // показываем только категории, в которых есть вещи
+    const used = new Set(catalog().map((i) => i.category));
+    chips.innerHTML = CATS.filter(([id]) => !id || id === "library" || used.has(id)).map(([id, label]) =>
+      id === "library"
+        ? `<a class="chip" href="#library">${label} →</a>`
+        : `<button class="chip" role="tab" data-cat="${id}" aria-selected="${state.cat === id}">${label}</button>`).join("");
     chips.addEventListener("click", (e) => {
       const b = e.target.closest("[data-cat]");
       if (!b) return;
       state.cat = b.dataset.cat;
-      chips.querySelectorAll(".chip").forEach((x) => x.setAttribute("aria-selected", x === b));
+      state.sub = "";
+      chips.querySelectorAll("[data-cat]").forEach((x) => x.setAttribute("aria-selected", x === b));
+      buildSubChips();
+      render();
+    });
+    $("#sub-chips").addEventListener("click", (e) => {
+      const b = e.target.closest("[data-sub]");
+      if (!b) return;
+      state.sub = b.dataset.sub;
+      $("#sub-chips").querySelectorAll("[data-sub]").forEach((x) => x.setAttribute("aria-selected", x === b));
       render();
     });
     $("#f-deal").onchange = (e) => { state.deal = e.target.value; render(); };
@@ -190,11 +218,25 @@
     $("#f-liked").onchange = (e) => { state.onlyLiked = e.target.checked; render(); };
   }
 
-  function catalog() { return state.items.filter((i) => i.status !== "archive"); }
+  function catalog() { return state.items.filter((i) => i.status !== "archive" && i.category !== "library"); }
+
+  function subsOf(list) {
+    const out = [];
+    list.forEach((i) => { if (i.subcategory && !out.includes(i.subcategory)) out.push(i.subcategory); });
+    return out;
+  }
+  function buildSubChips() {
+    const box = $("#sub-chips");
+    const subs = state.cat ? subsOf(catalog().filter((i) => i.category === state.cat)) : [];
+    box.hidden = subs.length < 2;
+    box.innerHTML = [["", "все"]].concat(subs.map((x) => [x, x])).map(([id, label]) =>
+      `<button class="chip" role="tab" data-sub="${esc(id)}" aria-selected="${state.sub === id}">${esc(label)}</button>`).join("");
+  }
 
   function render() {
     const base = catalog().filter((i) =>
       (!state.cat || i.category === state.cat) &&
+      (!state.sub || i.subcategory === state.sub) &&
       (!state.deal || i.deal.mode === state.deal) &&
       (!state.onlyLiked || state.likes.has(i.id)));
     const list = state.onlyFree ? base.filter((i) => i.status === "available") : base;
@@ -212,9 +254,10 @@
   function cardHTML(i) {
     const archived = i.status === "archive";
     const liked = state.likes.has(i.id);
-    const meta = [i.size, i.defects.length ? "есть дефект" : ""].filter(Boolean).map(esc).join(" · ");
+    const meta = [i.author || i.subcategory, i.size, i.defects.length ? "есть дефект" : ""].filter(Boolean).map(esc).join(" · ");
     const status = i.status === "reserved" ? `<div class="card__status st-reserved">забронировано</div>`
-      : archived ? `<div class="card__status st-archive">уже в других руках</div>` : "";
+      : archived ? `<div class="card__status st-archive">уже в других руках</div>`
+      : i.status === "draft" ? `<div class="card__status st-draft">черновик</div>` : "";
     const price = i.deal.mode === "price";
     return `<article class="card${archived ? " is-archived" : ""}">
       <button class="card__img" data-open="${esc(i.id)}" aria-label="открыть: ${esc(titleOf(i))}">
@@ -224,7 +267,7 @@
       <div class="card__info">
         <button class="card__title" data-open="${esc(i.id)}">${esc(titleOf(i))}</button>
         ${meta ? `<div class="card__meta">${meta}</div>` : ""}
-        <div class="card__deal${price ? " is-price" : ""}">${esc(dealShort(i))}</div>
+        ${i.is_collection ? `<div class="card__deal">${esc((i.books || []).length)} книг</div>` : `<div class="card__deal${price ? " is-price" : ""}${i.deal.mode === "tbd" ? " is-tbd" : ""}">${esc(dealShort(i))}</div>`}
         ${status}
       </div>
     </article>`;
@@ -238,6 +281,31 @@
     $("#archive-sub").textContent = list.length ? `уже в других руках — ${list.length}` : "";
   }
 
+  // ---------- библиотека ----------
+  function libItems() { return state.items.filter((i) => i.category === "library" && i.status !== "archive"); }
+  function buildLibrary() {
+    $("#lib-intro").textContent = (CFG.library || {}).intro || "";
+    const present = subsOf(libItems());
+    const subs = LIB_SUBS.filter((x) => present.includes(x)).concat(present.filter((x) => !LIB_SUBS.includes(x)));
+    const box = $("#lib-chips");
+    box.innerHTML = [["", "всё"]].concat(subs.map((x) => [x, x])).map(([id, label]) =>
+      `<button class="chip" role="tab" data-lsub="${esc(id)}" aria-selected="${state.libSub === id}">${esc(label)}</button>`).join("");
+    box.addEventListener("click", (e) => {
+      const b = e.target.closest("[data-lsub]");
+      if (!b) return;
+      state.libSub = b.dataset.lsub;
+      box.querySelectorAll("[data-lsub]").forEach((x) => x.setAttribute("aria-selected", x === b));
+      renderLibrary();
+    });
+    renderLibrary();
+  }
+  function renderLibrary() {
+    const order = (i) => { const k = LIB_SUBS.indexOf(i.subcategory); return k < 0 ? 99 : k; };
+    const list = libItems().filter((i) => !state.libSub || i.subcategory === state.libSub)
+      .map((i, n) => [i, n]).sort((a, b) => order(a[0]) - order(b[0]) || a[1] - b[1]).map((x) => x[0]);
+    $("#lib-grid").innerHTML = list.map(cardHTML).join("");
+  }
+
   function onGridClick(e) {
     const like = e.target.closest("[data-like]");
     if (like) { toggleLike(like.dataset.like); return; }
@@ -246,11 +314,13 @@
   }
   $("#grid").addEventListener("click", onGridClick);
   $("#archive-grid").addEventListener("click", onGridClick);
+  $("#lib-grid").addEventListener("click", onGridClick);
 
   function toggleLike(id) {
     if (state.likes.has(id)) state.likes.delete(id); else state.likes.add(id);
     saveLikes();
     render();
+    renderLibrary();
     if ($("#item-modal").open && currentId === id) renderItem(id);
   }
 
@@ -273,9 +343,9 @@
     const i = byId(id);
     const mine = state.mine[id];
     const liked = state.likes.has(id);
-    const head = [CAT[i.category], i.type].filter(Boolean).map(esc).join(" · ");
+    const head = [CAT[i.category], i.subcategory || i.type].filter(Boolean).map(esc).join(" · ");
 
-    const rows = [];
+    const rows = i.specs.slice();
     if (i.brand) rows.push(["бренд", i.brand]);
     if (i.model) rows.push(["модель", i.model]);
     if (i.size) rows.push(["размер", [i.size, i.fit].filter(Boolean).join(" · ")]);
@@ -287,7 +357,26 @@
     if (condText(i)) rows.push(["состояние", condText(i)]);
     const specs = rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("");
 
-    const defects = i.defects.map((d) => `<p class="defect">есть дефект → ${esc(d)}</p>`).join("");
+    const defects = i.defects.map((d) => `<p class="defect">есть дефект → ${esc(d)}</p>`).join("") +
+      i.features.filter((f) => !i.defects.includes(f)).map((f) => `<p class="feature">${esc(f)}</p>`).join("");
+    const e = i.estimate;
+    const estimate = e ? `<div class="market">предварительная оценка ≈ ${esc(rubRange(e.min, e.max))}
+        <button class="market__q" aria-expanded="false" aria-label="что это">?</button>
+        <span class="market__note" hidden>${esc(T.estimate)}<br>
+          ${esc(e.by_analogs ? "оценка по аналогам" : "по похожим предложениям")} · уверенность: ${esc(e.confidence)} · на ${esc(ruDate(e.date))}${e.note ? " · " + esc(e.note) : ""}
+          ${(e.sources || []).length ? `<span class="sources">${e.sources.map((s) => s.url
+            ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)} ↗</a>` : `<span>${esc(s.title)}</span>`).join("")}</span>` : ""}
+        </span></div>` : "";
+    const todo = i.todo.length ? `<p class="todo">уточняется: ${esc(i.todo.join("; "))}</p>` : "";
+    const draft = i.status === "draft" ? `<p class="defect">черновик, не показывается на сайте → ${esc(i.draft_reason || "")}</p>` : "";
+    let rel = "";
+    if (i.is_collection) {
+      const books = (i.books || []).map(byId).filter(Boolean);
+      rel = `<div class="books"><div class="books__h">книги из подборки — ${books.length}</div><ol class="books__list">${books.map((b) =>
+        `<li><a class="link-btn" href="#item-${encodeURIComponent(b.id)}">${esc(b.title)}</a>${b.author ? ` <span>— ${esc(b.author)}</span>` : ""}</li>`).join("")}</ol></div>`;
+    } else if (i.collection && byId(i.collection)) {
+      rel = `<p class="rel">эта книга из <a class="link-btn" href="#item-${encodeURIComponent(i.collection)}">общей подборки →</a></p>`;
+    }
     const market = i.market ? `<div class="market">примерная стоимость сейчас ≈ ${esc(rub(i.market))}
         <button class="market__q" aria-expanded="false" aria-label="что это">?</button>
         <span class="market__note" hidden>${esc(T.market)}</span></div>` : "";
@@ -301,7 +390,9 @@
 
     let actions = "";
     const likeBtn = `<button class="btn btn--icon" id="m-like" aria-pressed="${liked}" aria-label="нравится">${liked ? "♥" : "♡"}</button>`;
-    if (i.status === "archive") {
+    if (i.is_collection) {
+      actions = `<p class="state-msg">выбери книги из списка — каждую можно добавить в «моё»</p><div class="row-actions">${likeBtn}</div>`;
+    } else if (i.status === "archive") {
       actions = `<p class="state-msg">${T.given}</p>`;
     } else if (i.status === "reserved") {
       actions = `<p class="state-msg">${T.reserved}</p>` + (mine
@@ -335,8 +426,13 @@
           ${dealSub(i) ? `<div class="deal__sub">${dealSub(i)}</div>` : ""}
         </div>
         ${specs ? `<dl class="specs">${specs}</dl>` : ""}
+        ${i.description ? `<p class="comment">${esc(i.description)}</p>` : ""}
+        ${draft}
         ${defects}
+        ${todo}
         ${market}
+        ${estimate}
+        ${rel}
         ${i.comment ? `<p class="comment">${esc(i.comment)}</p>` : ""}
         <div class="actions">${actions}</div>
       </div>`;
@@ -520,27 +616,29 @@
     currentId = null;
     if (/^#item-/.test(location.hash)) history.replaceState(null, "", viewHash || location.pathname + location.search);
     render();
+    renderLibrary();
     if ($("#mine-modal").open) renderMine();
   });
   $("#mine-modal").addEventListener("close", () => { render(); $("#req").hidden = true; });
 
   // ---------- навигация ----------
   function showView(name) {
-    ["catalog", "archive", "podgon"].forEach((v) => { $("#view-" + v).hidden = v !== name; });
+    ["catalog", "archive", "podgon", "library"].forEach((v) => { $("#view-" + v).hidden = v !== name; });
   }
   function route() {
     const h = location.hash;
     const m = h.match(/^#item-(.+)$/);
     if (m) {
       const item = byId(decodeURIComponent(m[1]));
-      if (item && !$("#item-modal").open) showView(item.status === "archive" ? "archive" : "catalog");
-      viewHash = item && item.status === "archive" ? "#archive" : "";
+      const view = !item ? "catalog" : item.status === "archive" ? "archive" : item.category === "library" ? "library" : "catalog";
+      if (item && !$("#item-modal").open) showView(view);
+      viewHash = view === "catalog" ? "" : "#" + view;
       openItem(decodeURIComponent(m[1]));
       return;
     }
-    viewHash = h === "#archive" || h === "#podgon" ? h : "";
+    viewHash = h === "#archive" || h === "#podgon" || h === "#library" ? h : "";
     document.querySelectorAll("dialog[open]").forEach((d) => d.close());
-    const name = h === "#archive" ? "archive" : h === "#podgon" ? "podgon" : "catalog";
+    const name = h === "#archive" ? "archive" : h === "#podgon" ? "podgon" : h === "#library" ? "library" : "catalog";
     const wasHidden = $("#view-" + name).hidden;
     showView(name);
     if (name === "catalog") fitTitle();

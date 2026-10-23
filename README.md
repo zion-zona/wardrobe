@@ -1,4 +1,6 @@
-# ОДНА ВЕЩЬ ТЕБЕ ИЛИ ДВЕ ДРУГОМУ
+# ВЕЩЬ НЕ В СЕБЕ
+
+_одна вещь тебе или две другому_
 
 Личный каталог вещей, которые я хочу передать дальше. Статический сайт на GitHub Pages:
 без регистрации, базы данных и оплаты на сайте.
@@ -7,7 +9,7 @@
 
 | Файл | Что внутри |
 |---|---|
-| `config.js` | название, текст главной, telegram, бегущая строка, правила передачи, идеи для подгона |
+| `config.js` | название, слоган, текст главной, текст библиотеки, telegram, бегущая строка, правила передачи, идеи для подгона |
 | `data/items.json` | каталог вещей (и архив) |
 | `images/` | фотографии |
 | `index.html`, `assets/` | код сайта |
@@ -17,36 +19,38 @@
 
 ## Вещь (`data/items.json`)
 
-Обязательные поля: `id`, `category`, `type`, `condition`, `deal`, `photos`, `added`, `status`.
-Остальные — по желанию, пустые на сайте не показываются.
+Порядок вещей на сайте — как в файле. Пустые поля на сайте не показываются.
 
 ```json
 {
-  "id": "coat-cos-001",
-  "title": "",                       // необязательно: по умолчанию «бренд · модель» или «бренд · тип»
-  "category": "clothes",             // clothes | shoes | bags | accessories | jewelry | books | beauty | toys | home | other
-  "type": "пальто",
-  "brand": "COS",
-  "model": "Wool Blend Coat",
-  "size": "M",
-  "fit": "сидит скорее как S–M",
-  "author": "", "publisher": "",     // для книг
-  "opened": false,                   // для косметики: открыта ли упаковка
-  "condition": { "label": "как новая", "score": 9 },   // label: «новая» | «как новая» | пусто; score: 1–10
-  "defects": ["потёртость на правом кармане"],
-  "deal": { "mode": "give" },        // give — отдаю; donate — донат от amount; price — фиксированная цена amount
-  "market": 6000,                    // примерная стоимость на вторичном рынке, ₽
-  "comment": "личный комментарий",
-  "photos": [
-    { "src": "images/coat-cos-001-1.jpg", "kind": "real" },   // real | model | ai | defect
-    { "src": "images/coat-cos-001-defect.jpg", "kind": "defect" }
-  ],
-  "added": "2026-10-07",
-  "status": "available"              // available | reserved | archive (= «уже в других руках»)
+  "id": "v039",
+  "ref": "V039",                       // номер из базы на Google Диске
+  "title": "Наушники JBL Tune 720BT",
+  "category": "tech",                  // clothes | bags | accessories | jewelry | beauty | tech | dishes | home |
+                                       // repair | craft | stationery | toys | decor | library | other
+  "subcategory": "аудио",
+  "description": "1–3 спокойных предложения",
+  "specs": [["бренд", "JBL"], ["модель", "Tune 720BT (по коробке)"]],   // только подтверждённое
+  "condition": { "label": "б/у, состояние уточняется" },
+  "features": [],                      // видимые особенности
+  "defects": [],                       // дефекты (красная линия)
+  "deal": { "mode": "tbd" },           // tbd — «цена уточняется»; give — отдаю; donate — донат от amount; price — цена amount
+  "estimate": {                        // предварительная оценка рынка — отдельно от цены
+    "min": 2000, "max": 3000, "date": "2026-10-23",
+    "confidence": "средняя",           // высокая | средняя | низкая
+    "by_analogs": false,               // true — «оценка по аналогам»
+    "note": "…", "sources": [{ "title": "…", "url": "…" }]
+  },
+  "todo": ["что нужно уточнить"],
+  "photos": [{ "src": "images/v039-1.jpg", "kind": "real" }],  // real | tryon (виртуальная примерка) | fragment | defect
+  "added": "2026-10-23",
+  "status": "available",               // available | reserved | archive | draft
+  "draft_reason": "почему черновик"    // черновики не видны; посмотреть их — открыть сайт с ?drafts
 }
 ```
 
-Сортировка: новая → как новая → 10/10 → 9/10 → …; при равном состоянии выше та, что добавлена позже.
+Книги: `category: "library"`, поле `author`, `collection: "lib-collection"`.
+Общая подборка: `is_collection: true`, `books: [id, …]` — книги в ней не считаются отдельными экземплярами.
 
 ## Публикация
 
