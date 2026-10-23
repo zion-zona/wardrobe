@@ -38,6 +38,7 @@
     noFree: "свободных вещей здесь пока нет :(",
     error: "что-то пошло не так :(",
     market: "примерная стоимость — ориентир по вторичному рынку, а не цена продажи",
+    nominal: "сколько такая вещь стоит новой сейчас — ориентир по рознице, а не цена, за которую я её отдаю",
     estimate: "это ориентир по похожим предложениям, а не цена продажи. цены в объявлениях — не подтверждённые продажи."
   };
 
@@ -59,6 +60,12 @@
   const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const rub = (n) => Number(n).toLocaleString("ru-RU") + " ₽";
   const rubRange = (a, b) => a === b ? rub(a) : Number(a).toLocaleString("ru-RU") + "–" + rub(b);
+  function nominalText(i) {
+    const n = i.nominal;
+    if (!n) return "";
+    if (n.text) return n.text;
+    return "≈ " + rubRange(n.min, n.max);
+  }
   const ruDate = (d) => { const m = String(d || "").match(/^(\d{4})-(\d{2})-(\d{2})$/); return m ? `${m[3]}.${m[2]}.${m[1]}` : String(d || ""); };
   const byId = (id) => state.items.find((i) => i.id === id);
   const saveLikes = () => store.set("likes", Array.from(state.likes));
@@ -110,6 +117,7 @@
     if (d.mode === "donate") return "донат от " + rub(d.amount);
     if (d.mode === "price") return rub(d.amount);
     if (d.mode === "tbd") return CFG.priceTbd || "цена уточняется";
+    if (d.mode === "label") return d.text || "";
     return "отдаю";
   }
   const PODGON_LINK = `<a class="link" href="#podgon">идеи для подгона →</a>`;
@@ -260,13 +268,15 @@
       : i.status === "draft" ? `<div class="card__status st-draft">черновик</div>` : "";
     const price = i.deal.mode === "price";
     return `<article class="card${archived ? " is-archived" : ""}">
-      <button class="card__img" data-open="${esc(i.id)}" aria-label="открыть: ${esc(titleOf(i))}">
+      <button class="card__img" data-open="${esc(i.id)}" aria-label="открыть: ${esc(titleOf(i))}"${i.photos.length > 1 ? ` data-photos="${esc(JSON.stringify(i.photos.map((p) => p.src)))}"` : ""}>
         <img src="${esc((i.photos[0] || {}).src || "")}" alt="${esc(titleOf(i))}" loading="lazy">
+        ${i.photos.length > 1 ? `<span class="card__dots" aria-hidden="true">${i.photos.map((_, n) => `<i${n ? "" : ' class="on"'}></i>`).join("")}</span>` : ""}
       </button>
       ${archived ? "" : `<button class="like" data-like="${esc(i.id)}" aria-pressed="${liked}" aria-label="нравится">${liked ? "♥" : "♡"}</button>`}
       <div class="card__info">
         <button class="card__title" data-open="${esc(i.id)}">${esc(titleOf(i))}</button>
         ${meta ? `<div class="card__meta">${meta}</div>` : ""}
+        ${nominalText(i) ? `<div class="card__nominal">номинальная цена: <span class="nw">${esc(nominalText(i))}</span></div>` : ""}
         ${i.is_collection ? `<div class="card__deal">${esc((i.books || []).length)} книг</div>` : `<div class="card__deal${price ? " is-price" : ""}${i.deal.mode === "tbd" ? " is-tbd" : ""}">${esc(dealShort(i))}</div>`}
         ${status}
       </div>
@@ -306,7 +316,47 @@
     $("#lib-grid").innerHTML = list.map(cardHTML).join("");
   }
 
+  // ---------- превью как на маркетплейсах: ведёшь мышью — фото меняются, на телефоне — свайп ----------
+  function cardPhoto(box, n) {
+    const list = JSON.parse(box.dataset.photos);
+    n = Math.max(0, Math.min(list.length - 1, n));
+    if (box.dataset.cur === String(n)) return;
+    box.dataset.cur = String(n);
+    box.querySelector("img").src = list[n];
+    box.querySelectorAll(".card__dots i").forEach((d, k) => d.classList.toggle("on", k === n));
+  }
+  function bindPreview(grid) {
+    grid.addEventListener("mousemove", (e) => {
+      const box = e.target.closest(".card__img[data-photos]");
+      if (!box) return;
+      if (!box.dataset.pre) { box.dataset.pre = "1"; JSON.parse(box.dataset.photos).forEach((src) => { new Image().src = src; }); }
+      const r = box.getBoundingClientRect();
+      const n = JSON.parse(box.dataset.photos).length;
+      cardPhoto(box, Math.floor((e.clientX - r.left) / r.width * n));
+    });
+    grid.addEventListener("mouseout", (e) => {
+      const box = e.target.closest(".card__img[data-photos]");
+      if (box && !box.contains(e.relatedTarget)) cardPhoto(box, 0);
+    });
+    let sx = 0, sy = 0, sbox = null;
+    grid.addEventListener("touchstart", (e) => {
+      sbox = e.target.closest(".card__img[data-photos]");
+      if (sbox) { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }
+    }, { passive: true });
+    grid.addEventListener("touchend", (e) => {
+      if (!sbox) return;
+      const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+      if (Math.abs(dx) > 30 && Math.abs(dx) > Math.abs(dy)) {
+        cardPhoto(sbox, Number(sbox.dataset.cur || 0) + (dx < 0 ? 1 : -1));
+        sbox.dataset.swiped = "1";
+        setTimeout(() => { if (sbox) delete sbox.dataset.swiped; }, 400);
+      }
+    }, { passive: true });
+  }
+
   function onGridClick(e) {
+    const sw = e.target.closest("[data-swiped]");
+    if (sw) return;
     const like = e.target.closest("[data-like]");
     if (like) { toggleLike(like.dataset.like); return; }
     const open = e.target.closest("[data-open]");
@@ -315,6 +365,7 @@
   $("#grid").addEventListener("click", onGridClick);
   $("#archive-grid").addEventListener("click", onGridClick);
   $("#lib-grid").addEventListener("click", onGridClick);
+  ["#grid", "#archive-grid", "#lib-grid"].forEach((g) => bindPreview($(g)));
 
   function toggleLike(id) {
     if (state.likes.has(id)) state.likes.delete(id); else state.likes.add(id);
@@ -424,6 +475,9 @@
         <div class="deal">
           <div class="deal__main">${esc(dealShort(i))}</div>
           ${dealSub(i) ? `<div class="deal__sub">${dealSub(i)}</div>` : ""}
+          ${nominalText(i) ? `<div class="deal__nominal">номинальная цена: <span class="nw">${esc(nominalText(i))}</span>
+            <button class="market__q" aria-expanded="false" aria-label="что это">?</button>
+            <span class="market__note" hidden>${esc(T.nominal)}${i.nominal.note ? " · " + esc(i.nominal.note) : ""}${i.nominal.date ? " · на " + esc(ruDate(i.nominal.date)) : ""}</span></div>` : ""}
         </div>
         ${specs ? `<dl class="specs">${specs}</dl>` : ""}
         ${i.description ? `<p class="comment">${esc(i.description)}</p>` : ""}
@@ -447,12 +501,11 @@
       body.querySelectorAll(".gallery__nav").forEach((b) => b.addEventListener("click", () =>
         track.scrollBy({ left: track.clientWidth * Number(b.dataset.dir), behavior: "smooth" })));
     }
-    const q = body.querySelector(".market__q");
-    if (q) q.addEventListener("click", () => {
-      const note = body.querySelector(".market__note");
+    body.querySelectorAll(".market__q").forEach((q) => q.addEventListener("click", () => {
+      const note = q.parentElement.querySelector(".market__note");
       note.hidden = !note.hidden;
       q.setAttribute("aria-expanded", String(!note.hidden));
-    });
+    }));
     const like = $("#m-like");
     if (like) like.addEventListener("click", () => toggleLike(id));
     body.querySelectorAll("input[name=intent]").forEach((r) => r.addEventListener("change", () => {
