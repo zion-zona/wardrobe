@@ -793,15 +793,42 @@
             const score = ov * 4000 + rad * 0.15;
             if (!best || score < best.score) best = { x, y, score, ov };
           }
+          if (best.ov > 0 && placed.length) {   // ищем свободную дыру по всему разделу
+            const maxB = Math.max.apply(null, placed.map((q) => q.y + q.h));
+            for (let t = 0; t < 900 && best.ov > 0; t++) {
+              const x = 0.012 + rnd() * (1 - b.w - 0.024), y = rowBottom * 0.4 + rnd() * Math.max(0.01, maxB - b.h - rowBottom * 0.4);
+              let ov = 0;
+              for (const q of placed) {
+                const s = 1.12;
+                const ox = Math.min(x + b.w * (1 + s) / 2, q.x + q.w * (1 + s) / 2) - Math.max(x + b.w * (1 - s) / 2, q.x + q.w * (1 - s) / 2);
+                const oy = Math.min(y + b.h * (1 + s) / 2, q.y + q.h * (1 + s) / 2) - Math.max(y + b.h * (1 - s) / 2, q.y + q.h * (1 - s) / 2);
+                if (ox > 0 && oy > 0) { ov = 1; break; }
+              }
+              if (!ov) best = { x, y, score: 0, ov: 0 };
+            }
+          }
           if (best.ov > 0) {   // не нашлось свободного места рядом — кладём ниже всего, но не поверх
             best.y = Math.max.apply(null, placed.map((q) => q.y + q.h)) + 0.02;
             best.x = rnd() * (1 - b.w - 0.04) + 0.02;
+            b.fb = true;
           }
           b.x = best.x; b.y = best.y; placed.push(b);
         });
       });
-      rowBottom = Math.max.apply(null, placed.map((b) => b.y + b.h)) + (mob ? 0.03 : 0.015);
+      rowBottom = Math.max.apply(null, placed.filter((b) => !b.fb).map((b) => b.y + b.h)) + (mob ? 0.03 : 0.015);
       r++;
+    }
+    // убираем пустые горизонтальные полосы: всё, что ниже провала, подтягиваем вверх
+    const keepGap = mob ? 0.1 : 0.07;
+    for (let guard = 0; guard < 40; guard++) {
+      const iv = placed.slice().sort((a, b) => a.y - b.y);
+      let reach = iv[0].y + iv[0].h, cut = null;
+      for (let q = 1; q < iv.length; q++) {
+        if (iv[q].y - reach > keepGap + 0.02) { cut = { at: iv[q].y, d: iv[q].y - reach - keepGap }; break; }
+        reach = Math.max(reach, iv[q].y + iv[q].h);
+      }
+      if (!cut) break;
+      placed.forEach((b) => { if (b.y >= cut.at - 1e-9) b.y -= cut.d; });
     }
     const H = Math.max.apply(null, placed.map((b) => b.y + b.h)) + (mob ? 0.06 : 0.03);
     return { H, boxes: bs };

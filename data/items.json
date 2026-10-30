@@ -770,6 +770,536 @@
   "status": "available"
  },
  {
+  "id": "v161",
+  "ref": "V161",
+  "title": "Кроссовки New Balance 574, бежевые",
+  "category": "shoes",
+  "subcategory": "кроссовки",
+  "description": "Бежевые кроссовки New Balance 574.",
+  "specs": [
+   [
+    "бренд",
+    "New Balance"
+   ],
+   [
+    "размер",
+    "38 (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 4000
+  },
+  "nominal": {
+   "min": 9100,
+   "max": 15200,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 2700,
+   "max": 5400,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "длина стельки"
+  ],
+  "photos": [
+   {
+    "src": "images/v161-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 879
+   },
+   {
+    "src": "images/v161-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v161-3.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v163",
+  "ref": "V163",
+  "title": "Кроссовки Nike Air Force, чёрные",
+  "category": "shoes",
+  "subcategory": "кроссовки",
+  "description": "Чёрные высокие кроссовки Nike Air Force.",
+  "specs": [
+   [
+    "бренд",
+    "Nike"
+   ],
+   [
+    "размер",
+    "39 (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 4000
+  },
+  "nominal": {
+   "min": 9100,
+   "max": 15200,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 2700,
+   "max": 5400,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "длина стельки"
+  ],
+  "photos": [
+   {
+    "src": "images/v163-1.jpg",
+    "kind": "real",
+    "w": 1400,
+    "h": 1050
+   },
+   {
+    "src": "images/v163-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v163-3.jpg",
+    "kind": "real",
+    "w": 1400,
+    "h": 1050
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v159",
+  "ref": "V159",
+  "title": "Кроссовки FILA Powder Low",
+  "category": "shoes",
+  "subcategory": "кроссовки",
+  "description": "Кроссовки FILA Powder Low в серо-бежевых и молочных тонах с розоватыми шнурками.",
+  "specs": [
+   [
+    "бренд",
+    "FILA"
+   ],
+   [
+    "размер",
+    "38 (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 3000
+  },
+  "nominal": {
+   "min": 6600,
+   "max": 11000,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 1950,
+   "max": 3900,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "длина стельки"
+  ],
+  "photos": [
+   {
+    "src": "images/v159-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 1000
+   },
+   {
+    "src": "images/v159-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v159-3.jpg",
+    "kind": "real",
+    "w": 1400,
+    "h": 1050
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v160",
+  "ref": "V160",
+  "title": "Кроссовки Puma, белые с мятными деталями",
+  "category": "shoes",
+  "subcategory": "кроссовки",
+  "description": "Белые кроссовки Puma с мятными и горчичными деталями.",
+  "specs": [
+   [
+    "бренд",
+    "Puma"
+   ],
+   [
+    "размер",
+    "38 (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 3000
+  },
+  "nominal": {
+   "min": 6600,
+   "max": 11000,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 1950,
+   "max": 3900,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "длина стельки"
+  ],
+  "photos": [
+   {
+    "src": "images/v160-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 1086
+   },
+   {
+    "src": "images/v160-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v160-3.jpg",
+    "kind": "real",
+    "w": 1400,
+    "h": 1050
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v162",
+  "ref": "V162",
+  "title": "Кеды Converse PLAY, молочные",
+  "category": "shoes",
+  "subcategory": "кеды",
+  "description": "Молочные кеды Converse PLAY с красным сердечком.",
+  "specs": [
+   [
+    "бренд",
+    "Converse"
+   ],
+   [
+    "размер",
+    "36.5 (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 3000
+  },
+  "nominal": {
+   "min": 6500,
+   "max": 10800,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 1800,
+   "max": 3950,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер: в названии 36.5, на ярлыке читается 38.5 — уточнить",
+   "состояние"
+  ],
+  "photos": [
+   {
+    "src": "images/v162-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 914
+   },
+   {
+    "src": "images/v162-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v162-3.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v158",
+  "ref": "V158",
+  "title": "Кеды Vans, серо-бежевые",
+  "category": "shoes",
+  "subcategory": "кеды",
+  "description": "Серо-бежевые кеды Vans.",
+  "specs": [
+   [
+    "бренд",
+    "Vans"
+   ],
+   [
+    "размер",
+    "36 (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 2000
+  },
+  "nominal": {
+   "min": 4700,
+   "max": 7800,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 1300,
+   "max": 2850,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "длина стельки"
+  ],
+  "photos": [
+   {
+    "src": "images/v158-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 1056
+   },
+   {
+    "src": "images/v158-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v158-3.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v164",
+  "ref": "V164",
+  "title": "Сапоги чёрные с объёмным голенищем",
+  "category": "shoes",
+  "subcategory": "сапоги",
+  "description": "Чёрные сапоги с объёмным стёганым голенищем на рифлёной подошве.",
+  "specs": [
+   [
+    "размер",
+    "39 (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 1500
+  },
+  "nominal": {
+   "min": 3200,
+   "max": 5200,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 800,
+   "max": 2000,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "длина стельки"
+  ],
+  "photos": [
+   {
+    "src": "images/v164-1.jpg",
+    "kind": "real",
+    "w": 1400,
+    "h": 1050
+   },
+   {
+    "src": "images/v164-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v164-3.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v165",
+  "ref": "V165",
+  "title": "Рюкзак Vans, чёрный",
+  "category": "bags",
+  "subcategory": "рюкзаки",
+  "description": "Чёрный рюкзак Vans.",
+  "specs": [
+   [
+    "бренд",
+    "Vans"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 1000
+  },
+  "nominal": {
+   "min": 2500,
+   "max": 4100,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 650,
+   "max": 1550,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "объём"
+  ],
+  "photos": [
+   {
+    "src": "images/v165-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v165-2.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
   "id": "v130",
   "ref": "V130",
   "title": "Платье NUNA LIE, цветочное",
