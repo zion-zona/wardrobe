@@ -712,64 +712,134 @@
   $("#mine-modal").addEventListener("close", () => { render(); $("#req").hidden = true; });
 
   // ---------- коллаж ----------
-  // панели — как листы на референсах: вещи вперемешку, внутри группы; сверху лицо, при наведении — оборот
+  // листы — как на референсах: вещи вперемешку внутри группы, сверху лицо, при наведении — оборот;
+  // тонкая подпись-номер у каждой вещи и маленькая легенда внизу листа
   const TOPS = ["футболки и топы", "лонгсливы", "рубашки и блузы", "свитшоты и худи", "джемперы и кардиганы"];
   const PANELS = [
-    ["верх", (i) => i.category === "clothes" && TOPS.includes(i.subcategory)],
     ["платья и юбки", (i) => i.category === "clothes" && ["платья", "юбки"].includes(i.subcategory)],
-    ["брюки, джинсы, шорты", (i) => i.category === "clothes" && ["брюки", "джинсы", "шорты"].includes(i.subcategory)],
+    ["верх", (i) => i.category === "clothes" && TOPS.includes(i.subcategory)],
     ["обувь, сумки, аксессуары", (i) => ["shoes", "bags", "accessories"].includes(i.category)],
+    ["брюки, джинсы, шорты", (i) => i.category === "clothes" && ["брюки", "джинсы", "шорты"].includes(i.subcategory)],
     ["украшения", (i) => i.category === "jewelry"],
     ["косметика и уход", (i) => i.category === "beauty"],
     ["дом, посуда, техника, ремонт", (i) => ["home", "dishes", "tech", "repair", "decor"].includes(i.category)],
     ["творчество, канцелярия, игрушки", (i) => ["craft", "stationery", "toys", "other"].includes(i.category)]
   ];
-  // доля ширины панели (десктоп) по виду вещи
+  const SHEET_STYLES = ["black", "grey", "white", "black", "grey", "white", "black", "grey"];
+  // доля ширины листа (десктоп) по виду вещи
   function pieceWidth(i) {
     const s = i.subcategory;
-    if (i.category === "clothes") return ["брюки", "джинсы", "шорты", "платья", "юбки"].includes(s) ? 12.5 : 13.5;
-    if (i.category === "shoes") return 14;
-    if (i.category === "bags") return 16;
-    if (i.category === "jewelry") return 9;
-    if (["beauty", "stationery", "toys", "craft"].includes(i.category)) return 10;
-    return 12;
+    if (i.category === "clothes") return ["брюки", "джинсы", "шорты", "платья", "юбки"].includes(s) ? 0.135 : 0.145;
+    if (i.category === "shoes") return 0.15;
+    if (i.category === "bags") return 0.18;
+    if (i.category === "jewelry") return 0.1;
+    if (["beauty", "stationery", "toys", "craft"].includes(i.category)) return 0.11;
+    return 0.13;
   }
   function seeded(str) {
     let h = 2166136261;
     for (let k = 0; k < str.length; k++) { h ^= str.charCodeAt(k); h = Math.imul(h, 16777619); }
     return () => { h ^= h << 13; h ^= h >>> 17; h ^= h << 5; return ((h >>> 0) % 10000) / 10000; };
   }
-  function pieceHTML(i, n) {
-    const rnd = seeded(i.id);
-    const p0 = i.photos[0], p1 = i.photos[1];
-    const ratio = p0.w && p0.h ? p0.w / p0.h : 0.8;
-    const w = pieceWidth(i) * (0.88 + rnd() * 0.3);
-    const rot = (rnd() - 0.5) * 12;
-    const dy = (rnd() - 0.5) * 44;
-    const mx = (rnd() - 0.4) * 5;
-    const price = i.deal && i.deal.mode === "pwyw" && i.deal.amount ? " · ≈ " + rub(i.deal.amount) : "";
+  const scaleK = () => (window.innerWidth < 720 ? 2.15 : window.innerWidth < 1080 ? 1.4 : 1);
+  // раскладка «лучший из кандидатов»: ширина листа = 1, высота подбирается, чтобы вещи лежали вольно и чуть перекрывались
+  function scatter(items, k, seed) {
+    const rnd = seeded(seed);
+    const rawBoxes = items.map((i, n) => {
+      const p = i.photos[0], ratio = p.w && p.h ? p.w / p.h : 0.8;
+      return { n, ratio, w: pieceWidth(i) * k * (0.78 + rnd() * 0.5), rot: (rnd() - 0.5) * 14 };
+    });
+    const baseArea = rawBoxes.reduce((s, b) => s + b.w * b.w / b.ratio, 0);
+    // небольшие листы — вещи крупнее, чтобы лист не выглядел пустым
+    let H = Math.max(baseArea / 0.62, k > 1.8 ? 0.9 : 0.5);
+    const f = Math.min(2.3, Math.max(1, Math.sqrt(H * 0.62 / baseArea)));
+    const boxes = rawBoxes.map((b) => { const w = Math.min(0.44, b.w * f); return Object.assign(b, { w, h: w / b.ratio }); });
+    const order = boxes.slice().sort((a, b) => b.w * b.h - a.w * a.h);
+    for (let attempt = 0; attempt < 14; attempt++) {
+      const placed = []; let worst = 0;
+      for (const b of order) {
+        let best = null;
+        for (let t = 0; t < 90; t++) {
+          const x = rnd() * (1 - b.w), y = rnd() * Math.max(0.0001, H - b.h);
+          let ov = 0, md = 9;
+          for (const q of placed) {
+            const s = 0.82;  // у вещи пустые углы — габарит чуть уменьшаем
+            const ox = Math.min(x + b.w * (1 + s) / 2, q.x + q.w * (1 + s) / 2) - Math.max(x + b.w * (1 - s) / 2, q.x + q.w * (1 - s) / 2);
+            const oy = Math.min(y + b.h * (1 + s) / 2, q.y + q.h * (1 + s) / 2) - Math.max(y + b.h * (1 - s) / 2, q.y + q.h * (1 - s) / 2);
+            if (ox > 0 && oy > 0) ov += ox * oy;
+            md = Math.min(md, Math.hypot((x + b.w / 2) - (q.x + q.w / 2), (y + b.h / 2) - (q.y + q.h / 2)));
+          }
+          const score = ov * 60 - Math.min(md, 0.5);   // меньше наложений, дальше от соседей — ровнее, но «хаотично»
+          if (!best || score < best.score) best = { x, y, ov, score };
+        }
+        b.x = best.x; b.y = best.y; placed.push(b);
+        worst = Math.max(worst, best.ov / (b.w * b.h));
+      }
+      if (worst < 0.18) break;
+      H *= 1.07;
+    }
+    const maxY = Math.max.apply(null, boxes.map((b) => b.y + b.h));
+    return { H: Math.max(maxY * 1.02, 0.3), boxes };
+  }
+  const priceOf = (i) => (i.deal && i.deal.mode === "pwyw" && i.deal.amount ? "≈ " + rub(i.deal.amount) : "");
+  function pieceHTML(i, b, num, H) {
+    const p1 = i.photos[1];
     return `<a class="piece${p1 ? " has-back" : ""}" href="#item-${esc(encodeURIComponent(i.id))}" data-open="${esc(i.id)}"
-      style="--w:${w.toFixed(1)};--r:${rot.toFixed(1)}deg;--dy:${dy.toFixed(0)}px;--mx:${mx.toFixed(1)}%;--ar:${ratio.toFixed(3)}" aria-label="${esc(titleOf(i))}">
+      style="left:${(b.x * 100).toFixed(2)}%;top:${(b.y / H * 100).toFixed(2)}%;width:${(b.w * 100).toFixed(2)}%;--r:${b.rot.toFixed(1)}deg;--ar:${b.ratio.toFixed(3)}" aria-label="${esc(titleOf(i))}">
       <span class="piece__box">
-        <img class="p-front" src="${esc(p0.src)}" alt="${esc(titleOf(i))}" loading="lazy" decoding="async">
+        <img class="p-front" src="${esc(i.photos[0].src)}" alt="${esc(titleOf(i))}" loading="lazy" decoding="async">
         ${p1 ? `<img class="p-back" data-src="${esc(p1.src)}" alt="" decoding="async">` : ""}
       </span>
-      <span class="piece__no">${String(n).padStart(2, "0")}</span>
-      <span class="piece__cap">${esc(titleOf(i))}${esc(price)}</span>
+      <span class="piece__no">${String(num).padStart(2, "0")}</span>
+      <span class="piece__cap">${esc(titleOf(i))}${priceOf(i) ? " · " + esc(priceOf(i)) : ""}</span>
     </a>`;
   }
+  let collageK = 0;
   function buildCollage() {
+    const k = scaleK();
+    collageK = k;
     const list = state.items.filter((i) => i.category !== "library" && i.status !== "archive" && i.photos.length);
-    let n = 0;
-    $("#collage").innerHTML = PANELS.map(([name, f]) => {
+    let sheetNo = 0;
+    $("#collage").innerHTML = PANELS.map(([name, f], idx) => {
       const items = list.filter(f);
       if (!items.length) return "";
-      return `<section class="sheet" aria-label="${esc(name)}">
-        <header class="sheet__head"><span>${esc(name)}</span><span>${items.length}</span></header>
-        <div class="sheet__field">${items.map((i) => pieceHTML(i, ++n)).join("")}</div>
+      sheetNo++;
+      const sc = scatter(items, k, "sheet-" + name);
+      const H = sc.H;
+      let boxes = sc.boxes;
+      const style = SHEET_STYLES[idx % SHEET_STYLES.length];
+      const path = items.length <= 20 && style !== "black";
+      let list2 = items;
+      if (path) {
+        // соединяем вещи тонкой линией «ближайший сосед» и нумеруем по ходу линии — как на афише с маршрутом
+        const cx = (b) => b.x + b.w / 2, cy = (b) => b.y + b.h / 2;
+        const left = boxes.slice(); const seq = [];
+        let cur = left.splice(left.reduce((m, b, k2) => (cx(b) + cy(b) < cx(left[m]) + cy(left[m]) ? k2 : m), 0), 1)[0];
+        seq.push(cur);
+        while (left.length) {
+          let bi = 0, bd = 9;
+          left.forEach((b, k2) => { const d = Math.hypot(cx(b) - cx(cur), cy(b) - cy(cur)); if (d < bd) { bd = d; bi = k2; } });
+          cur = left.splice(bi, 1)[0]; seq.push(cur);
+        }
+        list2 = seq.map((b) => items[b.n]);
+        boxes = seq.map((b, n) => Object.assign({}, b, { n }));
+      }
+      const lines = path ? `<svg class="sheet__path" viewBox="0 0 1 ${H.toFixed(3)}" preserveAspectRatio="none" aria-hidden="true"><polyline vector-effect="non-scaling-stroke" points="${
+        boxes.map((b) => `${(b.x + b.w / 2).toFixed(3)},${(b.y + b.h / 2).toFixed(3)}`).join(" ")}"/></svg>` : "";
+      return `<section class="sheet sheet--${style}" aria-label="${esc(name)}">
+        <div class="sheet__in">
+          <header class="sheet__head"><span>${String(sheetNo).padStart(2, "0")} — ${esc(name)}</span><span>${items.length}</span></header>
+          <div class="sheet__field" style="aspect-ratio:1 / ${H.toFixed(3)}">${lines}${boxes.map((b) => pieceHTML(list2[b.n], b, b.n + 1, H)).join("")}</div>
+          <ol class="legend">${list2.map((i, n) => `<li><a href="#item-${esc(encodeURIComponent(i.id))}" data-open="${esc(i.id)}"><i>${String(n + 1).padStart(2, "0")}</i> ${esc(titleOf(i))}${priceOf(i) ? " · " + esc(priceOf(i)) : ""}</a></li>`).join("")}</ol>
+        </div>
       </section>`;
     }).join("");
   }
+  window.addEventListener("resize", () => {
+    if (!collageK || scaleK() === collageK) return;
+    clearTimeout(buildCollage._t);
+    buildCollage._t = setTimeout(buildCollage, 150);
+  });
   (function bindCollage() {
     const root = $("#collage");
     const load = (p) => { const b = p.querySelector(".p-back[data-src]"); if (b) { b.src = b.dataset.src; b.removeAttribute("data-src"); } };
@@ -790,9 +860,23 @@
     });
   })();
 
+  // режим главной: коллаж / списком
+  function setMode(mode) {
+    state.mode = mode === "list" ? "list" : "collage";
+    $("#collage-wrap").hidden = state.mode !== "collage";
+    $("#list-wrap").hidden = state.mode !== "list";
+    $("#modes-hint").hidden = state.mode !== "collage";
+    document.querySelectorAll(".mode").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.mode === state.mode)));
+  }
+  document.querySelectorAll(".mode").forEach((b) => b.addEventListener("click", () => {
+    const list = b.dataset.mode === "list";
+    if (location.hash !== (list ? "#list" : "")) location.hash = list ? "#list" : "";
+    if (!list && !location.hash) { setMode("collage"); history.replaceState(null, "", location.pathname + location.search); }
+  }));
+
   // ---------- навигация ----------
   function showView(name) {
-    ["catalog", "archive", "podgon", "library", "collage"].forEach((v) => { $("#view-" + v).hidden = v !== name; });
+    ["catalog", "archive", "podgon", "library"].forEach((v) => { $("#view-" + v).hidden = v !== name; });
   }
   function route() {
     const h = location.hash;
@@ -805,10 +889,11 @@
       openItem(decodeURIComponent(m[1]));
       return;
     }
-    viewHash = h === "#archive" || h === "#podgon" || h === "#library" || h === "#collage" ? h : "";
+    viewHash = h === "#archive" || h === "#podgon" || h === "#library" || h === "#list" ? h : "";
     document.querySelectorAll("dialog[open]").forEach((d) => d.close());
-    const name = h === "#archive" ? "archive" : h === "#podgon" ? "podgon" : h === "#library" ? "library" : h === "#collage" ? "collage" : "catalog";
+    const name = h === "#archive" ? "archive" : h === "#podgon" ? "podgon" : h === "#library" ? "library" : "catalog";
     const wasHidden = $("#view-" + name).hidden;
+    if (name === "catalog") setMode(h === "#list" ? "list" : "collage");
     showView(name);
     if (name === "catalog") fitTitle();
     if (name !== "catalog" || wasHidden) window.scrollTo(0, 0);

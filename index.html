@@ -25,7 +25,8 @@
     <div class="top__inner">
       <a class="logo" href="#" id="logo">ВЕЩЬ НЕ В СЕБЕ</a>
       <nav class="top__nav" aria-label="разделы">
-        <a class="top__link hide-sm" href="#collage">коллаж</a>
+        <a class="top__link hide-sm" href="#">коллаж</a>
+        <a class="top__link hide-sm" href="#list">списком</a>
         <a class="top__link hide-sm" href="#library">библиотека</a>
         <a class="top__link hide-sm" href="#podgon">идеи для подгона</a>
         <a class="top__link hide-sm" href="#archive">архив</a>
@@ -43,7 +44,7 @@
         <div class="intro__text" id="intro-text"></div>
         <div class="intro__links">
           <button class="link" id="to-items">к вещам ↓</button>
-          <a class="link" href="#collage">коллаж →</a>
+          <a class="link" href="#list">списком →</a>
           <a class="link" href="#library">библиотека →</a>
           <a class="link" href="#podgon">идеи для подгона →</a>
           <a class="link" href="#archive">архив →</a>
@@ -51,27 +52,35 @@
         <a class="given" href="#archive" id="given-counter" hidden></a>
       </section>
 
-      <h2 class="section-title" id="items-title">вещи</h2>
-      <section class="filters" aria-label="фильтры">
-        <div class="chips" id="cat-chips" role="tablist" aria-label="категории"></div>
-        <div class="chips chips--sub" id="sub-chips" aria-label="подкатегории" hidden></div>
-        <div class="filters__row">
-          <label class="select">
-            <span>стоимость</span>
-            <select id="f-deal">
-              <option value="">любая</option>
-              <option value="0-0">бесплатно / символически</option>
-              <option value="1-300">до 300 ₽</option>
-              <option value="301-1000">300–1 000 ₽</option>
-              <option value="1001-">дороже 1 000 ₽</option>
-            </select>
-          </label>
-          <label class="toggle"><input type="checkbox" id="f-free"> только доступные</label>
-          <label class="toggle"><input type="checkbox" id="f-liked"> ♡ избранное</label>
-        </div>
-      </section>
-      <p class="empty" id="empty" hidden></p>
-      <section class="grid" id="grid" aria-live="polite"></section>
+      <div class="modes" id="items-title" role="group" aria-label="вид">
+        <button class="mode" data-mode="collage" aria-pressed="true">коллаж</button>
+        <button class="mode" data-mode="list" aria-pressed="false">списком</button>
+        <span class="modes__hint" id="modes-hint">наведи на вещь — покажу оборот, нажми — карточка</span>
+      </div>
+      <div id="collage-wrap"><div id="collage"></div></div>
+
+      <div id="list-wrap" hidden>
+        <section class="filters" aria-label="фильтры">
+          <div class="chips" id="cat-chips" role="tablist" aria-label="категории"></div>
+          <div class="chips chips--sub" id="sub-chips" aria-label="подкатегории" hidden></div>
+          <div class="filters__row">
+            <label class="select">
+              <span>стоимость</span>
+              <select id="f-deal">
+                <option value="">любая</option>
+                <option value="0-0">бесплатно / символически</option>
+                <option value="1-300">до 300 ₽</option>
+                <option value="301-1000">300–1 000 ₽</option>
+                <option value="1001-">дороже 1 000 ₽</option>
+              </select>
+            </label>
+            <label class="toggle"><input type="checkbox" id="f-free"> только доступные</label>
+            <label class="toggle"><input type="checkbox" id="f-liked"> ♡ избранное</label>
+          </div>
+        </section>
+        <p class="empty" id="empty" hidden></p>
+        <section class="grid" id="grid" aria-live="polite"></section>
+      </div>
     </section>
 
     <!-- архив -->
@@ -81,14 +90,6 @@
       <p class="view-sub" id="archive-sub"></p>
       <p class="empty" id="archive-empty" hidden>пока пусто</p>
       <section class="grid" id="archive-grid"></section>
-    </section>
-
-    <!-- коллаж -->
-    <section id="view-collage" hidden>
-      <a class="back" href="#">← к вещам</a>
-      <h1 class="section-title section-title--page">коллаж</h1>
-      <p class="lib-intro" id="collage-intro">всё, что отдаю, — на одном столе. наведи на вещь: покажу оборот. нажми: откроется карточка.</p>
-      <div id="collage"></div>
     </section>
 
     <!-- библиотека -->
