@@ -5,7 +5,7 @@
   const TG = String(CFG.telegram || "").replace(/^@/, "").trim();
 
   const CATS = [
-    ["", "всё"], ["clothes", "одежда"], ["bags", "сумки и рюкзаки"], ["accessories", "аксессуары"],
+    ["", "всё"], ["clothes", "одежда"], ["shoes", "обувь"], ["bags", "сумки и рюкзаки"], ["accessories", "аксессуары"],
     ["jewelry", "украшения"], ["beauty", "косметика и уход"], ["tech", "техника"], ["dishes", "посуда"],
     ["home", "товары для дома"], ["repair", "ремонт"], ["craft", "творчество"], ["stationery", "канцелярия"],
     ["toys", "игрушки"], ["decor", "декор"], ["library", "библиотека"], ["other", "разное"]
@@ -198,6 +198,7 @@
     render();
     renderArchive();
     buildLibrary();
+    buildCollage();
     route();
   }
 
@@ -710,9 +711,88 @@
   });
   $("#mine-modal").addEventListener("close", () => { render(); $("#req").hidden = true; });
 
+  // ---------- коллаж ----------
+  // панели — как листы на референсах: вещи вперемешку, внутри группы; сверху лицо, при наведении — оборот
+  const TOPS = ["футболки и топы", "лонгсливы", "рубашки и блузы", "свитшоты и худи", "джемперы и кардиганы"];
+  const PANELS = [
+    ["верх", (i) => i.category === "clothes" && TOPS.includes(i.subcategory)],
+    ["платья и юбки", (i) => i.category === "clothes" && ["платья", "юбки"].includes(i.subcategory)],
+    ["брюки, джинсы, шорты", (i) => i.category === "clothes" && ["брюки", "джинсы", "шорты"].includes(i.subcategory)],
+    ["обувь, сумки, аксессуары", (i) => ["shoes", "bags", "accessories"].includes(i.category)],
+    ["украшения", (i) => i.category === "jewelry"],
+    ["косметика и уход", (i) => i.category === "beauty"],
+    ["дом, посуда, техника, ремонт", (i) => ["home", "dishes", "tech", "repair", "decor"].includes(i.category)],
+    ["творчество, канцелярия, игрушки", (i) => ["craft", "stationery", "toys", "other"].includes(i.category)]
+  ];
+  // доля ширины панели (десктоп) по виду вещи
+  function pieceWidth(i) {
+    const s = i.subcategory;
+    if (i.category === "clothes") return ["брюки", "джинсы", "шорты", "платья", "юбки"].includes(s) ? 12.5 : 13.5;
+    if (i.category === "shoes") return 14;
+    if (i.category === "bags") return 16;
+    if (i.category === "jewelry") return 9;
+    if (["beauty", "stationery", "toys", "craft"].includes(i.category)) return 10;
+    return 12;
+  }
+  function seeded(str) {
+    let h = 2166136261;
+    for (let k = 0; k < str.length; k++) { h ^= str.charCodeAt(k); h = Math.imul(h, 16777619); }
+    return () => { h ^= h << 13; h ^= h >>> 17; h ^= h << 5; return ((h >>> 0) % 10000) / 10000; };
+  }
+  function pieceHTML(i, n) {
+    const rnd = seeded(i.id);
+    const p0 = i.photos[0], p1 = i.photos[1];
+    const ratio = p0.w && p0.h ? p0.w / p0.h : 0.8;
+    const w = pieceWidth(i) * (0.88 + rnd() * 0.3);
+    const rot = (rnd() - 0.5) * 12;
+    const dy = (rnd() - 0.5) * 44;
+    const mx = (rnd() - 0.4) * 5;
+    const price = i.deal && i.deal.mode === "pwyw" && i.deal.amount ? " · ≈ " + rub(i.deal.amount) : "";
+    return `<a class="piece${p1 ? " has-back" : ""}" href="#item-${esc(encodeURIComponent(i.id))}" data-open="${esc(i.id)}"
+      style="--w:${w.toFixed(1)};--r:${rot.toFixed(1)}deg;--dy:${dy.toFixed(0)}px;--mx:${mx.toFixed(1)}%;--ar:${ratio.toFixed(3)}" aria-label="${esc(titleOf(i))}">
+      <span class="piece__box">
+        <img class="p-front" src="${esc(p0.src)}" alt="${esc(titleOf(i))}" loading="lazy" decoding="async">
+        ${p1 ? `<img class="p-back" data-src="${esc(p1.src)}" alt="" decoding="async">` : ""}
+      </span>
+      <span class="piece__no">${String(n).padStart(2, "0")}</span>
+      <span class="piece__cap">${esc(titleOf(i))}${esc(price)}</span>
+    </a>`;
+  }
+  function buildCollage() {
+    const list = state.items.filter((i) => i.category !== "library" && i.status !== "archive" && i.photos.length);
+    let n = 0;
+    $("#collage").innerHTML = PANELS.map(([name, f]) => {
+      const items = list.filter(f);
+      if (!items.length) return "";
+      return `<section class="sheet" aria-label="${esc(name)}">
+        <header class="sheet__head"><span>${esc(name)}</span><span>${items.length}</span></header>
+        <div class="sheet__field">${items.map((i) => pieceHTML(i, ++n)).join("")}</div>
+      </section>`;
+    }).join("");
+  }
+  (function bindCollage() {
+    const root = $("#collage");
+    const load = (p) => { const b = p.querySelector(".p-back[data-src]"); if (b) { b.src = b.dataset.src; b.removeAttribute("data-src"); } };
+    root.addEventListener("pointerover", (e) => { const p = e.target.closest(".piece"); if (p) load(p); });
+    root.addEventListener("focusin", (e) => { const p = e.target.closest(".piece"); if (p) load(p); });
+    root.addEventListener("click", (e) => {
+      const p = e.target.closest("[data-open]");
+      if (!p) return;
+      e.preventDefault();
+      const touch = window.matchMedia("(hover: none)").matches;
+      if (touch && p.classList.contains("has-back") && !p.classList.contains("flip")) {
+        root.querySelectorAll(".piece.flip").forEach((x) => x.classList.remove("flip"));
+        load(p);
+        p.classList.add("flip");     // на телефоне: первое касание — оборот, второе — карточка
+        return;
+      }
+      openItem(p.dataset.open);
+    });
+  })();
+
   // ---------- навигация ----------
   function showView(name) {
-    ["catalog", "archive", "podgon", "library"].forEach((v) => { $("#view-" + v).hidden = v !== name; });
+    ["catalog", "archive", "podgon", "library", "collage"].forEach((v) => { $("#view-" + v).hidden = v !== name; });
   }
   function route() {
     const h = location.hash;
@@ -725,9 +805,9 @@
       openItem(decodeURIComponent(m[1]));
       return;
     }
-    viewHash = h === "#archive" || h === "#podgon" || h === "#library" ? h : "";
+    viewHash = h === "#archive" || h === "#podgon" || h === "#library" || h === "#collage" ? h : "";
     document.querySelectorAll("dialog[open]").forEach((d) => d.close());
-    const name = h === "#archive" ? "archive" : h === "#podgon" ? "podgon" : h === "#library" ? "library" : "catalog";
+    const name = h === "#archive" ? "archive" : h === "#podgon" ? "podgon" : h === "#library" ? "library" : h === "#collage" ? "collage" : "catalog";
     const wasHidden = $("#view-" + name).hidden;
     showView(name);
     if (name === "catalog") fitTitle();

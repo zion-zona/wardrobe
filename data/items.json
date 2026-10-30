@@ -43,23 +43,33 @@
   "photos": [
    {
     "src": "images/v064-1.jpg",
-    "kind": "tryon"
+    "kind": "tryon",
+    "w": 933,
+    "h": 1400
    },
    {
     "src": "images/v064-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 881,
+    "h": 1400
    },
    {
     "src": "images/v064-3.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 850,
+    "h": 1400
    },
    {
     "src": "images/v064-4.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 1248
    },
    {
     "src": "images/v064-5.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 909,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -121,15 +131,21 @@
   "photos": [
    {
     "src": "images/v007-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v007-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v007-3.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -189,23 +205,33 @@
   "photos": [
    {
     "src": "images/v067-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v067-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v067-3.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v067-4.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v067-5.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -276,39 +302,57 @@
   "photos": [
    {
     "src": "images/v039-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1199,
+    "h": 1312
    },
    {
     "src": "images/v039-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v039-3.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 1214
    },
    {
     "src": "images/v039-4.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 689,
+    "h": 1400
    },
    {
     "src": "images/v039-5.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v039-6.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1254,
+    "h": 1254
    },
    {
     "src": "images/v039-7.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 547,
+    "h": 1400
    },
    {
     "src": "images/v039-8.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 792,
+    "h": 1400
    },
    {
     "src": "images/v039-9.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 530,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -355,27 +399,39 @@
   "photos": [
    {
     "src": "images/pin-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 772,
+    "h": 772
    },
    {
     "src": "images/pin-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 900,
+    "h": 900
    },
    {
     "src": "images/pin-3.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 900,
+    "h": 900
    },
    {
     "src": "images/pin-4.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 535,
+    "h": 535
    },
    {
     "src": "images/pin-5.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 528,
+    "h": 528
    },
    {
     "src": "images/pin-6.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 593,
+    "h": 593
    }
   ],
   "variants": [
@@ -460,19 +516,27 @@
   "photos": [
    {
     "src": "images/v065-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 1172
    },
    {
     "src": "images/v065-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 442,
+    "h": 1400
    },
    {
     "src": "images/v065-3.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 737,
+    "h": 1400
    },
    {
     "src": "images/v065-4.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 1109
    }
   ],
   "added": "2026-10-23",
@@ -517,15 +581,21 @@
   "photos": [
    {
     "src": "images/v072-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v072-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v072-3.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -569,7 +639,9 @@
   "photos": [
    {
     "src": "images/v053-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -614,18 +686,4170 @@
   "photos": [
    {
     "src": "images/v066-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v066-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v066-3.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
+  "status": "available"
+ },
+ {
+  "id": "v094",
+  "ref": "V094",
+  "title": "Кроссовки Yeezy 380 Mist",
+  "category": "shoes",
+  "subcategory": "кроссовки",
+  "description": "Кроссовки Yeezy 380 в цвете Mist.",
+  "specs": [
+   [
+    "бренд",
+    "Yeezy"
+   ],
+   [
+    "подлинность",
+    "оригинал (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 5500
+  },
+  "nominal": {
+   "min": 11800,
+   "max": 19700,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 3500,
+   "max": 7000,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние подошвы",
+   "коробка / документы"
+  ],
+  "photos": [
+   {
+    "src": "images/v094-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 1274
+   },
+   {
+    "src": "images/v094-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v130",
+  "ref": "V130",
+  "title": "Платье NUNA LIE, цветочное",
+  "category": "clothes",
+  "subcategory": "платья",
+  "description": "Платье на запах с цветочным принтом.",
+  "specs": [
+   [
+    "бренд",
+    "NUNA LIE"
+   ],
+   [
+    "размер",
+    "S (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 1000
+  },
+  "nominal": {
+   "min": 2300,
+   "max": 3800,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 500,
+   "max": 1550,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v130-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v130-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v127",
+  "ref": "V127",
+  "title": "Платье белое с объёмными рукавами",
+  "category": "clothes",
+  "subcategory": "платья",
+  "description": "Молочно-белое платье с объёмными рукавами.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 800
+  },
+  "nominal": {
+   "min": 1800,
+   "max": 3000,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 400,
+   "max": 1200,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v127-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v127-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v151",
+  "ref": "V151",
+  "title": "Джинсы Levi’s 505, бежевые",
+  "category": "clothes",
+  "subcategory": "джинсы",
+  "description": "Бежевые джинсы Levi’s 505 прямого кроя.",
+  "specs": [
+   [
+    "бренд",
+    "Levi’s"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 2000
+  },
+  "nominal": {
+   "min": 4600,
+   "max": 7700,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 1200,
+   "max": 2900,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v151-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v151-2.jpg",
+    "kind": "ai",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v151-3.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v107",
+  "ref": "V107",
+  "title": "Платье Summum, чёрное",
+  "category": "clothes",
+  "subcategory": "платья",
+  "description": "Чёрное платье без рукавов с карманами.",
+  "specs": [
+   [
+    "бренд",
+    "Summum"
+   ],
+   [
+    "размер",
+    "40 (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 1500
+  },
+  "nominal": {
+   "min": 3200,
+   "max": 5300,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 700,
+   "max": 2150,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v107-1.jpg",
+    "kind": "real",
+    "w": 852,
+    "h": 1400
+   },
+   {
+    "src": "images/v107-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v136",
+  "ref": "V136",
+  "title": "Платье чёрное миди",
+  "category": "clothes",
+  "subcategory": "платья",
+  "description": "Чёрное платье миди с коротким рукавом.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 800
+  },
+  "nominal": {
+   "min": 1800,
+   "max": 3000,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 400,
+   "max": 1200,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v136-1.jpg",
+    "kind": "real",
+    "w": 832,
+    "h": 1400
+   },
+   {
+    "src": "images/v136-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v148",
+  "ref": "V148",
+  "title": "Джинсы BOSS Maine, тёмно-серые",
+  "category": "clothes",
+  "subcategory": "джинсы",
+  "description": "Тёмно-серые джинсы прямого кроя, модель Maine.",
+  "specs": [
+   [
+    "бренд",
+    "BOSS"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 2000
+  },
+  "nominal": {
+   "min": 4600,
+   "max": 7700,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 1200,
+   "max": 2900,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v148-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v148-2.jpg",
+    "kind": "ai",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v148-3.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v106",
+  "ref": "V106",
+  "title": "Платье бежевое с коротким рукавом",
+  "category": "clothes",
+  "subcategory": "платья",
+  "description": "Бежевое платье с коротким рукавом и мягкой сборкой на талии.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 800
+  },
+  "nominal": {
+   "min": 1800,
+   "max": 3000,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 400,
+   "max": 1200,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v106-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v106-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v137",
+  "ref": "V137",
+  "title": "Юбка bpc, белая",
+  "category": "clothes",
+  "subcategory": "юбки",
+  "description": "Белая ярусная юбка на резинке с завязками.",
+  "specs": [
+   [
+    "бренд",
+    "bpc"
+   ],
+   [
+    "размер",
+    "38 (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 400
+  },
+  "nominal": {
+   "min": 1000,
+   "max": 1600,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 250,
+   "max": 600,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v137-1.jpg",
+    "kind": "real",
+    "w": 1142,
+    "h": 1377
+   },
+   {
+    "src": "images/v137-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v154",
+  "ref": "V154",
+  "title": "Юбка AMISU, чёрная",
+  "category": "clothes",
+  "subcategory": "юбки",
+  "description": "Чёрная юбка миди на резинке.",
+  "specs": [
+   [
+    "бренд",
+    "AMISU"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 400
+  },
+  "nominal": {
+   "min": 1000,
+   "max": 1600,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 250,
+   "max": 600,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v154-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v154-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v105",
+  "ref": "V105",
+  "title": "Джемпер TRIKO, оливковый",
+  "category": "clothes",
+  "subcategory": "джемперы и кардиганы",
+  "description": "Оливковый джемпер с воротником-стойкой.",
+  "specs": [
+   [
+    "бренд",
+    "TRIKO"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 700
+  },
+  "nominal": {
+   "min": 1500,
+   "max": 2400,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 400,
+   "max": 900,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v105-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v105-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v131",
+  "ref": "V131",
+  "title": "Джемпер MNG, оливковый",
+  "category": "clothes",
+  "subcategory": "джемперы и кардиганы",
+  "description": "Оливковый джемпер с круглым вырезом.",
+  "specs": [
+   [
+    "бренд",
+    "MNG"
+   ],
+   [
+    "размер",
+    "S (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 700
+  },
+  "nominal": {
+   "min": 1500,
+   "max": 2400,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 400,
+   "max": 900,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v131-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v131-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v104",
+  "ref": "V104",
+  "title": "Свитшот UNIQLO UT Hokusai",
+  "category": "clothes",
+  "subcategory": "свитшоты и худи",
+  "description": "Серый свитшот с принтом «Большая волна» Хокусая.",
+  "specs": [
+   [
+    "бренд",
+    "UNIQLO UT"
+   ],
+   [
+    "размер",
+    "M (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 800
+  },
+  "nominal": {
+   "min": 1700,
+   "max": 2800,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 450,
+   "max": 1050,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v104-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v104-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v114",
+  "ref": "V114",
+  "title": "Свитшот Zara, молочный с воротником",
+  "category": "clothes",
+  "subcategory": "свитшоты и худи",
+  "description": "Молочный свитшот с воротником на пуговицах.",
+  "specs": [
+   [
+    "бренд",
+    "Zara"
+   ],
+   [
+    "размер",
+    "S (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 800
+  },
+  "nominal": {
+   "min": 1700,
+   "max": 2800,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 450,
+   "max": 1050,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v114-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 1259
+   },
+   {
+    "src": "images/v114-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v090",
+  "ref": "V090",
+  "title": "Свитшот ARKET, серый оверсайз",
+  "category": "clothes",
+  "subcategory": "свитшоты и худи",
+  "description": "Серый свитшот свободного кроя.",
+  "specs": [
+   [
+    "бренд",
+    "ARKET"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 1000
+  },
+  "nominal": {
+   "min": 2400,
+   "max": 3900,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 650,
+   "max": 1450,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v090-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v090-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v125",
+  "ref": "V125",
+  "title": "Рубашка UNIQLO, коралловая",
+  "category": "clothes",
+  "subcategory": "рубашки и блузы",
+  "description": "Коралловая рубашка с длинным рукавом.",
+  "specs": [
+   [
+    "бренд",
+    "UNIQLO"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 600
+  },
+  "nominal": {
+   "min": 1200,
+   "max": 2100,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 300,
+   "max": 800,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v125-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v125-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v119",
+  "ref": "V119",
+  "title": "Блуза UNIQLO, коралловая",
+  "category": "clothes",
+  "subcategory": "рубашки и блузы",
+  "description": "Коралловая блуза с рукавом три четверти.",
+  "specs": [
+   [
+    "бренд",
+    "UNIQLO"
+   ],
+   [
+    "размер",
+    "S (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 600
+  },
+  "nominal": {
+   "min": 1200,
+   "max": 2100,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 300,
+   "max": 800,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v119-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v119-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v150",
+  "ref": "V150",
+  "title": "Джинсы UNIQLO U, чёрные",
+  "category": "clothes",
+  "subcategory": "джинсы",
+  "description": "Чёрные джинсы прямого кроя.",
+  "specs": [
+   [
+    "бренд",
+    "UNIQLO U"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 1000
+  },
+  "nominal": {
+   "min": 2500,
+   "max": 4100,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 650,
+   "max": 1550,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v150-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v150-2.jpg",
+    "kind": "ai",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v150-3.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v143",
+  "ref": "V143",
+  "title": "Брюки Patagonia, бежевые",
+  "category": "clothes",
+  "subcategory": "брюки",
+  "description": "Бежевые брюки.",
+  "specs": [
+   [
+    "бренд",
+    "Patagonia"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 1500
+  },
+  "nominal": {
+   "min": 3400,
+   "max": 5600,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 850,
+   "max": 2150,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v143-1.jpg",
+    "kind": "real",
+    "w": 868,
+    "h": 1400
+   },
+   {
+    "src": "images/v143-2.jpg",
+    "kind": "ai",
+    "w": 870,
+    "h": 1400
+   },
+   {
+    "src": "images/v143-3.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v156",
+  "ref": "V156",
+  "title": "Шорты Levi’s, тёмно-синие с отворотами",
+  "category": "clothes",
+  "subcategory": "шорты",
+  "description": "Тёмно-синие джинсовые шорты с отворотами.",
+  "specs": [
+   [
+    "бренд",
+    "Levi’s"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 800
+  },
+  "nominal": {
+   "min": 1700,
+   "max": 2900,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 450,
+   "max": 1100,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v156-1.jpg",
+    "kind": "real",
+    "w": 1400,
+    "h": 1050
+   },
+   {
+    "src": "images/v156-2.jpg",
+    "kind": "real",
+    "w": 1400,
+    "h": 1050
+   },
+   {
+    "src": "images/v156-3.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v153",
+  "ref": "V153",
+  "title": "Джинсы молочные",
+  "category": "clothes",
+  "subcategory": "джинсы",
+  "description": "Молочные джинсы.",
+  "specs": [
+   [
+    "размер",
+    "42 (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 900
+  },
+  "nominal": {
+   "min": 1900,
+   "max": 3200,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 500,
+   "max": 1200,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v153-1.jpg",
+    "kind": "real",
+    "w": 929,
+    "h": 1400
+   },
+   {
+    "src": "images/v153-2.jpg",
+    "kind": "ai",
+    "w": 931,
+    "h": 1400
+   },
+   {
+    "src": "images/v153-3.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v152",
+  "ref": "V152",
+  "title": "Джинсы синие с необработанным низом",
+  "category": "clothes",
+  "subcategory": "джинсы",
+  "description": "Синие джинсы с необработанным краем.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 900
+  },
+  "nominal": {
+   "min": 1900,
+   "max": 3200,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 500,
+   "max": 1200,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v152-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v152-2.jpg",
+    "kind": "ai",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v152-3.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v149",
+  "ref": "V149",
+  "title": "Джинсы Antonia, чёрные",
+  "category": "clothes",
+  "subcategory": "джинсы",
+  "description": "Чёрные джинсы.",
+  "specs": [
+   [
+    "бренд",
+    "Antonia"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 1000
+  },
+  "nominal": {
+   "min": 2500,
+   "max": 4100,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 650,
+   "max": 1550,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v149-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v149-2.jpg",
+    "kind": "ai",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v149-3.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v144",
+  "ref": "V144",
+  "title": "Джинсы MNG, серые",
+  "category": "clothes",
+  "subcategory": "джинсы",
+  "description": "Серые джинсы с потёртостями.",
+  "specs": [
+   [
+    "бренд",
+    "MNG"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 1000
+  },
+  "nominal": {
+   "min": 2500,
+   "max": 4100,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 650,
+   "max": 1550,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v144-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v144-2.jpg",
+    "kind": "ai",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v144-3.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v122",
+  "ref": "V122",
+  "title": "Блуза ONLY, терракотовая",
+  "category": "clothes",
+  "subcategory": "рубашки и блузы",
+  "description": "Терракотовая блуза с воланом по низу.",
+  "specs": [
+   [
+    "бренд",
+    "ONLY"
+   ],
+   [
+    "размер",
+    "40 (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 600
+  },
+  "nominal": {
+   "min": 1200,
+   "max": 2100,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 300,
+   "max": 800,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v122-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v122-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v117",
+  "ref": "V117",
+  "title": "Джемпер Pezzo, бордовый",
+  "category": "clothes",
+  "subcategory": "джемперы и кардиганы",
+  "description": "Бордовый джемпер с коротким рукавом.",
+  "specs": [
+   [
+    "бренд",
+    "Pezzo"
+   ],
+   [
+    "размер",
+    "50 (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 500
+  },
+  "nominal": {
+   "min": 1100,
+   "max": 1900,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 300,
+   "max": 700,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v117-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 1214
+   },
+   {
+    "src": "images/v117-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v110",
+  "ref": "V110",
+  "title": "Кардиган TU, коричневый",
+  "category": "clothes",
+  "subcategory": "джемперы и кардиганы",
+  "description": "Коричневый кардиган на пуговицах.",
+  "specs": [
+   [
+    "бренд",
+    "TU"
+   ],
+   [
+    "размер",
+    "10 (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 500
+  },
+  "nominal": {
+   "min": 1100,
+   "max": 1900,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 300,
+   "max": 700,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v110-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v110-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v109",
+  "ref": "V109",
+  "title": "Лонгслив Benetton, полосатый",
+  "category": "clothes",
+  "subcategory": "лонгсливы",
+  "description": "Лонгслив в чёрно-бежевую полоску.",
+  "specs": [
+   [
+    "бренд",
+    "Benetton"
+   ],
+   [
+    "размер",
+    "S (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 600
+  },
+  "nominal": {
+   "min": 1400,
+   "max": 2300,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 350,
+   "max": 900,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v109-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v109-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v103",
+  "ref": "V103",
+  "title": "Лонгслив CABANA, тай-дай",
+  "category": "clothes",
+  "subcategory": "лонгсливы",
+  "description": "Лонгслив с рисунком тай-дай.",
+  "specs": [
+   [
+    "бренд",
+    "CABANA"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 500
+  },
+  "nominal": {
+   "min": 1000,
+   "max": 1700,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 250,
+   "max": 650,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v103-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 1205
+   },
+   {
+    "src": "images/v103-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v095",
+  "ref": "V095",
+  "title": "Лонгслив Zara, пыльно-розовый",
+  "category": "clothes",
+  "subcategory": "лонгсливы",
+  "description": "Лонгслив пыльно-розового цвета.",
+  "specs": [
+   [
+    "бренд",
+    "Zara"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 500
+  },
+  "nominal": {
+   "min": 1000,
+   "max": 1700,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 250,
+   "max": 650,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v095-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v095-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v092",
+  "ref": "V092",
+  "title": "Слингбэки пудровые",
+  "category": "shoes",
+  "subcategory": "туфли",
+  "description": "Пудровые слингбэки на небольшом каблуке.",
+  "specs": [
+   [
+    "размер",
+    "36 (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 1000
+  },
+  "nominal": {
+   "min": 2400,
+   "max": 3900,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 600,
+   "max": 1500,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "длина стельки"
+  ],
+  "photos": [
+   {
+    "src": "images/v092-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 943
+   },
+   {
+    "src": "images/v092-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v093",
+  "ref": "V093",
+  "title": "Полуботинки серо-бежевые",
+  "category": "shoes",
+  "subcategory": "ботинки",
+  "description": "Серо-бежевые полуботинки на шнуровке.",
+  "specs": [
+   [
+    "размер",
+    "36 (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 1500
+  },
+  "nominal": {
+   "min": 3200,
+   "max": 5200,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 800,
+   "max": 2000,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "длина стельки"
+  ],
+  "photos": [
+   {
+    "src": "images/v093-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 1228
+   },
+   {
+    "src": "images/v093-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v100",
+  "ref": "V100",
+  "title": "Рубашка Michèle Boyard, красная",
+  "category": "clothes",
+  "subcategory": "рубашки и блузы",
+  "description": "Красная рубашка с коротким рукавом.",
+  "specs": [
+   [
+    "бренд",
+    "Michèle Boyard"
+   ],
+   [
+    "размер",
+    "40 (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 800
+  },
+  "nominal": {
+   "min": 1700,
+   "max": 2900,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 450,
+   "max": 1100,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v100-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v100-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v099",
+  "ref": "V099",
+  "title": "Рубашка H&M, молочная",
+  "category": "clothes",
+  "subcategory": "рубашки и блузы",
+  "description": "Молочная рубашка с коротким рукавом.",
+  "specs": [
+   [
+    "бренд",
+    "H&M"
+   ],
+   [
+    "размер",
+    "42 (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 400
+  },
+  "nominal": {
+   "min": 1000,
+   "max": 1600,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 250,
+   "max": 600,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v099-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v099-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v115",
+  "ref": "V115",
+  "title": "Рубашка Gloria Jeans, белая",
+  "category": "clothes",
+  "subcategory": "рубашки и блузы",
+  "description": "Белая рубашка с накладными карманами.",
+  "specs": [
+   [
+    "бренд",
+    "Gloria Jeans"
+   ],
+   [
+    "размер",
+    "S (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 400
+  },
+  "nominal": {
+   "min": 1000,
+   "max": 1600,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 250,
+   "max": 600,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v115-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v115-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v124",
+  "ref": "V124",
+  "title": "Рубашка Baricci, белая",
+  "category": "clothes",
+  "subcategory": "рубашки и блузы",
+  "description": "Белая рубашка с коротким рукавом.",
+  "specs": [
+   [
+    "бренд",
+    "Baricci"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 600
+  },
+  "nominal": {
+   "min": 1200,
+   "max": 2100,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 300,
+   "max": 800,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v124-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 1265
+   },
+   {
+    "src": "images/v124-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v118",
+  "ref": "V118",
+  "title": "Блуза UNIQLO, бежевая",
+  "category": "clothes",
+  "subcategory": "рубашки и блузы",
+  "description": "Бежевая блуза с планкой на пуговицах.",
+  "specs": [
+   [
+    "бренд",
+    "UNIQLO"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 600
+  },
+  "nominal": {
+   "min": 1200,
+   "max": 2100,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 300,
+   "max": 800,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v118-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 1277
+   },
+   {
+    "src": "images/v118-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v108",
+  "ref": "V108",
+  "title": "Рубашка Helly Hansen, серая",
+  "category": "clothes",
+  "subcategory": "рубашки и блузы",
+  "description": "Серо-голубая рубашка с коротким рукавом и карманами.",
+  "specs": [
+   [
+    "бренд",
+    "Helly Hansen"
+   ],
+   [
+    "размер",
+    "M (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 800
+  },
+  "nominal": {
+   "min": 1700,
+   "max": 2900,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 450,
+   "max": 1100,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v108-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v108-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v121",
+  "ref": "V121",
+  "title": "Рубашка Primark, коричневая",
+  "category": "clothes",
+  "subcategory": "рубашки и блузы",
+  "description": "Коричневая рубашка с нагрудным карманом.",
+  "specs": [
+   [
+    "бренд",
+    "Primark"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 400
+  },
+  "nominal": {
+   "min": 1000,
+   "max": 1600,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 250,
+   "max": 600,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v121-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v121-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v139",
+  "ref": "V139",
+  "title": "Туника белая с завязками",
+  "category": "clothes",
+  "subcategory": "рубашки и блузы",
+  "description": "Белая туника с завязками и кисточками.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 400
+  },
+  "nominal": {
+   "min": 1000,
+   "max": 1600,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 250,
+   "max": 600,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v139-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v139-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v135",
+  "ref": "V135",
+  "title": "Топ чёрный фактурный короткий",
+  "category": "clothes",
+  "subcategory": "футболки и топы",
+  "description": "Короткий чёрный топ из фактурной ткани.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 300
+  },
+  "nominal": {
+   "min": 600,
+   "max": 1000,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 150,
+   "max": 400,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v135-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 1194
+   },
+   {
+    "src": "images/v135-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v126",
+  "ref": "V126",
+  "title": "Топ Pull&Bear, молочный",
+  "category": "clothes",
+  "subcategory": "футболки и топы",
+  "description": "Молочный укороченный топ с фигурным краем.",
+  "specs": [
+   [
+    "бренд",
+    "Pull&Bear"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 300
+  },
+  "nominal": {
+   "min": 600,
+   "max": 1000,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 150,
+   "max": 400,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v126-1.jpg",
+    "kind": "real",
+    "w": 1227,
+    "h": 1099
+   },
+   {
+    "src": "images/v126-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v133",
+  "ref": "V133",
+  "title": "Топ NEOHIT, молочный",
+  "category": "clothes",
+  "subcategory": "футболки и топы",
+  "description": "Молочный топ без рукавов с V-образным вырезом.",
+  "specs": [
+   [
+    "бренд",
+    "NEOHIT"
+   ],
+   [
+    "размер",
+    "L (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 300
+  },
+  "nominal": {
+   "min": 600,
+   "max": 1000,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 150,
+   "max": 400,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v133-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v133-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v128",
+  "ref": "V128",
+  "title": "Топ St Michael, белый",
+  "category": "clothes",
+  "subcategory": "футболки и топы",
+  "description": "Белый топ на пуговицах.",
+  "specs": [
+   [
+    "бренд",
+    "St Michael"
+   ],
+   [
+    "размер",
+    "152 см (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 300
+  },
+  "nominal": {
+   "min": 600,
+   "max": 1000,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 150,
+   "max": 400,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v128-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 964
+   },
+   {
+    "src": "images/v128-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v129",
+  "ref": "V129",
+  "title": "Футболка светло-розовая",
+  "category": "clothes",
+  "subcategory": "футболки и топы",
+  "description": "Светло-розовая футболка.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 300
+  },
+  "nominal": {
+   "min": 600,
+   "max": 1000,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 150,
+   "max": 400,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v129-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 1220
+   },
+   {
+    "src": "images/v129-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v132",
+  "ref": "V132",
+  "title": "Топ UNIQLO, светло-серый",
+  "category": "clothes",
+  "subcategory": "футболки и топы",
+  "description": "Светло-серый топ.",
+  "specs": [
+   [
+    "бренд",
+    "UNIQLO"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 400
+  },
+  "nominal": {
+   "min": 800,
+   "max": 1300,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 200,
+   "max": 500,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v132-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 1230
+   },
+   {
+    "src": "images/v132-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v123",
+  "ref": "V123",
+  "title": "Футболка Oysho, бордовая",
+  "category": "clothes",
+  "subcategory": "футболки и топы",
+  "description": "Бордовая спортивная футболка.",
+  "specs": [
+   [
+    "бренд",
+    "Oysho"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 400
+  },
+  "nominal": {
+   "min": 800,
+   "max": 1300,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 200,
+   "max": 500,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v123-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v123-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v116",
+  "ref": "V116",
+  "title": "Футболка TU, тёмно-синяя",
+  "category": "clothes",
+  "subcategory": "футболки и топы",
+  "description": "Тёмно-синяя футболка.",
+  "specs": [
+   [
+    "бренд",
+    "TU"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 300
+  },
+  "nominal": {
+   "min": 600,
+   "max": 1000,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 150,
+   "max": 400,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v116-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 1276
+   },
+   {
+    "src": "images/v116-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v096",
+  "ref": "V096",
+  "title": "Футболка терракотовая, тонкая ткань",
+  "category": "clothes",
+  "subcategory": "футболки и топы",
+  "description": "Терракотовая футболка из тонкой ткани.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 300
+  },
+  "nominal": {
+   "min": 600,
+   "max": 1000,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 150,
+   "max": 400,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v096-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 1271
+   },
+   {
+    "src": "images/v096-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v120",
+  "ref": "V120",
+  "title": "Лонгслив охристый",
+  "category": "clothes",
+  "subcategory": "лонгсливы",
+  "description": "Охристый лонгслив с рукавом три четверти.",
+  "specs": [
+   [
+    "размер",
+    "L-XL (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 400
+  },
+  "nominal": {
+   "min": 800,
+   "max": 1300,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 200,
+   "max": 500,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v120-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v120-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v134",
+  "ref": "V134",
+  "title": "Лонгслив тёмно-зелёный",
+  "category": "clothes",
+  "subcategory": "лонгсливы",
+  "description": "Тёмно-зелёный лонгслив.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 400
+  },
+  "nominal": {
+   "min": 800,
+   "max": 1300,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 200,
+   "max": 500,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v134-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 1241
+   },
+   {
+    "src": "images/v134-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v138",
+  "ref": "V138",
+  "title": "Лонгслив Yessica, бордовый",
+  "category": "clothes",
+  "subcategory": "лонгсливы",
+  "description": "Бордовый лонгслив с рукавом-фонариком.",
+  "specs": [
+   [
+    "бренд",
+    "Yessica"
+   ],
+   [
+    "размер",
+    "50–52 (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 400
+  },
+  "nominal": {
+   "min": 800,
+   "max": 1300,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 200,
+   "max": 500,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v138-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v138-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v101",
+  "ref": "V101",
+  "title": "Лонгслив s.Oliver, молочный",
+  "category": "clothes",
+  "subcategory": "лонгсливы",
+  "description": "Молочный лонгслив.",
+  "specs": [
+   [
+    "бренд",
+    "s.Oliver"
+   ],
+   [
+    "размер",
+    "36 (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 500
+  },
+  "nominal": {
+   "min": 1000,
+   "max": 1700,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 250,
+   "max": 650,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v101-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v101-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v091",
+  "ref": "V091",
+  "title": "Свитшот TRY.ON.DRESS, молочный",
+  "category": "clothes",
+  "subcategory": "свитшоты и худи",
+  "description": "Молочный свитшот.",
+  "specs": [
+   [
+    "бренд",
+    "TRY.ON.DRESS"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 800
+  },
+  "nominal": {
+   "min": 1700,
+   "max": 2800,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 450,
+   "max": 1050,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v091-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v091-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v097",
+  "ref": "V097",
+  "title": "Худи UNIQLO, бежевая прямая",
+  "category": "clothes",
+  "subcategory": "свитшоты и худи",
+  "description": "Бежевая худи прямого кроя.",
+  "specs": [
+   [
+    "бренд",
+    "UNIQLO"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 800
+  },
+  "nominal": {
+   "min": 1700,
+   "max": 2800,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 450,
+   "max": 1050,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v097-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v097-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v098",
+  "ref": "V098",
+  "title": "Худи серо-бежевая укороченная с молниями",
+  "category": "clothes",
+  "subcategory": "свитшоты и худи",
+  "description": "Укороченная серо-бежевая худи с молниями.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 600
+  },
+  "nominal": {
+   "min": 1300,
+   "max": 2200,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 350,
+   "max": 800,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v098-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v098-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v089",
+  "ref": "V089",
+  "title": "Свитшот C&A, чёрный оверсайз",
+  "category": "clothes",
+  "subcategory": "свитшоты и худи",
+  "description": "Чёрный свитшот свободного кроя.",
+  "specs": [
+   [
+    "бренд",
+    "C&A"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 600
+  },
+  "nominal": {
+   "min": 1300,
+   "max": 2200,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 350,
+   "max": 800,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v089-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v089-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v102",
+  "ref": "V102",
+  "title": "Свитшот ACCO BIG, чёрный",
+  "category": "clothes",
+  "subcategory": "свитшоты и худи",
+  "description": "Чёрный свитшот.",
+  "specs": [
+   [
+    "бренд",
+    "ACCO BIG"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 600
+  },
+  "nominal": {
+   "min": 1300,
+   "max": 2200,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 350,
+   "max": 800,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v102-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 1228
+   },
+   {
+    "src": "images/v102-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v111",
+  "ref": "V111",
+  "title": "Худи тёмная с карманом",
+  "category": "clothes",
+  "subcategory": "свитшоты и худи",
+  "description": "Тёмная худи с карманом-кенгуру.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 600
+  },
+  "nominal": {
+   "min": 1300,
+   "max": 2200,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 350,
+   "max": 800,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v111-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v111-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v112",
+  "ref": "V112",
+  "title": "Футболка чёрная",
+  "category": "clothes",
+  "subcategory": "футболки и топы",
+  "description": "Чёрная футболка.",
+  "specs": [
+   [
+    "размер",
+    "XL (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 300
+  },
+  "nominal": {
+   "min": 600,
+   "max": 1000,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 150,
+   "max": 400,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v112-1.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 1234
+   },
+   {
+    "src": "images/v112-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v113",
+  "ref": "V113",
+  "title": "Рубашка чёрная с карманом",
+  "category": "clothes",
+  "subcategory": "рубашки и блузы",
+  "description": "Чёрная рубашка с нагрудным карманом.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 400
+  },
+  "nominal": {
+   "min": 1000,
+   "max": 1600,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 250,
+   "max": 600,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v113-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v113-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v146",
+  "ref": "V146",
+  "title": "Брюки UNIQLO U, чёрные",
+  "category": "clothes",
+  "subcategory": "брюки",
+  "description": "Чёрные брюки на резинке.",
+  "specs": [
+   [
+    "бренд",
+    "UNIQLO U"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 800
+  },
+  "nominal": {
+   "min": 1800,
+   "max": 3000,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 450,
+   "max": 1150,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v146-1.jpg",
+    "kind": "real",
+    "w": 830,
+    "h": 1400
+   },
+   {
+    "src": "images/v146-2.jpg",
+    "kind": "ai",
+    "w": 830,
+    "h": 1400
+   },
+   {
+    "src": "images/v146-3.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v147",
+  "ref": "V147",
+  "title": "Брюки карго серо-оливковые",
+  "category": "clothes",
+  "subcategory": "брюки",
+  "description": "Серо-оливковые брюки карго.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 600
+  },
+  "nominal": {
+   "min": 1400,
+   "max": 2300,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 350,
+   "max": 900,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v147-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v147-2.jpg",
+    "kind": "ai",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v147-3.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v141",
+  "ref": "V141",
+  "title": "Брюки Nike Dri-FIT, чёрные",
+  "category": "clothes",
+  "subcategory": "брюки",
+  "description": "Чёрные спортивные брюки Dri-FIT.",
+  "specs": [
+   [
+    "бренд",
+    "Nike"
+   ],
+   [
+    "размер",
+    "M (со слов владелицы)"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 1000
+  },
+  "nominal": {
+   "min": 2500,
+   "max": 4200,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 650,
+   "max": 1600,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v141-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v141-2.jpg",
+    "kind": "ai",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v141-3.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v145",
+  "ref": "V145",
+  "title": "Брюки серые с плиссированным низом",
+  "category": "clothes",
+  "subcategory": "брюки",
+  "description": "Серые брюки на резинке с плиссировкой внизу.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 600
+  },
+  "nominal": {
+   "min": 1400,
+   "max": 2300,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 350,
+   "max": 900,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v145-1.jpg",
+    "kind": "real",
+    "w": 912,
+    "h": 1400
+   },
+   {
+    "src": "images/v145-2.jpg",
+    "kind": "ai",
+    "w": 912,
+    "h": 1400
+   },
+   {
+    "src": "images/v145-3.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v140",
+  "ref": "V140",
+  "title": "Брюки Simply Hot, серые с молниями",
+  "category": "clothes",
+  "subcategory": "брюки",
+  "description": "Серые брюки с молниями и карманом на штанине.",
+  "specs": [
+   [
+    "бренд",
+    "Simply Hot"
+   ]
+  ],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 600
+  },
+  "nominal": {
+   "min": 1400,
+   "max": 2300,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 350,
+   "max": 900,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v140-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v140-2.jpg",
+    "kind": "ai",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v140-3.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v142",
+  "ref": "V142",
+  "title": "Брюки чёрные баллоны с завязками внизу",
+  "category": "clothes",
+  "subcategory": "брюки",
+  "description": "Чёрные брюки-баллоны со шнурками внизу штанин.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 600
+  },
+  "nominal": {
+   "min": 1400,
+   "max": 2300,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 350,
+   "max": 900,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v142-1.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v142-2.jpg",
+    "kind": "ai",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v142-3.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v155",
+  "ref": "V155",
+  "title": "Шорты джинсовые серые с потёртостями",
+  "category": "clothes",
+  "subcategory": "шорты",
+  "description": "Серые джинсовые шорты с потёртостями.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 400
+  },
+  "nominal": {
+   "min": 1000,
+   "max": 1600,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 250,
+   "max": 600,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "состояние",
+   "состав ткани"
+  ],
+  "photos": [
+   {
+    "src": "images/v155-1.jpg",
+    "kind": "real",
+    "w": 1312,
+    "h": 1199
+   },
+   {
+    "src": "images/v155-2.jpg",
+    "kind": "real",
+    "w": 1086,
+    "h": 1119
+   },
+   {
+    "src": "images/v155-3.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
+  "status": "available"
+ },
+ {
+  "id": "v157",
+  "ref": "V157",
+  "title": "Воронка стеклянная с бамбуковой подставкой",
+  "category": "dishes",
+  "subcategory": "кухня",
+  "description": "Стеклянная воронка на бамбуковой подставке. Похожа на воронку для заваривания кофе — назначение нужно уточнить.",
+  "specs": [],
+  "condition": {
+   "label": "состояние уточняется"
+  },
+  "features": [],
+  "defects": [],
+  "deal": {
+   "mode": "pwyw",
+   "amount": 300
+  },
+  "nominal": {
+   "min": 600,
+   "max": 1000,
+   "date": "2026-10-23",
+   "note": "прикидка по типу вещи и бренду, не из магазина"
+  },
+  "estimate": {
+   "min": 150,
+   "max": 400,
+   "date": "2026-10-23",
+   "confidence": "низкая",
+   "by_analogs": true,
+   "note": "по типу вещи и бренду, без поиска аналогов — нужно уточнить",
+   "sources": []
+  },
+  "todo": [
+   "размер",
+   "что за предмет — уточнить назначение"
+  ],
+  "photos": [
+   {
+    "src": "images/v157-1.jpg",
+    "kind": "real",
+    "w": 1082,
+    "h": 1250
+   },
+   {
+    "src": "images/v157-2.jpg",
+    "kind": "tryon",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "images/v157-3.jpg",
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
+   }
+  ],
+  "added": "2026-10-30",
   "status": "available"
  },
  {
@@ -667,11 +4891,15 @@
   "photos": [
    {
     "src": "images/v071-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 890,
+    "h": 999
    },
    {
     "src": "images/v071-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 858,
+    "h": 1378
    }
   ],
   "added": "2026-10-23",
@@ -715,15 +4943,21 @@
   "photos": [
    {
     "src": "images/v062-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 1050
    },
    {
     "src": "images/v062-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 996
    },
    {
     "src": "images/v062-3.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -778,7 +5012,9 @@
   "photos": [
    {
     "src": "images/v016-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 1178
    }
   ],
   "added": "2026-10-23",
@@ -831,11 +5067,15 @@
   "photos": [
    {
     "src": "images/v002-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1015,
+    "h": 1312
    },
    {
     "src": "images/v002-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1021,
+    "h": 1327
    }
   ],
   "added": "2026-10-23",
@@ -884,11 +5124,15 @@
   "photos": [
    {
     "src": "images/v001-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 1260
    },
    {
     "src": "images/v001-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 1255
    }
   ],
   "added": "2026-10-23",
@@ -943,7 +5187,9 @@
   "photos": [
    {
     "src": "images/v063-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1241,
+    "h": 1268
    }
   ],
   "added": "2026-10-23",
@@ -991,11 +5237,15 @@
   "photos": [
    {
     "src": "images/v058-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 1213
    },
    {
     "src": "images/v058-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 1030
    }
   ],
   "added": "2026-10-23",
@@ -1049,7 +5299,9 @@
   "photos": [
    {
     "src": "images/v040-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -1093,7 +5345,9 @@
   "photos": [
    {
     "src": "images/v059-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 1296
    }
   ],
   "added": "2026-10-23",
@@ -1137,11 +5391,15 @@
   "photos": [
    {
     "src": "images/v086-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1065,
+    "h": 1317
    },
    {
     "src": "images/v086-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 1088
    }
   ],
   "added": "2026-10-23",
@@ -1184,19 +5442,27 @@
   "photos": [
    {
     "src": "images/v042-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 933,
+    "h": 1328
    },
    {
     "src": "images/v042-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v042-3.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 878,
+    "h": 1268
    },
    {
     "src": "images/v042-4.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 943,
+    "h": 1271
    }
   ],
   "added": "2026-10-23",
@@ -1237,11 +5503,15 @@
   "photos": [
    {
     "src": "images/v027-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 913
    },
    {
     "src": "images/v027-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 907
    }
   ],
   "added": "2026-10-23",
@@ -1298,11 +5568,15 @@
   "photos": [
    {
     "src": "images/v024-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 513,
+    "h": 1027
    },
    {
     "src": "images/v024-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 710,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -1358,11 +5632,15 @@
   "photos": [
    {
     "src": "images/v030-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 967,
+    "h": 1004
    },
    {
     "src": "images/v030-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1230,
+    "h": 1278
    }
   ],
   "added": "2026-10-23",
@@ -1420,11 +5698,15 @@
   "photos": [
    {
     "src": "images/v003-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v003-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -1467,11 +5749,15 @@
   "photos": [
    {
     "src": "images/v060-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1000,
+    "h": 1119
    },
    {
     "src": "images/v060-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 896
    }
   ],
   "added": "2026-10-23",
@@ -1515,11 +5801,15 @@
   "photos": [
    {
     "src": "images/v061-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 706,
+    "h": 1400
    },
    {
     "src": "images/v061-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 737,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -1573,15 +5863,21 @@
   "photos": [
    {
     "src": "images/v021-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 600,
+    "h": 1400
    },
    {
     "src": "images/v021-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 656,
+    "h": 1400
    },
    {
     "src": "images/v021-3.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 586,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -1628,31 +5924,45 @@
   "photos": [
    {
     "src": "images/v032-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v032-p1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 274,
+    "h": 274
    },
    {
     "src": "images/v032-p2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 240,
+    "h": 240
    },
    {
     "src": "images/v032-p3.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 240,
+    "h": 240
    },
    {
     "src": "images/v032-p4.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 216,
+    "h": 216
    },
    {
     "src": "images/v032-p5.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 218,
+    "h": 218
    },
    {
     "src": "images/v032-p6.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 218,
+    "h": 218
    }
   ],
   "added": "2026-10-23",
@@ -1783,11 +6093,15 @@
   "photos": [
    {
     "src": "images/v019-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 681,
+    "h": 1400
    },
    {
     "src": "images/v019-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 627,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -1836,11 +6150,15 @@
   "photos": [
    {
     "src": "images/v008-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 896,
+    "h": 1400
    },
    {
     "src": "images/v008-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1045,
+    "h": 1273
    }
   ],
   "added": "2026-10-23",
@@ -1888,11 +6206,15 @@
   "photos": [
    {
     "src": "images/v009-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v009-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -1941,15 +6263,21 @@
   "photos": [
    {
     "src": "images/v022-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 975
    },
    {
     "src": "images/v022-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v022-3.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 1213
    }
   ],
   "added": "2026-10-23",
@@ -2005,11 +6333,15 @@
   "photos": [
    {
     "src": "images/v011-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 769
    },
    {
     "src": "images/v011-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 859
    }
   ],
   "added": "2026-10-23",
@@ -2050,7 +6382,9 @@
   "photos": [
    {
     "src": "images/v068-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 447,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -2094,11 +6428,15 @@
   "photos": [
    {
     "src": "images/v012-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 882,
+    "h": 980
    },
    {
     "src": "images/v012-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1084,
+    "h": 1246
    }
   ],
   "added": "2026-10-23",
@@ -2142,7 +6480,9 @@
   "photos": [
    {
     "src": "images/v014-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 783,
+    "h": 1164
    }
   ],
   "added": "2026-10-23",
@@ -2183,7 +6523,9 @@
   "photos": [
    {
     "src": "images/v028-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1400,
+    "h": 923
    }
   ],
   "added": "2026-10-23",
@@ -2224,11 +6566,15 @@
   "photos": [
    {
     "src": "images/v043-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 892,
+    "h": 1274
    },
    {
     "src": "images/v043-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 932,
+    "h": 1388
    }
   ],
   "added": "2026-10-23",
@@ -2282,11 +6628,15 @@
   "photos": [
    {
     "src": "images/v005-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 893,
+    "h": 1400
    },
    {
     "src": "images/v005-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 910,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -2329,11 +6679,15 @@
   "photos": [
    {
     "src": "images/v006-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v006-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 903,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -2374,7 +6728,9 @@
   "photos": [
    {
     "src": "images/v025-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 657,
+    "h": 1189
    }
   ],
   "added": "2026-10-23",
@@ -2415,7 +6771,9 @@
   "photos": [
    {
     "src": "images/v026-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 695,
+    "h": 1177
    }
   ],
   "added": "2026-10-23",
@@ -2456,7 +6814,9 @@
   "photos": [
    {
     "src": "images/v031-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 966,
+    "h": 604
    }
   ],
   "added": "2026-10-23",
@@ -2500,7 +6860,9 @@
   "photos": [
    {
     "src": "images/v054-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -2545,7 +6907,9 @@
   "photos": [
    {
     "src": "images/v055-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 865,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -2588,7 +6952,9 @@
   "photos": [
    {
     "src": "images/v029-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 830,
+    "h": 868
    }
   ],
   "added": "2026-10-23",
@@ -2640,11 +7006,15 @@
   "photos": [
    {
     "src": "images/v004-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v004-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -2685,11 +7055,15 @@
   "photos": [
    {
     "src": "images/v023-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1400,
+    "h": 1050
    },
    {
     "src": "images/v023-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1400,
+    "h": 1050
    }
   ],
   "added": "2026-10-23",
@@ -2735,7 +7109,9 @@
   "photos": [
    {
     "src": "images/v070-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 919,
+    "h": 1394
    }
   ],
   "added": "2026-10-23",
@@ -2784,7 +7160,9 @@
   "photos": [
    {
     "src": "images/v077-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1230,
+    "h": 1278
    }
   ],
   "added": "2026-10-23",
@@ -2840,7 +7218,9 @@
   "photos": [
    {
     "src": "images/v079-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1320,
+    "h": 1018
    }
   ],
   "added": "2026-10-23",
@@ -2900,11 +7280,15 @@
   "photos": [
    {
     "src": "images/v052-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v052-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -2956,11 +7340,15 @@
   "photos": [
    {
     "src": "images/v056-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v056-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 1281
    }
   ],
   "added": "2026-10-23",
@@ -3006,7 +7394,9 @@
   "photos": [
    {
     "src": "images/v078-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 927,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -3062,7 +7452,9 @@
   "photos": [
    {
     "src": "images/v045-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 1111
    }
   ],
   "added": "2026-10-23",
@@ -3101,7 +7493,9 @@
   "photos": [
    {
     "src": "images/v044-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -3160,11 +7554,15 @@
   "photos": [
    {
     "src": "images/v046-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1400,
+    "h": 634
    },
    {
     "src": "images/v046-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1400,
+    "h": 1050
    }
   ],
   "added": "2026-10-23",
@@ -3216,7 +7614,9 @@
   "photos": [
    {
     "src": "images/v057-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 732,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -3257,11 +7657,15 @@
   "photos": [
    {
     "src": "images/v050-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v050-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -3305,11 +7709,15 @@
   "photos": [
    {
     "src": "images/v047-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 1232
    },
    {
     "src": "images/v047-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -3353,7 +7761,9 @@
   "photos": [
    {
     "src": "images/v048-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 826,
+    "h": 1383
    }
   ],
   "added": "2026-10-23",
@@ -3409,11 +7819,15 @@
   "photos": [
    {
     "src": "images/v037-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v037-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -3469,7 +7883,9 @@
   "photos": [
    {
     "src": "images/v049-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 804,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -3521,11 +7937,15 @@
   "photos": [
    {
     "src": "images/v038-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1228,
+    "h": 1281
    },
    {
     "src": "images/v038-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 1287
    }
   ],
   "added": "2026-10-23",
@@ -3587,7 +8007,9 @@
   "photos": [
    {
     "src": "images/v033-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -3645,7 +8067,9 @@
   "photos": [
    {
     "src": "images/v035-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -3694,7 +8118,9 @@
   "photos": [
    {
     "src": "images/v036-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 588,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -3745,11 +8171,15 @@
   "photos": [
    {
     "src": "images/v034-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/v034-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -3805,11 +8235,15 @@
   "photos": [
    {
     "src": "images/v010-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1086,
+    "h": 1290
    },
    {
     "src": "images/v010-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -3858,11 +8292,15 @@
   "photos": [
    {
     "src": "images/v018-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 812,
+    "h": 1400
    },
    {
     "src": "images/v018-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 787,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -3916,15 +8354,21 @@
   "photos": [
    {
     "src": "images/v020-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 631,
+    "h": 1400
    },
    {
     "src": "images/v020-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 601,
+    "h": 1400
    },
    {
     "src": "images/v020-3.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 629,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -3975,15 +8419,21 @@
   "photos": [
    {
     "src": "images/v041-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 646,
+    "h": 1400
    },
    {
     "src": "images/v041-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 530,
+    "h": 1400
    },
    {
     "src": "images/v041-3.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 919,
+    "h": 921
    }
   ],
   "added": "2026-10-23",
@@ -4033,7 +8483,9 @@
   "photos": [
    {
     "src": "images/book-bradbury-martian-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -4083,7 +8535,9 @@
   "photos": [
    {
     "src": "images/book-sartre-nausea-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -4129,7 +8583,9 @@
   "photos": [
    {
     "src": "images/book-eur-poetry-xx-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -4179,7 +8635,9 @@
   "photos": [
    {
     "src": "images/book-dovlatov-zapovednik-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -4229,7 +8687,9 @@
   "photos": [
    {
     "src": "images/book-goethe-faust-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -4283,7 +8743,9 @@
   "photos": [
    {
     "src": "images/book-erofeev-moskva-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -4337,7 +8799,9 @@
   "photos": [
    {
     "src": "images/book-bronte-wuthering-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -4391,7 +8855,9 @@
   "photos": [
    {
     "src": "images/book-kafka-metamorphosis-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -4441,7 +8907,9 @@
   "photos": [
    {
     "src": "images/book-vonnegut-sh5-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -4491,7 +8959,9 @@
   "photos": [
    {
     "src": "images/book-sartre-words-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -4541,7 +9011,9 @@
   "photos": [
    {
     "src": "images/book-hamsun-hunger-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -4591,7 +9063,9 @@
   "photos": [
    {
     "src": "images/book-strugatsky-monday-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -4641,7 +9115,9 @@
   "photos": [
    {
     "src": "images/book-strugatsky-picnic-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -4691,7 +9167,9 @@
   "photos": [
    {
     "src": "images/book-lem-eden-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -4741,7 +9219,9 @@
   "photos": [
    {
     "src": "images/book-vygotsky-art-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -4791,7 +9271,9 @@
   "photos": [
    {
     "src": "images/book-fromm-love-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -4845,11 +9327,15 @@
   "photos": [
    {
     "src": "images/book-akunin-tales-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    },
    {
     "src": "images/book-akunin-tales-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -4899,7 +9385,9 @@
   "photos": [
    {
     "src": "images/book-akunin-chaika-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -4953,7 +9441,9 @@
   "photos": [
    {
     "src": "images/book-whistler-enemies-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -4997,7 +9487,9 @@
   "photos": [
    {
     "src": "images/book-competencies-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -5041,7 +9533,9 @@
   "photos": [
    {
     "src": "images/book-intellect-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -5087,7 +9581,9 @@
   "photos": [
    {
     "src": "images/book-philosophy-quick-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -5137,7 +9633,9 @@
   "photos": [
    {
     "src": "images/book-kuprin-duel-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -5187,7 +9685,9 @@
   "photos": [
    {
     "src": "images/book-akunin-leviathan-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -5237,11 +9737,15 @@
   "photos": [
    {
     "src": "images/book-murakami-afterdark-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 993,
+    "h": 1400
    },
    {
     "src": "images/book-murakami-afterdark-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -5291,7 +9795,9 @@
   "photos": [
    {
     "src": "images/book-strugatsky-billion-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -5345,7 +9851,9 @@
   "photos": [
    {
     "src": "images/book-murakami-south-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -5395,7 +9903,9 @@
   "photos": [
    {
     "src": "images/book-jay-defining-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -5449,7 +9959,9 @@
   "photos": [
    {
     "src": "images/book-primachenko-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -5499,7 +10011,9 @@
   "photos": [
    {
     "src": "images/book-kafka-trial-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -5549,7 +10063,9 @@
   "photos": [
    {
     "src": "images/book-randall-radiohead-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -5603,7 +10119,9 @@
   "photos": [
    {
     "src": "images/book-anatomy-cns-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -5657,7 +10175,9 @@
   "photos": [
    {
     "src": "images/book-cognitive-thinking-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -5707,7 +10227,9 @@
   "photos": [
    {
     "src": "images/book-psy-cinema-spine.jpg",
-    "kind": "fragment"
+    "kind": "fragment",
+    "w": 960,
+    "h": 1200
    }
   ],
   "added": "2026-10-23",
@@ -5758,7 +10280,9 @@
   "photos": [
    {
     "src": "images/book-world-art-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1032,
+    "h": 1359
    }
   ],
   "added": "2026-10-23",
@@ -5810,7 +10334,9 @@
   "photos": [
    {
     "src": "images/book-access-2002-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -5862,11 +10388,15 @@
   "photos": [
    {
     "src": "images/book-cognition-society-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 967,
+    "h": 1347
    },
    {
     "src": "images/book-cognition-society-2.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -5914,7 +10444,9 @@
   "photos": [
    {
     "src": "images/book-london-museums-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -5964,7 +10496,9 @@
   "photos": [
    {
     "src": "images/book-balabanova-voids-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -6014,7 +10548,9 @@
   "photos": [
    {
     "src": "images/book-emelin-solveig-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 970,
+    "h": 1373
    }
   ],
   "added": "2026-10-23",
@@ -6054,7 +10590,9 @@
   "photos": [
    {
     "src": "images/mag-iskusstvo-kino-2017-02-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -6093,7 +10631,9 @@
   "photos": [
    {
     "src": "images/mag-esquire-2021-10-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -6124,7 +10664,9 @@
   "photos": [
    {
     "src": "images/conf-program-perm-2026-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1050,
+    "h": 1400
    }
   ],
   "added": "2026-10-23",
@@ -6156,7 +10698,9 @@
   "photos": [
    {
     "src": "images/lib-collection-1.jpg",
-    "kind": "real"
+    "kind": "real",
+    "w": 1400,
+    "h": 1050
    }
   ],
   "added": "2026-10-23",

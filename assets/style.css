@@ -260,3 +260,29 @@ a.chip { text-decoration: none; }
 .var[aria-pressed="true"] img { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
 .var[aria-pressed="true"] { color: var(--ink); }
 .var[aria-pressed="true"] span::before { content: "✓ "; }
+
+/* ---------- коллаж ---------- */
+#collage { margin-top: 28px; display: grid; gap: 14px; }
+.sheet { background: #ececea; border-radius: 28px; padding: 14px 4% 5%; position: relative; overflow: hidden; }
+.sheet__head { display: flex; justify-content: space-between; font-size: 11px; letter-spacing: .05em; text-transform: uppercase; font-weight: 700; padding: 6px 2px 0; }
+.sheet__field { --k: 1.9; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2vw 1%; padding: 14px 0 12px; }
+@media (min-width: 720px) { .sheet { padding: 18px 3.5% 4.5%; border-radius: 36px; } .sheet__field { --k: 1.25; gap: 14px 1.5%; } }
+@media (min-width: 1080px) { .sheet__field { --k: 1; } }
+.sheet__field { align-content: flex-start; }
+/* белый фон фото «растворяется» на сером листе: multiply должен быть на элементе, который не лежит внутри другого transform/z-index */
+.piece { position: relative; display: block; width: calc(var(--w) * var(--k) * 1%); margin-left: var(--mx); top: var(--dy); text-decoration: none; color: var(--ink); -webkit-tap-highlight-color: transparent; }
+.piece__box { display: block; position: relative; aspect-ratio: var(--ar); transform: rotate(var(--r)); mix-blend-mode: multiply; transition: transform .35s cubic-bezier(.2, .7, .2, 1); }
+.piece__box img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; transition: opacity .25s ease; filter: brightness(1.05) contrast(1.06); }
+.piece .p-back { opacity: 0; }
+.piece__no { position: absolute; left: -2px; top: -4px; font-size: 9px; letter-spacing: .04em; color: #7a7a78; }
+.piece__cap { position: absolute; left: 50%; top: 100%; transform: translate(-50%, 4px); white-space: nowrap; font-size: 11px; line-height: 1.2; background: var(--ink); color: #fff; padding: 4px 9px; border-radius: 99px; opacity: 0; pointer-events: none; transition: opacity .2s; z-index: 6; max-width: 80vw; overflow: hidden; text-overflow: ellipsis; }
+@media (hover: hover) {
+  .piece:hover .piece__box { transform: rotate(0) scale(1.07); z-index: 5; }
+  .piece:hover .p-front { opacity: 0; }
+  .piece:hover .p-back { opacity: 1; }
+}
+.piece:hover .piece__cap, .piece:focus-visible .piece__cap, .piece.flip .piece__cap { opacity: 1; }
+.piece.flip .piece__box, .piece:focus-visible .piece__box { transform: rotate(0) scale(1.08); z-index: 5; }
+.piece.flip .p-front, .piece:focus-visible .p-front { opacity: 0; }
+.piece.flip .p-back, .piece:focus-visible .p-back { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .piece__box { transition: none; } }
