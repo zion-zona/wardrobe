@@ -741,7 +741,7 @@
     for (let k = 0; k < str.length; k++) { h ^= str.charCodeAt(k); h = Math.imul(h, 16777619); }
     return () => { h ^= h << 13; h ^= h >>> 17; h ^= h << 5; return ((h >>> 0) % 10000) / 10000; };
   }
-  const scaleK = () => (window.innerWidth < 720 ? 2.2 : window.innerWidth < 1080 ? 1.45 : 1);
+  const scaleK = () => (window.innerWidth < 720 ? 2.2 : window.innerWidth < 1080 ? 1.2 : 1);
   // лицо и оборот: у «вещи на мне» лицом идёт фото на модели, при наведении — сама вещь
   function faces(i, lead) {
     const ph = i.photos;
@@ -791,7 +791,11 @@
               if (ox > 0 && oy > 0) ov += ox * oy;
             }
             const score = ov * 4000 + rad * 0.15;
-            if (!best || score < best.score) best = { x, y, score };
+            if (!best || score < best.score) best = { x, y, score, ov };
+          }
+          if (best.ov > 0) {   // не нашлось свободного места рядом — кладём ниже всего, но не поверх
+            best.y = Math.max.apply(null, placed.map((q) => q.y + q.h)) + 0.02;
+            best.x = rnd() * (1 - b.w - 0.04) + 0.02;
           }
           b.x = best.x; b.y = best.y; placed.push(b);
         });
