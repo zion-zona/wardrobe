@@ -712,85 +712,105 @@
   $("#mine-modal").addEventListener("close", () => { render(); $("#req").hidden = true; });
 
   // ---------- коллаж ----------
-  // листы — как на референсах: вещи вперемешку внутри группы, сверху лицо, при наведении — оборот;
-  // тонкая подпись-номер у каждой вещи и маленькая легенда внизу листа
+  // одна белая страница на всю ширину: разделы идут друг за другом, вещи лежат небольшими группками
+  // слева / по центру / справа; сверху лицо, при наведении — оборот; в каждом разделе одна вещь «на мне»
   const TOPS = ["футболки и топы", "лонгсливы", "рубашки и блузы", "свитшоты и худи", "джемперы и кардиганы"];
   const PANELS = [
-    ["платья и юбки", (i) => i.category === "clothes" && ["платья", "юбки"].includes(i.subcategory)],
-    ["верх", (i) => i.category === "clothes" && TOPS.includes(i.subcategory)],
-    ["обувь, сумки, аксессуары", (i) => ["shoes", "bags", "accessories"].includes(i.category)],
-    ["брюки, джинсы, шорты", (i) => i.category === "clothes" && ["брюки", "джинсы", "шорты"].includes(i.subcategory)],
+    ["платья и юбки", (i) => i.category === "clothes" && ["платья", "юбки"].includes(i.subcategory), "v064"],
+    ["верх", (i) => i.category === "clothes" && TOPS.includes(i.subcategory), "v104"],
+    ["брюки, джинсы, шорты", (i) => i.category === "clothes" && ["брюки", "джинсы", "шорты"].includes(i.subcategory), "v151"],
+    ["обувь, сумки, аксессуары", (i) => ["shoes", "bags", "accessories"].includes(i.category), "v094"],
     ["украшения", (i) => i.category === "jewelry"],
     ["косметика и уход", (i) => i.category === "beauty"],
     ["дом, посуда, техника, ремонт", (i) => ["home", "dishes", "tech", "repair", "decor"].includes(i.category)],
-    ["творчество, канцелярия, игрушки", (i) => ["craft", "stationery", "toys", "other"].includes(i.category)]
+    ["творчество, канцелярия, игрушки", (i) => ["craft", "stationery", "toys", "other"].includes(i.category)],
+    ["библиотека", (i) => i.category === "library", "lib-collection", "#library"]
   ];
-  const SHEET_STYLES = ["black", "grey", "white", "black", "grey", "white", "black", "grey"];
-  // доля ширины листа (десктоп) по виду вещи
   function pieceWidth(i) {
     const s = i.subcategory;
-    if (i.category === "clothes") return ["брюки", "джинсы", "шорты", "платья", "юбки"].includes(s) ? 0.135 : 0.145;
-    if (i.category === "shoes") return 0.15;
-    if (i.category === "bags") return 0.18;
+    if (i.category === "library") return i.is_collection || i.id === "lib-collection" ? 0.2 : 0.095;
+    if (i.category === "clothes") return ["брюки", "джинсы", "шорты", "платья", "юбки"].includes(s) ? 0.125 : 0.135;
+    if (i.category === "shoes") return 0.14;
+    if (i.category === "bags") return 0.15;
     if (i.category === "jewelry") return 0.1;
-    if (["beauty", "stationery", "toys", "craft"].includes(i.category)) return 0.11;
-    return 0.13;
+    if (["beauty", "stationery", "toys", "craft"].includes(i.category)) return 0.1;
+    return 0.12;
   }
   function seeded(str) {
     let h = 2166136261;
     for (let k = 0; k < str.length; k++) { h ^= str.charCodeAt(k); h = Math.imul(h, 16777619); }
     return () => { h ^= h << 13; h ^= h >>> 17; h ^= h << 5; return ((h >>> 0) % 10000) / 10000; };
   }
-  const scaleK = () => (window.innerWidth < 720 ? 2.15 : window.innerWidth < 1080 ? 1.4 : 1);
-  // раскладка «лучший из кандидатов»: ширина листа = 1, высота подбирается, чтобы вещи лежали вольно и чуть перекрывались
-  function scatter(items, k, seed) {
-    const rnd = seeded(seed);
-    const rawBoxes = items.map((i, n) => {
-      const p = i.photos[0], ratio = p.w && p.h ? p.w / p.h : 0.8;
-      return { n, ratio, w: pieceWidth(i) * k * (0.78 + rnd() * 0.5), rot: (rnd() - 0.5) * 14 };
-    });
-    const baseArea = rawBoxes.reduce((s, b) => s + b.w * b.w / b.ratio, 0);
-    // небольшие листы — вещи крупнее, чтобы лист не выглядел пустым
-    let H = Math.max(baseArea / 0.62, k > 1.8 ? 0.9 : 0.5);
-    const f = Math.min(2.3, Math.max(1, Math.sqrt(H * 0.62 / baseArea)));
-    const boxes = rawBoxes.map((b) => { const w = Math.min(0.44, b.w * f); return Object.assign(b, { w, h: w / b.ratio }); });
-    const order = boxes.slice().sort((a, b) => b.w * b.h - a.w * a.h);
-    for (let attempt = 0; attempt < 14; attempt++) {
-      const placed = []; let worst = 0;
-      for (const b of order) {
-        let best = null;
-        for (let t = 0; t < 90; t++) {
-          const x = rnd() * (1 - b.w), y = rnd() * Math.max(0.0001, H - b.h);
-          let ov = 0, md = 9;
-          for (const q of placed) {
-            const s = 0.82;  // у вещи пустые углы — габарит чуть уменьшаем
-            const ox = Math.min(x + b.w * (1 + s) / 2, q.x + q.w * (1 + s) / 2) - Math.max(x + b.w * (1 - s) / 2, q.x + q.w * (1 - s) / 2);
-            const oy = Math.min(y + b.h * (1 + s) / 2, q.y + q.h * (1 + s) / 2) - Math.max(y + b.h * (1 - s) / 2, q.y + q.h * (1 - s) / 2);
-            if (ox > 0 && oy > 0) ov += ox * oy;
-            md = Math.min(md, Math.hypot((x + b.w / 2) - (q.x + q.w / 2), (y + b.h / 2) - (q.y + q.h / 2)));
-          }
-          const score = ov * 60 - Math.min(md, 0.5);   // меньше наложений, дальше от соседей — ровнее, но «хаотично»
-          if (!best || score < best.score) best = { x, y, ov, score };
-        }
-        b.x = best.x; b.y = best.y; placed.push(b);
-        worst = Math.max(worst, best.ov / (b.w * b.h));
-      }
-      if (worst < 0.18) break;
-      H *= 1.07;
+  const scaleK = () => (window.innerWidth < 720 ? 2.2 : window.innerWidth < 1080 ? 1.45 : 1);
+  // лицо и оборот: у «вещи на мне» лицом идёт фото на модели, при наведении — сама вещь
+  function faces(i, lead) {
+    const ph = i.photos;
+    if (lead) {
+      const m = ph.find((p) => p.kind === "tryon");
+      if (m) return [m, ph.find((p) => p !== m)];
     }
-    const maxY = Math.max.apply(null, boxes.map((b) => b.y + b.h));
-    return { H: Math.max(maxY * 1.02, 0.3), boxes };
+    return [ph[0], ph[1]];
+  }
+  const SLOTS_D = [[.14, .5, .86], [.3, .7], [.17, .53, .88], [.12, .45, .8], [.32, .72]];
+  const SLOTS_M = [[.26, .74], [.72, .27]];
+  function layout(items, k, seed, leadId) {
+    const rnd = seeded(seed), mob = k > 1.8;
+    const bs = items.map((i) => {
+      const lead = i.id === leadId, f = faces(i, lead)[0];
+      const ratio = f.w && f.h ? f.w / f.h : 0.8;
+      let w = pieceWidth(i) * k * (mob ? 1 : 1.35) * (0.82 + rnd() * 0.4) * (lead ? (mob ? 1.35 : 1.75) : 1);
+      w = Math.min(w, mob ? 0.5 : 0.26);
+      return { i, lead, ratio, w, h: w / ratio, rot: (rnd() - 0.5) * (lead ? 5 : 12) };
+    });
+    bs.sort((a, b) => (b.lead - a.lead) || (rnd() - 0.5));
+    const per = mob ? 3 : 5, nCl = Math.min(bs.length, Math.max(mob ? 2 : 3, Math.round(bs.length / per)));
+    const clusters = Array.from({ length: nCl }, () => []);
+    bs.forEach((b, n) => clusters[b.lead ? 0 : (n + 1) % nCl].push(b));
+    const rows = mob ? SLOTS_M : SLOTS_D, rowStep = mob ? 0.8 : 0.33;
+    const placed = [];
+    let ci = 0, r = 0, rowBottom = 0.02;
+    while (ci < nCl) {
+      const slots = rows[(r * (mob ? 1 : 2) + (nCl - ci > 2 || mob ? 0 : 1)) % rows.length];
+      slots.forEach((sx, si) => {
+        if (ci >= nCl) return;
+        const cl = clusters[ci++]; if (!cl.length) return;
+        const R = (mob ? 0.16 : 0.1) + 0.022 * cl.length;
+        const cx = sx + (rnd() - 0.5) * 0.06, cy = rowBottom + R * 0.95 + (rnd() - 0.3) * 0.05 + (si % 2) * (mob ? 0.1 : 0.07);
+        cl.sort((a, b) => b.w * b.h - a.w * a.h);
+        cl.forEach((b, n) => {
+          let best = null;
+          for (let t = 0; t < 120; t++) {
+            const ang = rnd() * 6.283, rad = n === 0 ? rnd() * 0.03 : (0.05 + Math.sqrt(rnd()) * R);
+            const x = Math.min(1 - b.w - 0.012, Math.max(0.012, cx + Math.cos(ang) * rad * (mob ? 1 : 1.35) - b.w / 2));
+            const y = Math.max(rowBottom - 0.02, cy + Math.sin(ang) * rad - b.h / 2);
+            let ov = 0;
+            for (const q of placed) {
+              const s = 0.9;
+              const ox = Math.min(x + b.w * (1 + s) / 2, q.x + q.w * (1 + s) / 2) - Math.max(x + b.w * (1 - s) / 2, q.x + q.w * (1 - s) / 2);
+              const oy = Math.min(y + b.h * (1 + s) / 2, q.y + q.h * (1 + s) / 2) - Math.max(y + b.h * (1 - s) / 2, q.y + q.h * (1 - s) / 2);
+              if (ox > 0 && oy > 0) ov += ox * oy;
+            }
+            const score = ov * 300 + rad * 0.15;
+            if (!best || score < best.score) best = { x, y, score };
+          }
+          b.x = best.x; b.y = best.y; placed.push(b);
+        });
+      });
+      rowBottom = Math.max.apply(null, placed.map((b) => b.y + b.h)) + (mob ? 0.03 : 0.015);
+      r++;
+    }
+    const H = Math.max.apply(null, placed.map((b) => b.y + b.h)) + (mob ? 0.06 : 0.03);
+    return { H, boxes: bs };
   }
   const priceOf = (i) => (i.deal && i.deal.mode === "pwyw" && i.deal.amount ? "≈ " + rub(i.deal.amount) : "");
-  function pieceHTML(i, b, num, H) {
-    const p1 = i.photos[1];
-    return `<a class="piece${p1 ? " has-back" : ""}" href="#item-${esc(encodeURIComponent(i.id))}" data-open="${esc(i.id)}"
+  function pieceHTML(b, H) {
+    const i = b.i, [f, bk] = faces(i, b.lead);
+    return `<a class="piece${bk ? " has-back" : ""}${b.lead ? " piece--lead" : ""}" href="#item-${esc(encodeURIComponent(i.id))}" data-open="${esc(i.id)}"
       style="left:${(b.x * 100).toFixed(2)}%;top:${(b.y / H * 100).toFixed(2)}%;width:${(b.w * 100).toFixed(2)}%;--r:${b.rot.toFixed(1)}deg;--ar:${b.ratio.toFixed(3)}" aria-label="${esc(titleOf(i))}">
       <span class="piece__box">
-        <img class="p-front" src="${esc(i.photos[0].src)}" alt="${esc(titleOf(i))}" loading="lazy" decoding="async">
-        ${p1 ? `<img class="p-back" data-src="${esc(p1.src)}" alt="" decoding="async">` : ""}
+        <img class="p-front" src="${esc(f.src)}" alt="${esc(titleOf(i))}" loading="lazy" decoding="async">
+        ${bk ? `<img class="p-back" data-src="${esc(bk.src)}" alt="" decoding="async">` : ""}
       </span>
-      <span class="piece__no">${String(num).padStart(2, "0")}</span>
       <span class="piece__cap">${esc(titleOf(i))}${priceOf(i) ? " · " + esc(priceOf(i)) : ""}</span>
     </a>`;
   }
@@ -798,40 +818,16 @@
   function buildCollage() {
     const k = scaleK();
     collageK = k;
-    const list = state.items.filter((i) => i.category !== "library" && i.status !== "archive" && i.photos.length);
-    let sheetNo = 0;
-    $("#collage").innerHTML = PANELS.map(([name, f], idx) => {
+    const list = state.items.filter((i) => i.status !== "archive" && i.photos.length);
+    let no = 0;
+    $("#collage").innerHTML = PANELS.map(([name, f, lead, link]) => {
       const items = list.filter(f);
       if (!items.length) return "";
-      sheetNo++;
-      const sc = scatter(items, k, "sheet-" + name);
-      const H = sc.H;
-      let boxes = sc.boxes;
-      const style = SHEET_STYLES[idx % SHEET_STYLES.length];
-      const path = items.length <= 20 && style !== "black";
-      let list2 = items;
-      if (path) {
-        // соединяем вещи тонкой линией «ближайший сосед» и нумеруем по ходу линии — как на афише с маршрутом
-        const cx = (b) => b.x + b.w / 2, cy = (b) => b.y + b.h / 2;
-        const left = boxes.slice(); const seq = [];
-        let cur = left.splice(left.reduce((m, b, k2) => (cx(b) + cy(b) < cx(left[m]) + cy(left[m]) ? k2 : m), 0), 1)[0];
-        seq.push(cur);
-        while (left.length) {
-          let bi = 0, bd = 9;
-          left.forEach((b, k2) => { const d = Math.hypot(cx(b) - cx(cur), cy(b) - cy(cur)); if (d < bd) { bd = d; bi = k2; } });
-          cur = left.splice(bi, 1)[0]; seq.push(cur);
-        }
-        list2 = seq.map((b) => items[b.n]);
-        boxes = seq.map((b, n) => Object.assign({}, b, { n }));
-      }
-      const lines = path ? `<svg class="sheet__path" viewBox="0 0 1 ${H.toFixed(3)}" preserveAspectRatio="none" aria-hidden="true"><polyline vector-effect="non-scaling-stroke" points="${
-        boxes.map((b) => `${(b.x + b.w / 2).toFixed(3)},${(b.y + b.h / 2).toFixed(3)}`).join(" ")}"/></svg>` : "";
-      return `<section class="sheet sheet--${style}" aria-label="${esc(name)}">
-        <div class="sheet__in">
-          <header class="sheet__head"><span>${String(sheetNo).padStart(2, "0")} — ${esc(name)}</span><span>${items.length}</span></header>
-          <div class="sheet__field" style="aspect-ratio:1 / ${H.toFixed(3)}">${lines}${boxes.map((b) => pieceHTML(list2[b.n], b, b.n + 1, H)).join("")}</div>
-          <ol class="legend">${list2.map((i, n) => `<li><a href="#item-${esc(encodeURIComponent(i.id))}" data-open="${esc(i.id)}"><i>${String(n + 1).padStart(2, "0")}</i> ${esc(titleOf(i))}${priceOf(i) ? " · " + esc(priceOf(i)) : ""}</a></li>`).join("")}</ol>
-        </div>
+      no++;
+      const L = layout(items, k, "sec-" + name, lead);
+      return `<section class="sec" aria-label="${esc(name)}">
+        <h2 class="sec__label"><span>${String(no).padStart(2, "0")} — ${esc(name)}</span>${link ? `<a href="${link}">смотреть списком →</a>` : ""}</h2>
+        <div class="sec__field" style="aspect-ratio:1 / ${L.H.toFixed(3)}">${L.boxes.map((b) => pieceHTML(b, L.H)).join("")}</div>
       </section>`;
     }).join("");
   }
