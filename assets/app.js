@@ -758,8 +758,8 @@
     const bs = items.map((i) => {
       const lead = i.id === leadId, f = faces(i, lead)[0];
       const ratio = f.w && f.h ? f.w / f.h : 0.8;
-      let w = pieceWidth(i) * k * (mob ? 1 : 1.35) * (0.82 + rnd() * 0.4) * (lead ? (mob ? 1.35 : 1.75) : 1);
-      w = Math.min(w, mob ? 0.5 : 0.26);
+      let w = pieceWidth(i) * k * (mob ? 0.78 : 1.02) * (0.82 + rnd() * 0.4) * (lead ? (mob ? 1.35 : 1.75) : 1);
+      w = Math.min(w, mob ? 0.42 : 0.22);
       return { i, lead, ratio, w, h: w / ratio, rot: (rnd() - 0.5) * (lead ? 5 : 12) };
     });
     bs.sort((a, b) => (b.lead - a.lead) || (rnd() - 0.5));
@@ -774,23 +774,23 @@
       slots.forEach((sx, si) => {
         if (ci >= nCl) return;
         const cl = clusters[ci++]; if (!cl.length) return;
-        const R = (mob ? 0.16 : 0.1) + 0.022 * cl.length;
+        const R = (mob ? 0.14 : 0.09) + 0.02 * cl.length;
         const cx = sx + (rnd() - 0.5) * 0.06, cy = rowBottom + R * 0.95 + (rnd() - 0.3) * 0.05 + (si % 2) * (mob ? 0.1 : 0.07);
         cl.sort((a, b) => b.w * b.h - a.w * a.h);
         cl.forEach((b, n) => {
           let best = null;
-          for (let t = 0; t < 120; t++) {
-            const ang = rnd() * 6.283, rad = n === 0 ? rnd() * 0.03 : (0.05 + Math.sqrt(rnd()) * R);
-            const x = Math.min(1 - b.w - 0.012, Math.max(0.012, cx + Math.cos(ang) * rad * (mob ? 1 : 1.35) - b.w / 2));
+          for (let t = 0; t < 400; t++) {
+            const ang = rnd() * 6.283, rad = n === 0 && !placed.length ? 0 : (0.03 + Math.sqrt(rnd()) * R * (1 + t / 90));
+            const x = Math.min(1 - b.w - 0.012, Math.max(0.012, cx + Math.cos(ang) * rad * (mob ? 0.78 : 1.02) - b.w / 2));
             const y = Math.max(rowBottom - 0.02, cy + Math.sin(ang) * rad - b.h / 2);
             let ov = 0;
             for (const q of placed) {
-              const s = 0.9;
+              const s = 1.12;
               const ox = Math.min(x + b.w * (1 + s) / 2, q.x + q.w * (1 + s) / 2) - Math.max(x + b.w * (1 - s) / 2, q.x + q.w * (1 - s) / 2);
               const oy = Math.min(y + b.h * (1 + s) / 2, q.y + q.h * (1 + s) / 2) - Math.max(y + b.h * (1 - s) / 2, q.y + q.h * (1 - s) / 2);
               if (ox > 0 && oy > 0) ov += ox * oy;
             }
-            const score = ov * 300 + rad * 0.15;
+            const score = ov * 4000 + rad * 0.15;
             if (!best || score < best.score) best = { x, y, score };
           }
           b.x = best.x; b.y = best.y; placed.push(b);
